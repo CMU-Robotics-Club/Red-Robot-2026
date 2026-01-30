@@ -4678,6 +4678,18 @@
 		(uuid 8ba7dac9-d425-4828-babf-1e9f679b453d)
 	)
 	(rectangle
+		(start 41.91 95.25)
+		(end 80.01 114.3)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(fill
+			(type none)
+		)
+		(uuid d59e30c9-0aa6-4e13-b7e1-02236a96cafb)
+	)
+	(rectangle
 		(start 119.38 146.05)
 		(end 166.37 196.85)
 		(stroke
@@ -4819,9 +4831,9 @@
 		)
 		(uuid "7a332567-1294-490a-b99a-e3ec7ddedd12")
 	)
-	(text "Battery Monitor"
+	(text "Battery Monitor TP\n"
 		(exclude_from_sim no)
-		(at 57.658 98.298 0)
+		(at 60.706 98.298 0)
 		(effects
 			(font
 				(size 2.54 2.54)
@@ -5203,6 +5215,10 @@
 		(uuid "2328158d-9637-4687-9c7a-4029ed9664fe")
 	)
 	(no_connect
+		(at 135.89 -12.7)
+		(uuid "3398f832-1a38-46f9-987b-da13a47789e9")
+	)
+	(no_connect
 		(at 148.59 152.4)
 		(uuid "63990f98-49df-484c-918b-5bc5d8b0e3d7")
 	)
@@ -5212,7 +5228,7 @@
 	)
 	(wire
 		(pts
-			(xy 69.85 114.3) (xy 69.85 107.95)
+			(xy 67.31 113.03) (xy 67.31 106.68)
 		)
 		(stroke
 			(width 0)
@@ -6262,7 +6278,7 @@
 	)
 	(wire
 		(pts
-			(xy 62.23 114.3) (xy 62.23 107.95)
+			(xy 59.69 113.03) (xy 59.69 106.68)
 		)
 		(stroke
 			(width 0)
@@ -6322,7 +6338,7 @@
 	)
 	(wire
 		(pts
-			(xy 46.99 114.3) (xy 46.99 107.95)
+			(xy 44.45 113.03) (xy 44.45 106.68)
 		)
 		(stroke
 			(width 0)
@@ -6362,7 +6378,7 @@
 	)
 	(wire
 		(pts
-			(xy 54.61 114.3) (xy 54.61 107.95)
+			(xy 52.07 113.03) (xy 52.07 106.68)
 		)
 		(stroke
 			(width 0)
@@ -6822,7 +6838,7 @@
 	)
 	(wire
 		(pts
-			(xy 77.47 114.3) (xy 77.47 107.95)
+			(xy 74.93 113.03) (xy 74.93 106.68)
 		)
 		(stroke
 			(width 0)
@@ -7040,6 +7056,16 @@
 		)
 		(uuid "fe96611a-a50f-4d8b-88f9-e5c715c31a29")
 	)
+	(label "BMS_CLK"
+		(at 16.51 52.07 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "036ad39c-2de6-4e4e-8f62-a3cc091f139f")
+	)
 	(label "LF4_LED"
 		(at 16.51 74.93 0)
 		(effects
@@ -7059,6 +7085,16 @@
 			(justify right bottom)
 		)
 		(uuid "07aab836-f69d-4aaa-96ea-53927a5e1ded")
+	)
+	(label "BMS_D2"
+		(at 16.51 46.99 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "0846ed12-66dd-4ba3-b97a-757b2cfa65f1")
 	)
 	(label "Vprot"
 		(at 15.24 166.37 0)
@@ -7081,7 +7117,7 @@
 		(uuid "14e485b2-a0eb-427f-91bb-160fec8faf91")
 	)
 	(label "BMS_D0"
-		(at 46.99 114.3 90)
+		(at 44.45 113.03 90)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -7119,6 +7155,16 @@
 			(justify left bottom)
 		)
 		(uuid "29a0059a-f59e-4dba-87ae-f47bb9794887")
+	)
+	(label "BMS_D0"
+		(at 16.51 41.91 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "2ccb95ad-d4c9-4a10-9dd0-83378b5817ff")
 	)
 	(label "LF2_LED"
 		(at 16.51 69.85 0)
@@ -7171,7 +7217,7 @@
 		(uuid "433c56f0-3531-4623-8db7-2d3d15c19f2c")
 	)
 	(label "BMS_D2"
-		(at 62.23 114.3 90)
+		(at 59.69 113.03 90)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -7189,6 +7235,16 @@
 			(justify left bottom)
 		)
 		(uuid "4a24283b-3913-46b2-9784-b8da99b37810")
+	)
+	(label "BMS_D1"
+		(at 16.51 44.45 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "4acf2904-aad5-466b-84f3-fcd21295c8cc")
 	)
 	(label "SERVO3_PWM"
 		(at 96.52 78.74 0)
@@ -7209,6 +7265,16 @@
 			(justify right bottom)
 		)
 		(uuid "517e054e-0e62-457c-afc1-98c3fcc3c66f")
+	)
+	(label "BMS_SDI"
+		(at 16.51 49.53 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "554e3ef6-4966-4019-8493-2fdd32ce5d3e")
 	)
 	(label "SERVO3_PWM"
 		(at 82.55 77.47 180)
@@ -7291,7 +7357,7 @@
 		(uuid "9c55ae49-158f-4f9b-9f5f-69e3343c054b")
 	)
 	(label "BMS_D1"
-		(at 54.61 114.3 90)
+		(at 52.07 113.03 90)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -7301,7 +7367,7 @@
 		(uuid "a0517821-7876-4e77-ab6e-10c50c5474a3")
 	)
 	(label "BMS_SDI"
-		(at 69.85 114.3 90)
+		(at 67.31 113.03 90)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -7421,7 +7487,7 @@
 		(uuid "e6f985eb-316a-4809-b2dd-172b4e926b89")
 	)
 	(label "BMS_CLK"
-		(at 77.47 114.3 90)
+		(at 74.93 113.03 90)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -7605,7 +7671,7 @@
 	)
 	(symbol
 		(lib_id "Connector:TestPoint")
-		(at 77.47 107.95 0)
+		(at 74.93 106.68 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -7613,7 +7679,7 @@
 		(dnp no)
 		(uuid "0551b18a-e6eb-4205-8c76-61b7711ec9cb")
 		(property "Reference" "TP5"
-			(at 78.232 103.378 0)
+			(at 75.692 102.108 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7622,7 +7688,7 @@
 			)
 		)
 		(property "Value" "CLK"
-			(at 78.232 105.918 0)
+			(at 75.692 104.648 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7631,7 +7697,7 @@
 			)
 		)
 		(property "Footprint" "TestPoint:TestPoint_THTPad_2.0x2.0mm_Drill1.0mm"
-			(at 82.55 107.95 0)
+			(at 80.01 106.68 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7640,7 +7706,7 @@
 			)
 		)
 		(property "Datasheet" "~"
-			(at 82.55 107.95 0)
+			(at 80.01 106.68 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7649,7 +7715,7 @@
 			)
 		)
 		(property "Description" "test point"
-			(at 77.47 107.95 0)
+			(at 74.93 106.68 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -9939,7 +10005,7 @@
 	)
 	(symbol
 		(lib_id "Connector:TestPoint")
-		(at 62.23 107.95 0)
+		(at 59.69 106.68 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -9947,7 +10013,7 @@
 		(dnp no)
 		(uuid "51a7da5a-42be-41cb-9ab1-4c404672917a")
 		(property "Reference" "TP3"
-			(at 63.246 103.378 0)
+			(at 60.706 102.108 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -9956,7 +10022,7 @@
 			)
 		)
 		(property "Value" "D2"
-			(at 63.246 105.918 0)
+			(at 60.706 104.648 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -9965,7 +10031,7 @@
 			)
 		)
 		(property "Footprint" "TestPoint:TestPoint_THTPad_2.0x2.0mm_Drill1.0mm"
-			(at 67.31 107.95 0)
+			(at 64.77 106.68 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -9974,7 +10040,7 @@
 			)
 		)
 		(property "Datasheet" "~"
-			(at 67.31 107.95 0)
+			(at 64.77 106.68 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -9983,7 +10049,7 @@
 			)
 		)
 		(property "Description" "test point"
-			(at 62.23 107.95 0)
+			(at 59.69 106.68 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -11186,7 +11252,7 @@
 	)
 	(symbol
 		(lib_id "Connector:TestPoint")
-		(at 54.61 107.95 0)
+		(at 52.07 106.68 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -11194,7 +11260,7 @@
 		(dnp no)
 		(uuid "7ca22aeb-5334-4ca6-98de-3121ba5ae22b")
 		(property "Reference" "TP2"
-			(at 55.626 103.378 0)
+			(at 53.086 102.108 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -11203,7 +11269,7 @@
 			)
 		)
 		(property "Value" "D1"
-			(at 55.626 105.918 0)
+			(at 53.086 104.648 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -11212,7 +11278,7 @@
 			)
 		)
 		(property "Footprint" "TestPoint:TestPoint_THTPad_2.0x2.0mm_Drill1.0mm"
-			(at 59.69 107.95 0)
+			(at 57.15 106.68 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -11221,7 +11287,7 @@
 			)
 		)
 		(property "Datasheet" "~"
-			(at 59.69 107.95 0)
+			(at 57.15 106.68 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -11230,7 +11296,7 @@
 			)
 		)
 		(property "Description" "test point"
-			(at 54.61 107.95 0)
+			(at 52.07 106.68 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -14939,7 +15005,7 @@
 	)
 	(symbol
 		(lib_id "Connector:TestPoint")
-		(at 46.99 107.95 0)
+		(at 44.45 106.68 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -14947,7 +15013,7 @@
 		(dnp no)
 		(uuid "e18de106-83b7-42d2-8c92-edb3d427836b")
 		(property "Reference" "TP1"
-			(at 48.006 103.378 0)
+			(at 45.466 102.108 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -14956,7 +15022,7 @@
 			)
 		)
 		(property "Value" "D0"
-			(at 48.006 105.918 0)
+			(at 45.466 104.648 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -14965,7 +15031,7 @@
 			)
 		)
 		(property "Footprint" "TestPoint:TestPoint_THTPad_2.0x2.0mm_Drill1.0mm"
-			(at 52.07 107.95 0)
+			(at 49.53 106.68 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -14974,7 +15040,7 @@
 			)
 		)
 		(property "Datasheet" "~"
-			(at 52.07 107.95 0)
+			(at 49.53 106.68 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -14983,7 +15049,7 @@
 			)
 		)
 		(property "Description" "test point"
-			(at 46.99 107.95 0)
+			(at 44.45 106.68 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -15330,7 +15396,7 @@
 	)
 	(symbol
 		(lib_id "Connector:TestPoint")
-		(at 69.85 107.95 0)
+		(at 67.31 106.68 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -15338,7 +15404,7 @@
 		(dnp no)
 		(uuid "fa9d4a94-b973-4d21-8de0-7d53e490b554")
 		(property "Reference" "TP4"
-			(at 70.866 103.378 0)
+			(at 68.326 102.108 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -15347,7 +15413,7 @@
 			)
 		)
 		(property "Value" "SDI"
-			(at 70.866 105.918 0)
+			(at 68.326 104.648 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -15356,7 +15422,7 @@
 			)
 		)
 		(property "Footprint" "TestPoint:TestPoint_THTPad_2.0x2.0mm_Drill1.0mm"
-			(at 74.93 107.95 0)
+			(at 72.39 106.68 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -15365,7 +15431,7 @@
 			)
 		)
 		(property "Datasheet" "~"
-			(at 74.93 107.95 0)
+			(at 72.39 106.68 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -15374,7 +15440,7 @@
 			)
 		)
 		(property "Description" "test point"
-			(at 69.85 107.95 0)
+			(at 67.31 106.68 0)
 			(effects
 				(font
 					(size 1.27 1.27)
