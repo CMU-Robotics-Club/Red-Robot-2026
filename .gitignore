@@ -31,3 +31,6 @@ fp-info-cache
 
 # Archived Backups (KiCad 6.0)
 **/*-backups/*.zip
+
+# MacOS File Thing
+**/.DS_Store
