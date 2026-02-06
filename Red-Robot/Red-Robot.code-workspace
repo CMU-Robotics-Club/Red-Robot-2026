@@ -1,0 +1,25 @@
+{
+	"folders": [
+		{
+			"path": "."
+		}
+	],
+	"settings": {
+		"files.autoSave": "onFocusChange",
+		"workbench.colorCustomizations": {
+			"titleBar.activeBackground": "#440301",
+			"activityBar.background": "#440301",
+			"activityBar.inactiveForeground": "#9c0000",
+			"activityBar.foreground": "#ffb8b8",
+			"activityBar.border": "#9c0000",
+			"sideBar.background": "#440301",
+			"sideBar.foreground": "#ffffff",
+			"sideBarTitle.foreground": "#ffffff",
+			"sideBarSectionHeader.foreground": "#e20000",
+			"sideBarSectionHeader.background": "#440301",
+			"list.activeSelectionBackground": "#9e0000d4",
+			"list.inactiveSelectionBackground": "#9e00005b",
+			"list.hoverBackground": "#6600005b",
+		}
+	}
+}
