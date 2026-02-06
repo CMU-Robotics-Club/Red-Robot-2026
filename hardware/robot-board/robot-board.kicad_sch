@@ -17705,7 +17705,7 @@
 				)
 			)
 		)
-		(property "Footprint" "random-keyboard-parts:SKQGADE010"
+		(property "Footprint" "footprints:SW_Push_SPST_TS-1088"
 			(at 26.67 113.03 0)
 			(effects
 				(font
@@ -17732,7 +17732,7 @@
 				(hide yes)
 			)
 		)
-		(property "JLC P/N" "C116647"
+		(property "JLC P/N" "C720477"
 			(at 26.67 113.03 0)
 			(effects
 				(font
