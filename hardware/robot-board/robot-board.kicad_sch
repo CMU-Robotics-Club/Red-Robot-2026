@@ -4206,6 +4206,25 @@
 				(pin power_in line
 					(at -10.16 -15.24 0)
 					(length 2.54)
+					(hide yes)
+					(name "GND"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "13"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin power_in line
+					(at -10.16 -15.24 0)
+					(length 2.54)
 					(name "GND"
 						(effects
 							(font
@@ -8608,6 +8627,10 @@
 	(no_connect
 		(at 46.99 181.61)
 		(uuid "2328158d-9637-4687-9c7a-4029ed9664fe")
+	)
+	(no_connect
+		(at 125.73 195.58)
+		(uuid "2c762a34-501b-417b-b493-cd3c25ce403b")
 	)
 	(no_connect
 		(at 46.99 143.51)
@@ -35221,6 +35244,9 @@
 		(pin "3"
 			(uuid "44a1651d-1b54-4298-9514-aac9657a33dc")
 		)
+		(pin "13"
+			(uuid "e97ab25d-1bf3-4789-9581-9ee7fe5d3586")
+		)
 		(instances
 			(project "robot-board"
 				(path "/3adacf52-553b-4591-a9be-9572be717553"
@@ -44061,6 +44087,9 @@
 		(pin "3"
 			(uuid "b0c6cb35-0289-4c10-9e73-f39f0bc1fbe5")
 		)
+		(pin "13"
+			(uuid "8664a779-f86b-4753-8a4d-05e04a6832ce")
+		)
 		(instances
 			(project ""
 				(path "/3adacf52-553b-4591-a9be-9572be717553"
@@ -44983,72 +45012,6 @@
 			(project "robot-board"
 				(path "/3adacf52-553b-4591-a9be-9572be717553"
 					(reference "#PWR074")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "power:GND")
-		(at 125.73 195.58 0)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "a3ca45a9-18fe-4575-bcb4-94f08c5969b0")
-		(property "Reference" "#PWR028"
-			(at 125.73 201.93 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Value" "GND"
-			(at 125.73 200.66 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" ""
-			(at 125.73 195.58 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" ""
-			(at 125.73 195.58 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
-			(at 125.73 195.58 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "fad316ad-b326-477b-b33e-4886edabd163")
-		)
-		(instances
-			(project ""
-				(path "/3adacf52-553b-4591-a9be-9572be717553"
-					(reference "#PWR028")
 					(unit 1)
 				)
 			)
