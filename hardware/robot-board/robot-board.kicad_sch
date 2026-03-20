@@ -36456,7 +36456,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Connector_BarrelJack:BarrelJack_Horizontal"
+		(property "Footprint" "Connector_BarrelJack:BarrelJack_CLIFF_FC681465S_SMT_Horizontal"
 			(at 129.286 139.7 0)
 			(effects
 				(font
@@ -36474,7 +36474,7 @@
 				(hide yes)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "DC Barrel Jack with an internal switch"
 			(at 128.27 140.97 0)
 			(effects
 				(font
@@ -36483,7 +36483,7 @@
 				(hide yes)
 			)
 		)
-		(property "JLC P/N" "C136744"
+		(property "JLC P/N" "C114916"
 			(at 128.27 140.97 0)
 			(effects
 				(font
