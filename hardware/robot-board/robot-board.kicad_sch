@@ -4351,6 +4351,192 @@
 			)
 			(embedded_fonts no)
 		)
+		(symbol "Jumper:SolderJumper_2_Open"
+			(pin_numbers
+				(hide yes)
+			)
+			(pin_names
+				(offset 0)
+				(hide yes)
+			)
+			(exclude_from_sim no)
+			(in_bom no)
+			(on_board yes)
+			(property "Reference" "JP"
+				(at 0 2.032 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Value" "SolderJumper_2_Open"
+				(at 0 -2.54 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Footprint" ""
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Datasheet" "~"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Description" "Solder Jumper, 2-pole, open"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "ki_keywords" "solder jumper SPST"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "ki_fp_filters" "SolderJumper*Open*"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(symbol "SolderJumper_2_Open_0_1"
+				(polyline
+					(pts
+						(xy -0.254 1.016) (xy -0.254 -1.016)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(arc
+					(start -0.254 -1.016)
+					(mid -1.2656 0)
+					(end -0.254 1.016)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(arc
+					(start -0.254 -1.016)
+					(mid -1.2656 0)
+					(end -0.254 1.016)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type outline)
+					)
+				)
+				(arc
+					(start 0.254 1.016)
+					(mid 1.2656 0)
+					(end 0.254 -1.016)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(arc
+					(start 0.254 1.016)
+					(mid 1.2656 0)
+					(end 0.254 -1.016)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type outline)
+					)
+				)
+				(polyline
+					(pts
+						(xy 0.254 1.016) (xy 0.254 -1.016)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+			)
+			(symbol "SolderJumper_2_Open_1_1"
+				(pin passive line
+					(at -3.81 0 0)
+					(length 2.54)
+					(name "A"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 3.81 0 180)
+					(length 2.54)
+					(name "B"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+			(embedded_fonts no)
+		)
 		(symbol "Power_Protection:TVS1400DRV"
 			(pin_names
 				(offset 0)
@@ -7749,6 +7935,18 @@
 		(uuid ae433804-f57f-4a5d-bc5d-e0101449d8a8)
 	)
 	(rectangle
+		(start 275.59 152.4)
+		(end 303.53 171.45)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(fill
+			(type none)
+		)
+		(uuid cf440787-a1f2-4d2d-8b18-4238b9154e0d)
+	)
+	(rectangle
 		(start 41.91 100.33)
 		(end 80.01 119.38)
 		(stroke
@@ -7831,6 +8029,18 @@
 			)
 		)
 		(uuid "243f2441-63ea-4d4f-956d-1add91424f05")
+	)
+	(text "Boot Select\n"
+		(exclude_from_sim no)
+		(at 289.306 155.448 0)
+		(effects
+			(font
+				(size 2.54 2.54)
+				(thickness 0.508)
+				(bold yes)
+			)
+		)
+		(uuid "2cdb1fbe-4081-4ffa-9e84-5088c09f066d")
 	)
 	(text "Motor Drivers"
 		(exclude_from_sim no)
@@ -8621,10 +8831,6 @@
 		(uuid "faf49056-1b57-4c07-8c38-9dc09540f7ce")
 	)
 	(no_connect
-		(at 43.18 82.55)
-		(uuid "07963d8d-ce1d-4167-b43a-536e30eb4ac0")
-	)
-	(no_connect
 		(at 46.99 181.61)
 		(uuid "2328158d-9637-4687-9c7a-4029ed9664fe")
 	)
@@ -8643,10 +8849,6 @@
 	(no_connect
 		(at 193.04 35.56)
 		(uuid "45ffc6af-185d-457e-9e69-396e6bebf620")
-	)
-	(no_connect
-		(at 148.59 157.48)
-		(uuid "63990f98-49df-484c-918b-5bc5d8b0e3d7")
 	)
 	(no_connect
 		(at 46.99 185.42)
@@ -9421,6 +9623,16 @@
 			(type default)
 		)
 		(uuid "40ae5d7b-d57d-44d5-bcc2-b8d1bd38ff06")
+	)
+	(wire
+		(pts
+			(xy 149.86 157.48) (xy 148.59 157.48)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "40b848bd-1533-4b85-8cf7-7fa75729d62f")
 	)
 	(wire
 		(pts
@@ -10271,6 +10483,16 @@
 			(type default)
 		)
 		(uuid "8322c1a6-0879-4bb4-bf40-e9f562357020")
+	)
+	(wire
+		(pts
+			(xy 279.4 165.1) (xy 284.48 165.1)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "83b344e3-15fc-446f-afb6-b504561978a8")
 	)
 	(wire
 		(pts
@@ -11501,6 +11723,16 @@
 			(type default)
 		)
 		(uuid "d7a050d5-2790-4e43-9d3f-0ed6a41bcc65")
+	)
+	(wire
+		(pts
+			(xy 294.64 165.1) (xy 297.18 165.1)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "d86da810-a0bf-4c96-814e-7d673ec83937")
 	)
 	(wire
 		(pts
@@ -33663,6 +33895,16 @@
 		)
 		(uuid "5d0d6a2e-ce6f-42d1-89ad-8e2e062117f5")
 	)
+	(label "BS"
+		(at 280.67 165.1 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "5e321c73-9121-4408-a5f5-38b7a734693d")
+	)
 	(label "BMS_CLK"
 		(at 273.05 151.13 180)
 		(effects
@@ -33772,6 +34014,16 @@
 			(justify right bottom)
 		)
 		(uuid "7290ba9b-797d-4d00-a955-b0d44ac075a0")
+	)
+	(label "BS"
+		(at 24.13 41.91 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "780890a5-353a-42b5-8875-3b12e651c8fc")
 	)
 	(label "LF5"
 		(at 111.76 106.68 270)
@@ -33964,7 +34216,7 @@
 		(uuid "bce817af-4218-42cc-890d-56a86c260219")
 	)
 	(label "LBAT_LED"
-		(at 24.13 41.91 0)
+		(at 24.13 82.55 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -34756,6 +35008,71 @@
 			(project ""
 				(path "/3adacf52-553b-4591-a9be-9572be717553"
 					(reference "#PWR040")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:+3V3")
+		(at 279.4 160.02 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "0c720894-64a6-464d-b735-6c271ad2aaff")
+		(property "Reference" "#PWR028"
+			(at 279.4 163.83 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "+3V3"
+			(at 283.21 158.496 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 279.4 160.02 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 279.4 160.02 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"+3V3\""
+			(at 279.4 160.02 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "d9a0c922-fd52-4d51-960a-0a808078a20f")
+		)
+		(instances
+			(project "robot-board"
+				(path "/3adacf52-553b-4591-a9be-9572be717553"
+					(reference "#PWR028")
 					(unit 1)
 				)
 			)
@@ -38962,10 +39279,9 @@
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
-		(fields_autoplaced yes)
 		(uuid "4e128be8-7923-4f0e-99e7-86f0b51a4121")
 		(property "Reference" "R17"
-			(at 153.67 160.02 90)
+			(at 153.67 165.1 90)
 			(effects
 				(font
 					(size 1.016 1.016)
@@ -38973,7 +39289,7 @@
 			)
 		)
 		(property "Value" "5.1k"
-			(at 153.67 162.56 90)
+			(at 153.67 163.576 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -42663,10 +42979,9 @@
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
-		(fields_autoplaced yes)
 		(uuid "83c459cf-f10f-4d76-8d63-b33e854dc35e")
 		(property "Reference" "R18"
-			(at 161.29 157.48 90)
+			(at 161.29 162.56 90)
 			(effects
 				(font
 					(size 1.016 1.016)
@@ -42674,7 +42989,7 @@
 			)
 		)
 		(property "Value" "5.1k"
-			(at 161.29 160.02 90)
+			(at 161.29 160.782 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -42832,6 +43147,93 @@
 			(project "robot-board"
 				(path "/3adacf52-553b-4591-a9be-9572be717553"
 					(reference "D3")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:R_Small")
+		(at 279.4 162.56 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "8570263f-afb7-49b2-b88c-f31605696209")
+		(property "Reference" "R44"
+			(at 279.654 161.036 90)
+			(effects
+				(font
+					(size 1.016 1.016)
+				)
+				(justify right)
+			)
+		)
+		(property "Value" "5.1k"
+			(at 277.622 160.274 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Footprint" "Resistor_SMD:R_0402_1005Metric"
+			(at 279.4 162.56 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 279.4 162.56 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Resistor, small symbol"
+			(at 279.4 162.56 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Sim.Type" ""
+			(at 279.4 162.56 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "JLC P/N" "C25905"
+			(at 279.4 162.56 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "2da6264a-0321-4a7a-8968-7fe7d746b8fa")
+		)
+		(pin "2"
+			(uuid "28f4a062-5ed3-42fd-96c1-0d228e72f472")
+		)
+		(instances
+			(project "robot-board"
+				(path "/3adacf52-553b-4591-a9be-9572be717553"
+					(reference "R44")
 					(unit 1)
 				)
 			)
@@ -43209,6 +43611,91 @@
 			(project "robot-board"
 				(path "/3adacf52-553b-4591-a9be-9572be717553"
 					(reference "#PWR023")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Switch:SW_SPST")
+		(at 289.56 165.1 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "8d404def-95b0-45a4-b925-d41af5d1677e")
+		(property "Reference" "SW2"
+			(at 289.56 159.512 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "SW_SPST"
+			(at 289.56 161.798 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "footprints:SW_Push_SPST_TS-1088"
+			(at 289.56 165.1 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 289.56 165.1 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Single Pole Single Throw (SPST) switch"
+			(at 289.56 165.1 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "JLC P/N" "C720477"
+			(at 289.56 165.1 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Sim.Type" ""
+			(at 289.56 165.1 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "f37cc8c2-1ae1-45c9-a0ee-20ace914be7d")
+		)
+		(pin "2"
+			(uuid "8e25917a-9120-445b-87ce-61877d62f848")
+		)
+		(instances
+			(project "robot-board"
+				(path "/3adacf52-553b-4591-a9be-9572be717553"
+					(reference "SW2")
 					(unit 1)
 				)
 			)
@@ -44486,6 +44973,72 @@
 			(project "robot-board"
 				(path "/3adacf52-553b-4591-a9be-9572be717553"
 					(reference "#PWR02")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:+5V")
+		(at 162.56 157.48 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "9ba33dda-50f5-44ab-b985-f3558a922dd6")
+		(property "Reference" "#PWR082"
+			(at 162.56 161.29 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "+5V"
+			(at 162.56 152.4 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 162.56 157.48 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 162.56 157.48 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"+5V\""
+			(at 162.56 157.48 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "81af4f56-3d91-4671-a009-6d84c4cb59e9")
+		)
+		(instances
+			(project ""
+				(path "/3adacf52-553b-4591-a9be-9572be717553"
+					(reference "#PWR082")
 					(unit 1)
 				)
 			)
@@ -46312,6 +46865,71 @@
 	)
 	(symbol
 		(lib_id "power:GND")
+		(at 297.18 165.1 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "b11a430c-b845-4c6d-baf6-a54839d7a61c")
+		(property "Reference" "#PWR081"
+			(at 297.18 171.45 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "GND"
+			(at 297.18 169.418 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 297.18 165.1 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 297.18 165.1 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
+			(at 297.18 165.1 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "4c1b747d-59cc-492e-9077-696cd7391611")
+		)
+		(instances
+			(project "robot-board"
+				(path "/3adacf52-553b-4591-a9be-9572be717553"
+					(reference "#PWR081")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:GND")
 		(at 267.97 143.51 180)
 		(unit 1)
 		(exclude_from_sim no)
@@ -47014,6 +47632,109 @@
 			(project "robot-board"
 				(path "/3adacf52-553b-4591-a9be-9572be717553"
 					(reference "#PWR048")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:D_Small")
+		(at 152.4 157.48 180)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "b8013038-948c-4c69-b6e7-524f112ad16e")
+		(property "Reference" "D10"
+			(at 150.368 153.416 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "D_Small"
+			(at 152.4 155.448 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Diode_SMD:D_SOD-123"
+			(at 152.4 157.48 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 152.4 157.48 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Diode, small symbol"
+			(at 152.4 157.48 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Sim.Device" "D"
+			(at 152.4 157.48 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Sim.Pins" "1=K 2=A"
+			(at 152.4 157.48 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Sim.Type" ""
+			(at 152.4 157.48 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "JLC P/N" "C82544"
+			(at 152.4 157.48 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "c50fe53e-844a-4897-8bda-7bd767a03a4c")
+		)
+		(pin "2"
+			(uuid "9ca6547c-bed7-40d7-bf17-3bd673104517")
+		)
+		(instances
+			(project "robot-board"
+				(path "/3adacf52-553b-4591-a9be-9572be717553"
+					(reference "D10")
 					(unit 1)
 				)
 			)
@@ -48618,7 +49339,7 @@
 				(hide yes)
 			)
 		)
-		(property "JLC P/N" "C41417348"
+		(property "JLC P/N" "C49423356"
 			(at 104.14 115.57 90)
 			(effects
 				(font
@@ -48658,81 +49379,6 @@
 			(project ""
 				(path "/3adacf52-553b-4591-a9be-9572be717553"
 					(reference "J1")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Connector:TestPoint")
-		(at 24.13 82.55 90)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom no)
-		(on_board yes)
-		(dnp no)
-		(uuid "cfed54ab-3ae7-4f77-8e0b-7de844789441")
-		(property "Reference" "TP1"
-			(at 19.558 81.534 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Value" "D0"
-			(at 22.098 81.534 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Footprint" "TestPoint:TestPoint_THTPad_2.0x2.0mm_Drill1.0mm"
-			(at 24.13 77.47 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "~"
-			(at 24.13 77.47 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "test point"
-			(at 24.13 82.55 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Sim.Type" ""
-			(at 24.13 82.55 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "f9f20c06-69dc-43a0-9025-42d4f0040518")
-		)
-		(instances
-			(project "robot-board"
-				(path "/3adacf52-553b-4591-a9be-9572be717553"
-					(reference "TP1")
 					(unit 1)
 				)
 			)
@@ -50811,6 +51457,74 @@
 			(project "robot-board"
 				(path "/3adacf52-553b-4591-a9be-9572be717553"
 					(reference "TP5")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Jumper:SolderJumper_2_Open")
+		(at 158.75 157.48 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom no)
+		(on_board yes)
+		(dnp no)
+		(uuid "fc9e0b37-baea-4e02-bf9b-112ffd00edce")
+		(property "Reference" "JP1"
+			(at 158.75 155.448 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "SolderJumper_2_Open"
+			(at 158.75 153.67 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Footprint" "Jumper:SolderJumper-2_P1.3mm_Open_Pad1.0x1.5mm"
+			(at 158.75 157.48 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 158.75 157.48 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Solder Jumper, 2-pole, open"
+			(at 158.75 157.48 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "2"
+			(uuid "d53cd92e-f355-4bf0-a029-a1d24abc3f02")
+		)
+		(pin "1"
+			(uuid "b867d5e1-ee01-498d-afab-2f7605a9a59b")
+		)
+		(instances
+			(project ""
+				(path "/3adacf52-553b-4591-a9be-9572be717553"
+					(reference "JP1")
 					(unit 1)
 				)
 			)
