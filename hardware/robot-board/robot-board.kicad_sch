@@ -35507,7 +35507,7 @@
 				(hide yes)
 			)
 		)
-		(property "JLC P/N" "C82045"
+		(property "JLC P/N" "C129328"
 			(at 236.22 101.6 0)
 			(effects
 				(font
@@ -38421,7 +38421,7 @@
 				(hide yes)
 			)
 		)
-		(property "JLC P/N" "C110776"
+		(property "JLC P/N" "C2906864"
 			(at 90.17 177.8 0)
 			(effects
 				(font
@@ -44520,7 +44520,7 @@
 				(hide yes)
 			)
 		)
-		(property "JLC P/N" "C82045"
+		(property "JLC P/N" "C129328"
 			(at 236.22 74.93 0)
 			(effects
 				(font
@@ -49749,7 +49749,7 @@
 				(hide yes)
 			)
 		)
-		(property "JLC P/N" "C110776"
+		(property "JLC P/N" "C2906864"
 			(at 90.17 135.89 0)
 			(effects
 				(font
