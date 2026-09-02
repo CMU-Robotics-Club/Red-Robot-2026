@@ -60,60 +60,16 @@
           "this is the footprint"
         ],
         [
-          "clearance|55362600|70842252|0a1df2ac-75c9-4f3a-84c6-d193d9c4b4f6|7c7d6eed-a1e7-4d67-8b9f-be7f1d4c81b7",
-          "this is the footprint"
-        ],
-        [
           "clearance|55529811|66587244|74673f7e-12ca-4e73-9bb7-4731e9018bfc|e530eccd-7520-47be-abf5-dc424a6dcaa1",
           "this is the footprint"
-        ],
-        [
-          "clearance|57284189|66619502|8ed22a8a-2a77-4c17-a232-1c196ed00eee|11098f36-2533-48db-b0a8-c57391fb0e1f",
-          "footprint"
         ],
         [
           "clearance|57284189|70809994|c1d082c9-cc82-499a-92a0-23b523055630|5beb2ac1-5e7b-4ece-ac61-f7af6f7b9451",
           "this is the footprint"
         ],
         [
-          "clearance|57547000|68341622|ea10ca68-083b-460b-8d49-8da92edcb6ef|aeed0d13-fab5-4e86-9ce9-4272d5dd89cb",
-          "this is the footprint"
-        ],
-        [
           "clearance|57547000|68584748|aeed0d13-fab5-4e86-9ce9-4272d5dd89cb|be891a24-0a5b-4b08-a250-1577473a10c4",
           "footprint"
-        ],
-        [
-          "clearance|57547000|68587748|aa6d014b-879b-4908-b8fb-ff1afc60e2bd|aeed0d13-fab5-4e86-9ce9-4272d5dd89cb",
-          "this is the footprint"
-        ],
-        [
-          "shorting_items|42195000|144216567|f5215101-4fee-488e-a8c9-2922aec1d3fe|42b3df4e-64f2-4468-b841-11311eba82b3",
-          "bum ass footprint"
-        ],
-        [
-          "shorting_items|46995000|144216567|965b311c-9ca0-434a-81c7-be44e464ecd2|d337ecf1-6eff-4916-ab8e-cbda6751353b",
-          "bum ass footprint 2"
-        ],
-        [
-          "silk_overlap|56850103|65425000|c1a75ead-0fa1-40bd-9bbd-1ac440bb4ef4|dbd7a888-0c72-47c8-94a0-37c5eece2f01",
-          ""
-        ],
-        [
-          "silk_overlap|57702369|65425000|c1a75ead-0fa1-40bd-9bbd-1ac440bb4ef4|dbd7a888-0c72-47c8-94a0-37c5eece2f01",
-          "i dont really care"
-        ],
-        [
-          "solder_mask_bridge|42195000|144216567|f5215101-4fee-488e-a8c9-2922aec1d3fe|42b3df4e-64f2-4468-b841-11311eba82b3",
-          "footprint skissue"
-        ],
-        [
-          "solder_mask_bridge|46995000|144216567|965b311c-9ca0-434a-81c7-be44e464ecd2|d337ecf1-6eff-4916-ab8e-cbda6751353b",
-          "footprint skissue"
-        ],
-        [
-          "solder_mask_bridge|57547000|68584748|424fd820-a18d-4f27-a74a-bd097af016ac|e143c7f4-bb02-4c27-b87b-6042f8f6f1b6",
-          "these are the same irl"
         ],
         [
           "solder_mask_bridge|57547000|68587748|aeed0d13-fab5-4e86-9ce9-4272d5dd89cb|aa6d014b-879b-4908-b8fb-ff1afc60e2bd",
@@ -594,7 +550,7 @@
       "method": 0,
       "sort_order": 0
     },
-    "bom_export_filename": "out/robot-board.csv",
+    "bom_export_filename": "${PROJECTNAME}.csv",
     "bom_fmt_presets": [],
     "bom_fmt_settings": {
       "field_delimiter": ",",
@@ -750,7 +706,7 @@
         "uuid": "3adacf52-553b-4591-a9be-9572be717553"
       }
     ],
-    "used_designators": "",
+    "used_designators": "#PWR46,#PWR51,#PWR57,#PWR63-65,#PWR76-78,#PWR83,C34-36,R21,R23,U9-10",
     "variants": []
   },
   "sheets": [
