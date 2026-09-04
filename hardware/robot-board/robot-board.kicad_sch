@@ -5391,6 +5391,105 @@
 			)
 			(embedded_fonts no)
 		)
+		(symbol "Mechanical:MountingHole"
+			(pin_names
+				(offset 1.016)
+			)
+			(exclude_from_sim no)
+			(in_bom no)
+			(on_board yes)
+			(in_pos_files yes)
+			(duplicate_pin_numbers_are_jumpers no)
+			(property "Reference" "H"
+				(at 0 5.08 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Value" "MountingHole"
+				(at 0 3.175 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Footprint" ""
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Datasheet" ""
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Description" "Mounting Hole without connection"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "ki_keywords" "mounting hole"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "ki_fp_filters" "MountingHole*"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(symbol "MountingHole_0_1"
+				(circle
+					(center 0 0)
+					(radius 1.27)
+					(stroke
+						(width 1.27)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+			)
+			(embedded_fonts no)
+		)
 		(symbol "Power_Protection:TVS1400DRV"
 			(pin_names
 				(offset 0)
@@ -40211,7 +40310,7 @@
 				)
 			)
 		)
-		(property "JLC P/N" "C2906864"
+		(property "JLC P/N" "C11702"
 			(at 90.17 177.8 0)
 			(hide yes)
 			(show_name no)
@@ -40428,46 +40527,46 @@
 			)
 		)
 		(pin "12"
-			(uuid "1f392293-791c-4948-96cb-167aab929d2c")
+			(uuid "1f392293-791c-4948-96cb-167aab929d2d")
 		)
 		(pin "8"
-			(uuid "dd136ec4-0784-4b72-bed1-d82b7d396936")
+			(uuid "dd136ec4-0784-4b72-bed1-d82b7d396937")
 		)
 		(pin "3"
-			(uuid "22aacead-27e2-419e-b701-be5fbf958582")
+			(uuid "22aacead-27e2-419e-b701-be5fbf958583")
 		)
 		(pin "4"
-			(uuid "cbda38d1-e69c-4891-9b27-ecb9339af955")
+			(uuid "cbda38d1-e69c-4891-9b27-ecb9339af956")
 		)
 		(pin "13"
-			(uuid "39748e8e-02e7-4359-9e13-acebc40caa8b")
+			(uuid "39748e8e-02e7-4359-9e13-acebc40caa8c")
 		)
 		(pin "6"
-			(uuid "f1bdef4d-fcc6-4eb7-8902-bf84b2862a4d")
+			(uuid "f1bdef4d-fcc6-4eb7-8902-bf84b2862a4e")
 		)
 		(pin "5"
-			(uuid "f5581c93-68d0-4808-b0e1-6b5d9e8f481d")
+			(uuid "f5581c93-68d0-4808-b0e1-6b5d9e8f481e")
 		)
 		(pin "9"
-			(uuid "6c452c46-6ab7-4580-aae1-f14a45b6a0c0")
+			(uuid "6c452c46-6ab7-4580-aae1-f14a45b6a0c1")
 		)
 		(pin "2"
-			(uuid "7ed61f4d-54ec-4b7b-ac01-225fe03520ee")
+			(uuid "7ed61f4d-54ec-4b7b-ac01-225fe03520ef")
 		)
 		(pin "1"
-			(uuid "99c64035-b2b4-4e3a-aef2-63e6872093f4")
+			(uuid "99c64035-b2b4-4e3a-aef2-63e6872093f5")
 		)
 		(pin "11"
-			(uuid "91f7ef2b-a8cf-426a-99d2-5e24d24c65df")
+			(uuid "91f7ef2b-a8cf-426a-99d2-5e24d24c65e0")
 		)
 		(pin "10"
-			(uuid "b7e4e442-690b-4e65-835c-be728e9717ec")
+			(uuid "b7e4e442-690b-4e65-835c-be728e9717ed")
 		)
 		(pin "7"
-			(uuid "143a965a-0973-484f-8572-5978018b972a")
+			(uuid "143a965a-0973-484f-8572-5978018b972b")
 		)
 		(pin "14"
-			(uuid "ac891682-e050-4e67-8307-da0339ddde11")
+			(uuid "ac891682-e050-4e67-8307-da0339ddde12")
 		)
 		(instances
 			(project "robot-board"
@@ -41054,7 +41153,7 @@
 				(justify left)
 			)
 		)
-		(property "Value" "5.1R"
+		(property "Value" "1k"
 			(at 200.66 81.28 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -41098,7 +41197,7 @@
 				)
 			)
 		)
-		(property "JLC P/N" "C2909363"
+		(property "JLC P/N" "C11702"
 			(at 199.39 80.01 0)
 			(hide yes)
 			(show_name no)
@@ -41825,7 +41924,7 @@
 				(justify left)
 			)
 		)
-		(property "Value" "5.1R"
+		(property "Value" "1k"
 			(at 191.77 81.28 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -41869,7 +41968,7 @@
 				)
 			)
 		)
-		(property "JLC P/N" "C2909363"
+		(property "JLC P/N" "C11702"
 			(at 190.5 80.01 0)
 			(hide yes)
 			(show_name no)
@@ -43975,46 +44074,46 @@
 			)
 		)
 		(pin "12"
-			(uuid "1f392293-791c-4948-96cb-167aab929d2c")
+			(uuid "1f392293-791c-4948-96cb-167aab929d2e")
 		)
 		(pin "8"
-			(uuid "dd136ec4-0784-4b72-bed1-d82b7d396936")
+			(uuid "dd136ec4-0784-4b72-bed1-d82b7d396938")
 		)
 		(pin "3"
-			(uuid "22aacead-27e2-419e-b701-be5fbf958582")
+			(uuid "22aacead-27e2-419e-b701-be5fbf958584")
 		)
 		(pin "4"
-			(uuid "cbda38d1-e69c-4891-9b27-ecb9339af955")
+			(uuid "cbda38d1-e69c-4891-9b27-ecb9339af957")
 		)
 		(pin "13"
-			(uuid "39748e8e-02e7-4359-9e13-acebc40caa8b")
+			(uuid "39748e8e-02e7-4359-9e13-acebc40caa8d")
 		)
 		(pin "6"
-			(uuid "f1bdef4d-fcc6-4eb7-8902-bf84b2862a4d")
+			(uuid "f1bdef4d-fcc6-4eb7-8902-bf84b2862a4f")
 		)
 		(pin "5"
-			(uuid "f5581c93-68d0-4808-b0e1-6b5d9e8f481d")
+			(uuid "f5581c93-68d0-4808-b0e1-6b5d9e8f481f")
 		)
 		(pin "9"
-			(uuid "6c452c46-6ab7-4580-aae1-f14a45b6a0c0")
+			(uuid "6c452c46-6ab7-4580-aae1-f14a45b6a0c2")
 		)
 		(pin "2"
-			(uuid "7ed61f4d-54ec-4b7b-ac01-225fe03520ee")
+			(uuid "7ed61f4d-54ec-4b7b-ac01-225fe03520f0")
 		)
 		(pin "1"
-			(uuid "99c64035-b2b4-4e3a-aef2-63e6872093f4")
+			(uuid "99c64035-b2b4-4e3a-aef2-63e6872093f6")
 		)
 		(pin "11"
-			(uuid "91f7ef2b-a8cf-426a-99d2-5e24d24c65df")
+			(uuid "91f7ef2b-a8cf-426a-99d2-5e24d24c65e1")
 		)
 		(pin "10"
-			(uuid "b7e4e442-690b-4e65-835c-be728e9717ec")
+			(uuid "b7e4e442-690b-4e65-835c-be728e9717ee")
 		)
 		(pin "7"
-			(uuid "143a965a-0973-484f-8572-5978018b972a")
+			(uuid "143a965a-0973-484f-8572-5978018b972c")
 		)
 		(pin "14"
-			(uuid "ac891682-e050-4e67-8307-da0339ddde11")
+			(uuid "ac891682-e050-4e67-8307-da0339ddde13")
 		)
 		(instances
 			(project "robot-board"
@@ -46012,7 +46111,7 @@
 				(justify left)
 			)
 		)
-		(property "Value" "5.1R"
+		(property "Value" "1k"
 			(at 165.1 81.28 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -46056,7 +46155,7 @@
 				)
 			)
 		)
-		(property "JLC P/N" "C2909363"
+		(property "JLC P/N" "C11702"
 			(at 163.83 80.01 0)
 			(hide yes)
 			(show_name no)
@@ -46711,46 +46810,46 @@
 			)
 		)
 		(pin "12"
-			(uuid "1f392293-791c-4948-96cb-167aab929d2c")
+			(uuid "1f392293-791c-4948-96cb-167aab929d2f")
 		)
 		(pin "8"
-			(uuid "dd136ec4-0784-4b72-bed1-d82b7d396936")
+			(uuid "dd136ec4-0784-4b72-bed1-d82b7d396939")
 		)
 		(pin "3"
-			(uuid "22aacead-27e2-419e-b701-be5fbf958582")
+			(uuid "22aacead-27e2-419e-b701-be5fbf958585")
 		)
 		(pin "4"
-			(uuid "cbda38d1-e69c-4891-9b27-ecb9339af955")
+			(uuid "cbda38d1-e69c-4891-9b27-ecb9339af958")
 		)
 		(pin "13"
-			(uuid "39748e8e-02e7-4359-9e13-acebc40caa8b")
+			(uuid "39748e8e-02e7-4359-9e13-acebc40caa8e")
 		)
 		(pin "6"
-			(uuid "f1bdef4d-fcc6-4eb7-8902-bf84b2862a4d")
+			(uuid "f1bdef4d-fcc6-4eb7-8902-bf84b2862a50")
 		)
 		(pin "5"
-			(uuid "f5581c93-68d0-4808-b0e1-6b5d9e8f481d")
+			(uuid "f5581c93-68d0-4808-b0e1-6b5d9e8f4820")
 		)
 		(pin "9"
-			(uuid "6c452c46-6ab7-4580-aae1-f14a45b6a0c0")
+			(uuid "6c452c46-6ab7-4580-aae1-f14a45b6a0c3")
 		)
 		(pin "2"
-			(uuid "7ed61f4d-54ec-4b7b-ac01-225fe03520ee")
+			(uuid "7ed61f4d-54ec-4b7b-ac01-225fe03520f1")
 		)
 		(pin "1"
-			(uuid "99c64035-b2b4-4e3a-aef2-63e6872093f4")
+			(uuid "99c64035-b2b4-4e3a-aef2-63e6872093f7")
 		)
 		(pin "11"
-			(uuid "91f7ef2b-a8cf-426a-99d2-5e24d24c65df")
+			(uuid "91f7ef2b-a8cf-426a-99d2-5e24d24c65e2")
 		)
 		(pin "10"
-			(uuid "b7e4e442-690b-4e65-835c-be728e9717ec")
+			(uuid "b7e4e442-690b-4e65-835c-be728e9717ef")
 		)
 		(pin "7"
-			(uuid "143a965a-0973-484f-8572-5978018b972a")
+			(uuid "143a965a-0973-484f-8572-5978018b972d")
 		)
 		(pin "14"
-			(uuid "ac891682-e050-4e67-8307-da0339ddde11")
+			(uuid "ac891682-e050-4e67-8307-da0339ddde14")
 		)
 		(instances
 			(project "robot-board"
@@ -46997,7 +47096,7 @@
 				(justify left)
 			)
 		)
-		(property "Value" "5.1R"
+		(property "Value" "1k"
 			(at 173.99 81.28 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -47041,7 +47140,7 @@
 				)
 			)
 		)
-		(property "JLC P/N" "C2909363"
+		(property "JLC P/N" "C11702"
 			(at 172.72 80.01 0)
 			(hide yes)
 			(show_name no)
@@ -50119,6 +50218,82 @@
 		)
 	)
 	(symbol
+		(lib_id "Mechanical:MountingHole")
+		(at 207.01 193.04 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom no)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "b6eba7fb-ff1a-4e5e-85ce-c6c03adf2cf7")
+		(property "Reference" "H1"
+			(at 209.55 191.7699 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "MountingHole"
+			(at 209.55 194.3099 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "MountingHole:MountingHole_3.2mm_M3"
+			(at 207.01 193.04 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 207.01 193.04 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Mounting Hole without connection"
+			(at 207.01 193.04 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(instances
+			(project "robot-board"
+				(path "/3adacf52-553b-4591-a9be-9572be717553"
+					(reference "H1")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "power:+5V")
 		(at 114.3 175.26 0)
 		(unit 1)
@@ -52625,7 +52800,7 @@
 				)
 			)
 		)
-		(property "JLC P/N" "C2906864"
+		(property "JLC P/N" "C11702"
 			(at 90.17 135.89 0)
 			(hide yes)
 			(show_name no)
@@ -52865,7 +53040,7 @@
 				(justify left)
 			)
 		)
-		(property "Value" "82R"
+		(property "Value" "5.1k"
 			(at 182.88 81.28 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -52909,7 +53084,7 @@
 				)
 			)
 		)
-		(property "JLC P/N" "C163453"
+		(property "JLC P/N" "C25905"
 			(at 181.61 80.01 0)
 			(hide yes)
 			(show_name no)
@@ -53101,46 +53276,46 @@
 			)
 		)
 		(pin "12"
-			(uuid "1f392293-791c-4948-96cb-167aab929d2c")
+			(uuid "1f392293-791c-4948-96cb-167aab929d30")
 		)
 		(pin "8"
-			(uuid "dd136ec4-0784-4b72-bed1-d82b7d396936")
+			(uuid "dd136ec4-0784-4b72-bed1-d82b7d39693a")
 		)
 		(pin "3"
-			(uuid "22aacead-27e2-419e-b701-be5fbf958582")
+			(uuid "22aacead-27e2-419e-b701-be5fbf958586")
 		)
 		(pin "4"
-			(uuid "cbda38d1-e69c-4891-9b27-ecb9339af955")
+			(uuid "cbda38d1-e69c-4891-9b27-ecb9339af959")
 		)
 		(pin "13"
-			(uuid "39748e8e-02e7-4359-9e13-acebc40caa8b")
+			(uuid "39748e8e-02e7-4359-9e13-acebc40caa8f")
 		)
 		(pin "6"
-			(uuid "f1bdef4d-fcc6-4eb7-8902-bf84b2862a4d")
+			(uuid "f1bdef4d-fcc6-4eb7-8902-bf84b2862a51")
 		)
 		(pin "5"
-			(uuid "f5581c93-68d0-4808-b0e1-6b5d9e8f481d")
+			(uuid "f5581c93-68d0-4808-b0e1-6b5d9e8f4821")
 		)
 		(pin "9"
-			(uuid "6c452c46-6ab7-4580-aae1-f14a45b6a0c0")
+			(uuid "6c452c46-6ab7-4580-aae1-f14a45b6a0c4")
 		)
 		(pin "2"
-			(uuid "7ed61f4d-54ec-4b7b-ac01-225fe03520ee")
+			(uuid "7ed61f4d-54ec-4b7b-ac01-225fe03520f2")
 		)
 		(pin "1"
-			(uuid "99c64035-b2b4-4e3a-aef2-63e6872093f4")
+			(uuid "99c64035-b2b4-4e3a-aef2-63e6872093f8")
 		)
 		(pin "11"
-			(uuid "91f7ef2b-a8cf-426a-99d2-5e24d24c65df")
+			(uuid "91f7ef2b-a8cf-426a-99d2-5e24d24c65e3")
 		)
 		(pin "10"
-			(uuid "b7e4e442-690b-4e65-835c-be728e9717ec")
+			(uuid "b7e4e442-690b-4e65-835c-be728e9717f0")
 		)
 		(pin "7"
-			(uuid "143a965a-0973-484f-8572-5978018b972a")
+			(uuid "143a965a-0973-484f-8572-5978018b972e")
 		)
 		(pin "14"
-			(uuid "ac891682-e050-4e67-8307-da0339ddde11")
+			(uuid "ac891682-e050-4e67-8307-da0339ddde15")
 		)
 		(instances
 			(project "robot-board"
@@ -53439,6 +53614,82 @@
 			(project "robot-board"
 				(path "/3adacf52-553b-4591-a9be-9572be717553"
 					(reference "NT2")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Mechanical:MountingHole")
+		(at 207.01 198.12 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom no)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "e7b672b2-f665-44f1-a802-b8e2ea4d63b9")
+		(property "Reference" "H2"
+			(at 209.55 196.8499 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "MountingHole"
+			(at 209.55 199.3899 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "MountingHole:MountingHole_3.2mm_M3"
+			(at 207.01 198.12 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 207.01 198.12 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Mounting Hole without connection"
+			(at 207.01 198.12 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(instances
+			(project "robot-board"
+				(path "/3adacf52-553b-4591-a9be-9572be717553"
+					(reference "H2")
 					(unit 1)
 				)
 			)
@@ -54306,6 +54557,82 @@
 			(project "robot-board"
 				(path "/3adacf52-553b-4591-a9be-9572be717553"
 					(reference "#PWR071")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Mechanical:MountingHole")
+		(at 207.01 203.2 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom no)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "f46a9a0e-57c1-4ef0-8579-7627bc2419d1")
+		(property "Reference" "H3"
+			(at 209.55 201.9299 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "MountingHole"
+			(at 209.55 204.4699 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "MountingHole:MountingHole_3.2mm_M3"
+			(at 207.01 203.2 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 207.01 203.2 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Mounting Hole without connection"
+			(at 207.01 203.2 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(instances
+			(project "robot-board"
+				(path "/3adacf52-553b-4591-a9be-9572be717553"
+					(reference "H3")
 					(unit 1)
 				)
 			)

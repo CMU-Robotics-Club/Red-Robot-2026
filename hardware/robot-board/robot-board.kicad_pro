@@ -60,15 +60,51 @@
           "this is the footprint"
         ],
         [
+          "clearance|55362600|70809994|0a1df2ac-75c9-4f3a-84c6-d193d9c4b4f6|7c7d6eed-a1e7-4d67-8b9f-be7f1d4c81b7",
+          "footprint"
+        ],
+        [
           "clearance|55529811|66587244|74673f7e-12ca-4e73-9bb7-4731e9018bfc|e530eccd-7520-47be-abf5-dc424a6dcaa1",
           "this is the footprint"
+        ],
+        [
+          "clearance|57284189|66587244|8ed22a8a-2a77-4c17-a232-1c196ed00eee|11098f36-2533-48db-b0a8-c57391fb0e1f",
+          "footprint"
         ],
         [
           "clearance|57284189|70809994|c1d082c9-cc82-499a-92a0-23b523055630|5beb2ac1-5e7b-4ece-ac61-f7af6f7b9451",
           "this is the footprint"
         ],
         [
+          "clearance|57547000|68341622|aeed0d13-fab5-4e86-9ce9-4272d5dd89cb|ea10ca68-083b-460b-8d49-8da92edcb6ef",
+          "footprint"
+        ],
+        [
           "clearance|57547000|68584748|aeed0d13-fab5-4e86-9ce9-4272d5dd89cb|be891a24-0a5b-4b08-a250-1577473a10c4",
+          "footprint"
+        ],
+        [
+          "clearance|68875736|70437500|0c0314d5-e28a-48d9-954c-847178bd42fd|ca0f574d-0a94-44a1-9455-d6cbcddff966",
+          "footprint"
+        ],
+        [
+          "shorting_items|57547000|68587748|aa6d014b-879b-4908-b8fb-ff1afc60e2bd|aeed0d13-fab5-4e86-9ce9-4272d5dd89cb",
+          "footprint"
+        ],
+        [
+          "solder_mask_bridge|57547000|68584748|424fd820-a18d-4f27-a74a-bd097af016ac|4b2ec6bf-3c99-052f-0080-9f580496130b",
+          "footprint"
+        ],
+        [
+          "solder_mask_bridge|57547000|68584748|424fd820-a18d-4f27-a74a-bd097af016ac|a489598e-fe2b-426b-8e18-1b0c18f0469c",
+          "footprint"
+        ],
+        [
+          "solder_mask_bridge|57547000|68584748|424fd820-a18d-4f27-a74a-bd097af016ac|aa6d014b-879b-4908-b8fb-ff1afc60e2bd",
+          "footprint"
+        ],
+        [
+          "solder_mask_bridge|57547000|68584748|424fd820-a18d-4f27-a74a-bd097af016ac|e6cacddc-fee4-036e-0db9-113788503ae1",
           "footprint"
         ],
         [
@@ -78,6 +114,10 @@
         [
           "starved_thermal|37200000|96710000|b19ee0ab-0171-4234-91e3-b3bdff68f7a3|8f8ebe3c-5989-4274-bcc0-75ec6aa8df75|F.Cu",
           "not possible due to board constraints"
+        ],
+        [
+          "starved_thermal|64135000|105664000|b19ee0ab-0171-4234-91e3-b3bdff68f7a3|2603dce8-d37c-4cbb-b24a-3f97229b9e1a|F.Cu",
+          ""
         ]
       ],
       "meta": {
@@ -706,7 +746,7 @@
         "uuid": "3adacf52-553b-4591-a9be-9572be717553"
       }
     ],
-    "used_designators": "#PWR46,#PWR51,#PWR57,#PWR63-65,#PWR76-78,#PWR83,C34-36,R21,R23,U9-10",
+    "used_designators": "H1-3",
     "variants": []
   },
   "sheets": [
