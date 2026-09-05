@@ -3,9 +3,9 @@
     "GenerationSoftware": {
       "Vendor": "KiCad",
       "Application": "Pcbnew",
-      "Version": "9.0.2"
+      "Version": "10.0.1"
     },
-    "CreationDate": "2026-04-13T14:18:15-04:00"
+    "CreationDate": "2026-09-05T01:31:50-04:00"
   },
   "GeneralSpecs": {
     "ProjectId": {
@@ -48,12 +48,12 @@
     },
     {
       "Path": "robot-board-In1_Cu.gbr",
-      "FileFunction": "Copper,L5,Inr",
+      "FileFunction": "Copper,L2,Inr",
       "FilePolarity": "Positive"
     },
     {
       "Path": "robot-board-In2_Cu.gbr",
-      "FileFunction": "Copper,L7,Inr",
+      "FileFunction": "Copper,L3,Inr",
       "FilePolarity": "Positive"
     },
     {
