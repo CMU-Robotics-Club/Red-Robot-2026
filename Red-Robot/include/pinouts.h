@@ -1,46 +1,51 @@
 /**
  * @file  pinouts.h
  * @brief ESP32 pinout map
- * 
- * Nets should match with hardware schem
+ *
+ * Nets should match name with schematic
  */
 
-// Motors
-#define MOTOR0_PWM  7
-#define MOTOR1_PWM  8
-#define MOTOR2_PWM  9
-#define MOTOR3_PWM  10
+#pragma once
 
-#define MOTOR0_EN   36
-#define MOTOR1_EN   35
-#define MOTOR2_EN   14
-#define MOTOR3_EN   43 // TXD0
+// Motors
+#define MOTOR0_PWM 7
+#define MOTOR1_PWM 8
+#define MOTOR2_PWM 9
+#define MOTOR3_PWM 10
+
+#define MOTOR0_EN 36
+#define MOTOR1_EN 35
+#define MOTOR2_EN 14
+#define MOTOR3_EN 43 // TXD0
 
 // Servo PWM
-#define SERVO0_PWM  13
-#define SERVO1_PWM  12
-#define SERVO2_PWM  47
-#define SERVO3_PWM  48
+#define SERVO0_PWM 13
+#define SERVO1_PWM 12
+#define SERVO2_PWM 47
+#define SERVO3_PWM 48
 
 // Buzzer
-#define BUZZER      15
+#define BUZZER 15
 
 // Status LEDs
-#define LBAT_LED    16
-#define RADIO_LED   21
-#define RX_LED      17
-#define TX_LED      18
+#define LBAT_LED 16
+#define RADIO_LED 21
+#define RX_LED 17
+#define TX_LED 18
 
 // Line following
-#define LF0         37
-#define LF1         38
-#define LF2         39
-#define LF3         40
-#define LF4         41
-#define LF5         42
-#define LF_LEDCTRL  43 // RXD0
+#define LF0 37
+#define LF1 38
+#define LF2 39
+#define LF3 40
+#define LF4 41
+#define LF5 42
+#define LF_LEDCTRL 43 // RXD0
 
 // BMS
-#define BMS_LOAD    4
-#define BMS_SDI     5
-#define BMS_CLK     6
+#define BMS_LOAD 4
+#define BMS_SDI 5
+#define BMS_CLK 6
+
+// Battery voltage divider
+#define ADC1_0 1

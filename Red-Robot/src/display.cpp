@@ -1,97 +1,64 @@
-#include <Arduino.h>
-
 #include "display.h"
 #include "pinouts.h"
+#include <Arduino.h>
+#include <SPI.h>
 
-namespace
-{
-  // Segment bit layout matches the STP08CP05M output order (OUT7..OUT0):
-  // bit7..bit1 = a,b,c,d,e,f,g ; bit0 = decimal point.
-  const uint8_t kSegmentTable[10] = {
-      0b11111100, // 0
-      0b01100000, // 1
-      0b11011010, // 2
-      0b11110010, // 3
-      0b01100110, // 4
-      0b10110110, // 5
-      0b10111110, // 6
-      0b11100000, // 7
-      0b11111110, // 8
-      0b11110110, // 9
-  };
+namespace {
+/**
+ * @brief SPI driver for MAX7219EWG
+ *
+ * This should be thread safe since only this chip uses the bus
+ */
+SPIClass spi(HSPI);
 
-  // Left-to-right digit order: DP3 (tens), DP2 (ones), DP1 (tenths).
-  const uint8_t kDigitSelectPins[3] = {BMS_D0, BMS_D1, BMS_D2};
+/**
+ * @brief SPI write
+ */
+void spi_write(uint8_t address, uint8_t data) {
+  // 10MHz clock speed, MSB First, SPI Mode 0
+  spi.beginTransaction(SPISettings(10000000, MSBFIRST, SPI_MODE0));
+  digitalWrite(BMS_LOAD, LOW);  // Select MAX7219
+  spi.transfer(address);        // Transmit address
+  spi.transfer(data);           // Transmit data
+  digitalWrite(BMS_LOAD, HIGH); // Latch data into MAX7219
+  spi.endTransaction();
+}
 
-  // "XX.X" -> decimal point lives on the ones digit (the middle one).
-  constexpr uint8_t kDecimalPointDigit = 1;
-
-  volatile uint8_t g_digitPattern[3] = {
-      kSegmentTable[0],
-      (uint8_t)(kSegmentTable[0] | 1),
-      kSegmentTable[0],
-  };
-
-  void shiftOutByte(uint8_t value)
-  {
-    digitalWrite(BATMON_LATCH, LOW);
-    for (int8_t i = 7; i >= 0; i--)
-    {
-      digitalWrite(BATMON_CLK, LOW);
-      digitalWrite(BATMON_DATA, !!(value & (1 << i)));
-      delayMicroseconds(2);
-      digitalWrite(BATMON_CLK, HIGH);
-      delayMicroseconds(2);
-    }
-    digitalWrite(BATMON_LATCH, HIGH);
+/**
+ * @brief Draw a single digit (0 to 9) at a position in [3,2,1]
+ */
+void show_digit(uint8_t position, uint8_t number, bool decimal_point) {
+  if (position >= 1 && position <= 3 && number <= 9) {
+    number |= decimal_point ? 0x80 : 0;
+    spi_write(position, number);
   }
-
-  void refreshTask(void *)
-  {
-    uint8_t digit = 0;
-    for (;;)
-    {
-      for (uint8_t d = 0; d < 3; d++)
-        digitalWrite(kDigitSelectPins[d], LOW);
-
-      shiftOutByte(g_digitPattern[digit]);
-      digitalWrite(kDigitSelectPins[digit], HIGH);
-
-      digit = (digit + 1) % 3;
-      vTaskDelay(pdMS_TO_TICKS(3)); // ~83Hz per-digit refresh, no visible flicker
-    }
-  }
+}
 } // namespace
 
-void displayInit()
-{
-  pinMode(BATMON_LATCH, OUTPUT);
-  pinMode(BATMON_CLK, OUTPUT);
-  pinMode(BATMON_DATA, OUTPUT);
-
-  for (uint8_t d = 0; d < 3; d++)
-  {
-    pinMode(kDigitSelectPins[d], OUTPUT);
-    digitalWrite(kDigitSelectPins[d], LOW);
-  }
-
-  xTaskCreatePinnedToCore(refreshTask, "disp_refresh", 2048, nullptr, 1, nullptr, 1);
+namespace Display {
+void init() {
+  pinMode(BMS_LOAD, OUTPUT);
+  digitalWrite(BMS_LOAD, HIGH);
+  // no MISO since the driver chip doesn't talk back
+  spi.begin(BMS_CLK, -1, BMS_SDI, BMS_LOAD);
+  // decode mode: enable Code B decode for digits 0-2 to write digits directly
+  spi_write(0x09, 0x07);
+  spi_write(0x0A, 0x0F); // intensity: set to max brightness
+  spi_write(0x0B, 0x02); // scan limit: display only 3 digits
+  spi_write(0x0C, 0x01); // shutdown: turn on normal operation
+  spi_write(0x0F, 0x00); // display Test off
+  show(0);               // initialize with 00.0
 }
 
-void displayNumber(uint16_t value)
-{
+void show(uint16_t value) {
+  // Clamp from 0 to 999
   if (value > 999)
     value = 999;
-
-  uint8_t digits[3] = {
-      (uint8_t)(value / 100),
-      (uint8_t)((value / 10) % 10),
-      (uint8_t)(value % 10),
-  };
-
-  for (uint8_t d = 0; d < 3; d++)
-  {
-    uint8_t dp = (d == kDecimalPointDigit) ? 1 : 0;
-    g_digitPattern[d] = kSegmentTable[digits[d]] | dp;
-  }
+  uint8_t digit1 = value / 100;
+  uint8_t digit2 = (value / 10) % 10;
+  uint8_t digit3 = value % 10;
+  show_digit(1, digit1, true); // decimal point
+  show_digit(2, digit2, false);
+  show_digit(3, digit3, false);
 }
+} // namespace Display
