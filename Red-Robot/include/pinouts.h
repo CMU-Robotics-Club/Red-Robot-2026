@@ -8,10 +8,10 @@
 #pragma once
 
 // Motors
-#define MOTOR0_PWM 7
-#define MOTOR1_PWM 8
-#define MOTOR2_PWM 9
-#define MOTOR3_PWM 10
+#define MOTOR0_PHASE 7
+#define MOTOR1_PHASE 8
+#define MOTOR2_PHASE 9
+#define MOTOR3_PHASE 10
 
 #define MOTOR0_EN 36
 #define MOTOR1_EN 35
