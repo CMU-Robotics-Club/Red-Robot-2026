@@ -3,7 +3,7 @@
 #include <Arduino.h>
 
 namespace {
-const uint8_t buzzer_channel = 0;
+const uint8_t buzzer_channel = 7;
 const uint32_t buzzer_freq = 5000; // dummy value
 const uint8_t buzzer_resolution = 8;
 
