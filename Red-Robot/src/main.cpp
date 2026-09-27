@@ -5,12 +5,23 @@
 #include "buzzer.h"
 #include "servo.h"
 
+#define VOLTAGE_BUF_SIZE 60
+
 void batteryLevelTask(void *)
 {
-  for (;;)
+  int voltage_buf[VOLTAGE_BUF_SIZE] = {};
+  uint16_t index = 0;
+  while (1)
   {
     vTaskDelay(pdMS_TO_TICKS(5));
-    uint16_t val = static_cast<uint16_t>((Battery::read() * 100.0f) + 0.5f);
+    voltage_buf[index] = static_cast<uint16_t>((Battery::read() * 100.0f) + 0.5f);
+    index = (index + 1) % VOLTAGE_BUF_SIZE;
+
+    uint16_t val = 0;
+    for (int i = 0; i < VOLTAGE_BUF_SIZE; i++)
+      val += voltage_buf[i];
+    val /= VOLTAGE_BUF_SIZE;
+
     Display::show(val);
   }
 }

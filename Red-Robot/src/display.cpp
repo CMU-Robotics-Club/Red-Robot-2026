@@ -35,18 +35,24 @@ void show_digit(uint8_t position, uint8_t number, bool decimal_point) {
 }
 } // namespace
 
+/**
+ * @brief Sends packets to configure the display's brightness, number of digits, etc.
+ */
+void setup_display() {
+  spi_write(0x09, 0x07); // decode mode: enable Code B decode for digits 0-2 to write digits directly
+  spi_write(0x0A, 0x0F); // intensity: set to max brightness
+  spi_write(0x0B, 0x02); // scan limit: display only 3 digits
+  spi_write(0x0C, 0x01); // shutdown: turn on normal operation
+  spi_write(0x0F, 0x00); // display Test off
+}
+
 namespace Display {
 void init() {
   pinMode(BMS_LOAD, OUTPUT);
   digitalWrite(BMS_LOAD, HIGH);
   // no MISO since the driver chip doesn't talk back
   spi.begin(BMS_CLK, -1, BMS_SDI, BMS_LOAD);
-  // decode mode: enable Code B decode for digits 0-2 to write digits directly
-  spi_write(0x09, 0x07);
-  spi_write(0x0A, 0x0F); // intensity: set to max brightness
-  spi_write(0x0B, 0x02); // scan limit: display only 3 digits
-  spi_write(0x0C, 0x01); // shutdown: turn on normal operation
-  spi_write(0x0F, 0x00); // display Test off
+  setup_display();
   show(0);               // initialize with 00.0
 }
 
@@ -57,6 +63,7 @@ void show(uint16_t value) {
   uint8_t digit1 = value / 100;
   uint8_t digit2 = (value / 10) % 10;
   uint8_t digit3 = value % 10;
+  setup_display();
   show_digit(1, digit1, true); // decimal point
   show_digit(2, digit2, false);
   show_digit(3, digit3, false);
