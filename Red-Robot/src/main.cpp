@@ -8,6 +8,8 @@
 
 #define VOLTAGE_BUF_SIZE 60
 
+volatile int16_t global_motor_speed = 0;
+
 void batteryLevelTask(void *)
 {
   int voltage_buf[VOLTAGE_BUF_SIZE] = {};
@@ -47,22 +49,41 @@ void servoTask(void *) {
   }
 }
 
-void motorTask(void *) {
-  int counter = 0;
-  int16_t val;
+void motorTask(void *pvParameters) {
+  int16_t last_speed = -999;
+
   while (1) {
-    DCMotor::write(DCMotor::DCMOTOR::MOTOR_0, -90);
-//  {
-//    vTaskDelay(pdMS_TO_TICKS(1000));
-//    val = (val + 20) % 200 - 100;
-//    DCMotor::write(DCMotor::DCMOTOR::MOTOR_0, val);
-//    DCMotor::write(DCMotor::DCMOTOR::MOTOR_1, val);
-//    DCMotor::write(DCMotor::DCMOTOR::MOTOR_2, val);
-//    DCMotor::write(DCMotor::DCMOTOR::MOTOR_3, val);
-//    counter++;
+    int16_t local_speed = global_motor_speed;
+
+    // Only update and print when speed changes to reduce log spam
+    if (local_speed != last_speed) {
+      DCMotor::write(DCMotor::DCMOTOR::MOTOR_0, local_speed);
+      last_speed = local_speed;
+    }
+
+    vTaskDelay(pdMS_TO_TICKS(50)); 
   }
 }
 
+void serialTask(void *pvParameters) {
+  while (1) {
+    if (Serial.available() > 0) {
+      int16_t incoming_speed = Serial.parseInt();
+
+      // Clear remaining characters (\r, \n, spaces) from input buffer
+      while (Serial.available() > 0 && (Serial.peek() == '\n' || Serial.peek() == '\r' || Serial.peek() == ' ')) {
+        Serial.read();
+      }
+
+      incoming_speed = constrain(incoming_speed, -100, 100);
+      Serial.printf("[SERIAL] Speed updated to: %d\n", incoming_speed);
+      
+      global_motor_speed = incoming_speed;
+    }
+
+    vTaskDelay(pdMS_TO_TICKS(50));
+  }
+}
 
 void setup()
 {
@@ -80,6 +101,7 @@ void setup()
   xTaskCreatePinnedToCore(buzzerTask, "buzzer", 2048, nullptr, 1, nullptr, 1);
   xTaskCreatePinnedToCore(servoTask, "servo", 2048, nullptr, 1, nullptr, 1);
   xTaskCreatePinnedToCore(motorTask, "dc_motor", 2048, nullptr, 1, nullptr, 1);
+  xTaskCreatePinnedToCore(serialTask, "serial", 2048, nullptr, 1, nullptr, 1);
 }
 
 void loop()
