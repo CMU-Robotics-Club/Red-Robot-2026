@@ -12,7 +12,7 @@ namespace Servo {
   /**
    * @brief Servo enum
    */
-  enum class SERVO {
+  enum SERVO{
     SERVO_0, SERVO_1, SERVO_2, SERVO_3
   };
 

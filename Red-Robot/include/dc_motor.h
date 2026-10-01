@@ -12,14 +12,9 @@ namespace DCMotor {
   /**
    * @brief DC motor enum
    */
-  enum class DCMOTOR {
+  enum DCMOTOR {
     MOTOR_0, MOTOR_1, MOTOR_2, MOTOR_3
   };
-
-  enum class DIRECTION {
-    FORWARD = 0, BACKWARD = 1
-  };
-
 
   /**
    * @brief Initialize all motors 
@@ -27,8 +22,7 @@ namespace DCMotor {
   void init();
 
    /**
-   * @brief Drive a certain motor at a certain duty cycle (-100 to 100)
-   * 
+   * @brief Drive a certain motor at a certain speed (-100, 100)
    */
-  void write(DCMOTOR d, int16_t duty_cycle);
+  void write(DCMOTOR d, int16_t speed);
 }
