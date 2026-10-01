@@ -11,6 +11,7 @@
 #include "pinouts.h"
 #include "servo.h"
 #include "ble.h"
+#include "line_sensors.h"
 
 #define VOLTAGE_BUF_SIZE 60
 
@@ -79,6 +80,7 @@ void setup() {
   Servo::init();
   DCMotor::init();
   BLE::init();
+  LineSensors::init();
 
   xTaskCreatePinnedToCore(batteryLevelTask, "batteryLevel", 2048, nullptr, 1,
                           nullptr, 1);
@@ -88,4 +90,14 @@ void setup() {
 }
 
 void loop() {
+  uint16_t sensor_values[6];
+
+  Serial.print("Line sensors=");
+  LineSensors::read(sensor_values);
+  for (int i = 0; i < 6; ++i)
+  {
+    Serial.print(sensor_values[i]);
+    Serial.print(" ");
+  }
+  Serial.println();
 }
