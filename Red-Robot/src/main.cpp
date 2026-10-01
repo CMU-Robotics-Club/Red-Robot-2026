@@ -74,6 +74,7 @@ void setup() {
   Serial.begin(115200);
 
   analogReadResolution(12);
+  analogSetAttenuation(ADC_11db);
 
   Display::init();
   Buzzer::init();
