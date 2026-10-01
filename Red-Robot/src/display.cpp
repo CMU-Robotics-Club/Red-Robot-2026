@@ -2,6 +2,7 @@
 #include "pinouts.h"
 #include <Arduino.h>
 #include <SPI.h>
+#include <stdint.h>
 
 namespace {
 /**

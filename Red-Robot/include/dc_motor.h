@@ -6,8 +6,6 @@
 
 #pragma once
 
-#include <stdint.h>
-
 namespace DCMotor {
   /**
    * @brief DC motor enum

@@ -6,8 +6,6 @@
 
 #pragma once
 
-#include <stdint.h>
-
 namespace Battery {
 /**
  * @brief Read the battery level

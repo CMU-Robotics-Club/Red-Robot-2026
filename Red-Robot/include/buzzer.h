@@ -6,8 +6,6 @@
 
 #pragma once
 
-#include <stdint.h>
-
 namespace Buzzer {
   /**
    * @brief Initialize buzzer PWM
