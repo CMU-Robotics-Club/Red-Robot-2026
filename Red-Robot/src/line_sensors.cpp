@@ -1,6 +1,7 @@
+#include <Arduino.h>
+
 #include "line_sensors.h"
 #include "pinouts.h"
-#include <Arduino.h>
 #include <stdint.h>
 
 const int LINE_SENSOR_PINS[] = { LF0, LF1, LF2, LF3, LF4, LF5 };

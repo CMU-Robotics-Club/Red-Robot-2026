@@ -1,6 +1,7 @@
+#include <Arduino.h>
+
 #include "battery.h"
 #include "pinouts.h"
-#include <Arduino.h>
 
 namespace Battery {
 float read() {

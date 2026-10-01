@@ -69,6 +69,8 @@ void motorTask(void *pvParameters) {
 void setup() {
   Serial.begin(115200);
 
+  Serial.printf("Reset reason: %d\n", (int)esp_reset_reason());
+
   analogReadResolution(12);
   analogSetAttenuation(ADC_11db);
 
@@ -83,11 +85,11 @@ void setup() {
                           nullptr, 1);
   xTaskCreatePinnedToCore(buzzerTask, "buzzer", 2048, nullptr, 1, nullptr, 1);
   xTaskCreatePinnedToCore(servoTask, "servo", 2048, nullptr, 1, nullptr, 1);
-  xTaskCreatePinnedToCore(motorTask, "dc_motor", 2048, nullptr, 1, nullptr, 1);
+  xTaskCreatePinnedToCore(motorTask, "dc_motor", 4096, nullptr, 1, nullptr, 1);
 }
 
 void loop() {
-  uint16_t sensor_values[6];
+  /*uint16_t sensor_values[6];
 
   Serial.print("Line sensors=");
   LineSensors::read(sensor_values);
@@ -96,5 +98,5 @@ void loop() {
     Serial.print(sensor_values[i]);
     Serial.print(" ");
   }
-  Serial.println();
+  Serial.println();*/
 }

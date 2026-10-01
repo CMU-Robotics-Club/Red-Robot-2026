@@ -1,6 +1,7 @@
+#include <Arduino.h>
+
 #include "display.h"
 #include "pinouts.h"
-#include <Arduino.h>
 #include <SPI.h>
 #include <stdint.h>
 
@@ -54,7 +55,7 @@ void init() {
   // no MISO since the driver chip doesn't talk back
   spi.begin(BMS_CLK, -1, BMS_SDI, BMS_LOAD);
   setup_display();
-  show(0);               // initialize with 00.0
+  show(0);               // initialize with 0.00
 }
 
 void show(uint16_t value) {
@@ -64,7 +65,7 @@ void show(uint16_t value) {
   uint8_t digit1 = value / 100;
   uint8_t digit2 = (value / 10) % 10;
   uint8_t digit3 = value % 10;
-  setup_display();
+  //setup_display();
   show_digit(1, digit1, true); // decimal point
   show_digit(2, digit2, false);
   show_digit(3, digit3, false);

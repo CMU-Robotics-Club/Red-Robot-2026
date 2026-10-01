@@ -1,6 +1,7 @@
+#include <Arduino.h>
+
 #include "buzzer.h"
 #include "pinouts.h"
-#include <Arduino.h>
 
 namespace {
 const uint8_t buzzer_channel = 7;
