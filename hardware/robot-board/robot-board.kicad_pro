@@ -56,52 +56,12 @@
       "diff_pair_dimensions": [],
       "drc_exclusions": [
         [
-          "clearance|55277000|69087874|4ddba79f-350e-4734-b323-3e5318eaa12e|aeed0d13-fab5-4e86-9ce9-4272d5dd89cb",
-          "this is the footprint"
-        ],
-        [
-          "clearance|55362600|70809994|0a1df2ac-75c9-4f3a-84c6-d193d9c4b4f6|7c7d6eed-a1e7-4d67-8b9f-be7f1d4c81b7",
-          "footprint"
-        ],
-        [
           "clearance|55529811|66587244|74673f7e-12ca-4e73-9bb7-4731e9018bfc|e530eccd-7520-47be-abf5-dc424a6dcaa1",
           "this is the footprint"
         ],
         [
-          "clearance|57284189|66587244|8ed22a8a-2a77-4c17-a232-1c196ed00eee|11098f36-2533-48db-b0a8-c57391fb0e1f",
-          "footprint"
-        ],
-        [
-          "clearance|57284189|70809994|c1d082c9-cc82-499a-92a0-23b523055630|5beb2ac1-5e7b-4ece-ac61-f7af6f7b9451",
-          "this is the footprint"
-        ],
-        [
-          "clearance|57547000|68341622|aeed0d13-fab5-4e86-9ce9-4272d5dd89cb|ea10ca68-083b-460b-8d49-8da92edcb6ef",
-          "footprint"
-        ],
-        [
-          "clearance|57547000|68584748|aeed0d13-fab5-4e86-9ce9-4272d5dd89cb|be891a24-0a5b-4b08-a250-1577473a10c4",
-          "footprint"
-        ],
-        [
           "clearance|68875736|70437500|0c0314d5-e28a-48d9-954c-847178bd42fd|ca0f574d-0a94-44a1-9455-d6cbcddff966",
           "footprint"
-        ],
-        [
-          "shorting_items|57547000|68587748|aa6d014b-879b-4908-b8fb-ff1afc60e2bd|aeed0d13-fab5-4e86-9ce9-4272d5dd89cb",
-          "footprint"
-        ],
-        [
-          "solder_mask_bridge|57547000|68584748|424fd820-a18d-4f27-a74a-bd097af016ac|a489598e-fe2b-426b-8e18-1b0c18f0469c",
-          "footprint"
-        ],
-        [
-          "solder_mask_bridge|57547000|68584748|424fd820-a18d-4f27-a74a-bd097af016ac|aa6d014b-879b-4908-b8fb-ff1afc60e2bd",
-          "footprint"
-        ],
-        [
-          "solder_mask_bridge|57547000|68587748|aeed0d13-fab5-4e86-9ce9-4272d5dd89cb|aa6d014b-879b-4908-b8fb-ff1afc60e2bd",
-          "these are the same irl"
         ],
         [
           "starved_thermal|37200000|96710000|b19ee0ab-0171-4234-91e3-b3bdff68f7a3|8f8ebe3c-5989-4274-bcc0-75ec6aa8df75|F.Cu",
@@ -738,7 +698,7 @@
         "uuid": "3adacf52-553b-4591-a9be-9572be717553"
       }
     ],
-    "used_designators": "TP7-10,F1,D4,C16-19,C21-22,C25-27,C30-33,C37-41,#PWR39,#PWR45,#PWR49,#PWR52,#PWR54,#PWR66,#PWR68,#PWR72-75,#PWR84-86,H1-3",
+    "used_designators": "R28,SW3,TP7-10,F1,Q6-7,D4,C16-19,C21-22,C25-27,C30-33,C37-47,#PWR39,#PWR45,#PWR49,#PWR52,#PWR54,#PWR66,#PWR68,#PWR72-75,#PWR84-91,H1-3",
     "variants": []
   },
   "sheets": [
