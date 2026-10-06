@@ -35708,7 +35708,7 @@
 				)
 			)
 		)
-		(property "JLC P/N" "C51048211"
+		(property "JLC P/N" "C122538"
 			(at 82.55 177.8 0)
 			(hide yes)
 			(show_name no)
@@ -36247,6 +36247,17 @@
 				)
 			)
 		)
+		(property "JLC P/N" "C15850"
+			(at 184.15 73.66 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "2"
 			(uuid "b043e4fa-66de-42aa-8944-0ae189a48d3c")
 		)
@@ -36397,6 +36408,17 @@
 			)
 		)
 		(property "Description" "Unpolarized capacitor, small symbol"
+			(at 184.15 82.55 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "JLC P/N" "C15850"
 			(at 184.15 82.55 0)
 			(hide yes)
 			(show_name no)
@@ -37347,7 +37369,7 @@
 				(justify right)
 			)
 		)
-		(property "Value" "2.2uF"
+		(property "Value" "22uF"
 			(at 30.988 30.48 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -37391,7 +37413,7 @@
 				)
 			)
 		)
-		(property "JLC P/N" "C307423"
+		(property "JLC P/N" "C22442507"
 			(at 33.02 29.21 0)
 			(hide yes)
 			(show_name no)
@@ -37563,6 +37585,17 @@
 			)
 		)
 		(property "Description" "Unpolarized capacitor, small symbol"
+			(at 184.15 64.77 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "JLC P/N" "C15850"
 			(at 184.15 64.77 0)
 			(hide yes)
 			(show_name no)
@@ -37900,7 +37933,7 @@
 				)
 			)
 		)
-		(property "JLC P/N" "C307423"
+		(property "JLC P/N" "C33546013"
 			(at 31.75 132.08 0)
 			(hide yes)
 			(show_name no)
@@ -40312,7 +40345,7 @@
 				)
 			)
 		)
-		(property "JLC P/N" "C326730"
+		(property "JLC P/N" "C122538"
 			(at 200.66 107.95 0)
 			(hide yes)
 			(show_name no)
@@ -40907,6 +40940,17 @@
 			)
 		)
 		(property "Description" "Unpolarized capacitor, small symbol"
+			(at 175.26 90.17 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "JLC P/N" "C282734"
 			(at 175.26 90.17 0)
 			(hide yes)
 			(show_name no)
@@ -41768,6 +41812,17 @@
 				)
 			)
 		)
+		(property "JLC P/N" "C178991"
+			(at 147.32 128.27 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "2"
 			(uuid "6729b295-cb51-417e-8492-879559556cf8")
 		)
@@ -41817,7 +41872,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Capacitor_SMD:C_Elec_8x10.2"
+		(property "Footprint" "Capacitor_SMD:CP_Elec_8x10"
 			(at 181.61 39.37 0)
 			(hide yes)
 			(show_name no)
@@ -41840,6 +41895,17 @@
 			)
 		)
 		(property "Description" "Unpolarized capacitor, small symbol"
+			(at 181.61 39.37 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "JLC P/N" "C401763"
 			(at 181.61 39.37 0)
 			(hide yes)
 			(show_name no)
@@ -41899,7 +41965,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Capacitor_SMD:C_Elec_8x10.2"
+		(property "Footprint" "Capacitor_SMD:CP_Elec_10x10"
 			(at 304.8 72.39 0)
 			(hide yes)
 			(show_name no)
@@ -41922,6 +41988,17 @@
 			)
 		)
 		(property "Description" "Unpolarized capacitor, small symbol"
+			(at 304.8 72.39 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "JLC P/N" "C970714"
 			(at 304.8 72.39 0)
 			(hide yes)
 			(show_name no)
@@ -42376,6 +42453,17 @@
 			)
 		)
 		(property "Description" "Unpolarized capacitor, small symbol"
+			(at 165.1 90.17 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "JLC P/N" "C1525"
 			(at 165.1 90.17 0)
 			(hide yes)
 			(show_name no)
@@ -42874,7 +42962,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Package_SO:SOIC-8_5.3x5.3mm_P1.27mm"
+		(property "Footprint" "Package_SO:SOIC-8_3.9x4.9mm_P1.27mm"
 			(at 167.64 146.05 0)
 			(hide yes)
 			(show_name no)
@@ -42898,6 +42986,17 @@
 		)
 		(property "Description" ""
 			(at 167.64 146.05 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "JLC P/N" "C16072"
+			(at 167.64 146.05 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -43006,7 +43105,7 @@
 				)
 			)
 		)
-		(property "JLC P/N" "C51048211"
+		(property "JLC P/N" "C705768"
 			(at 200.66 113.03 0)
 			(hide yes)
 			(show_name no)
@@ -43728,7 +43827,7 @@
 				)
 			)
 		)
-		(property "JLC P/N" "C140782"
+		(property "JLC P/N" "C2167809"
 			(at 97.79 135.89 0)
 			(hide yes)
 			(show_name no)
@@ -44028,6 +44127,17 @@
 			)
 		)
 		(property "Description" "Unpolarized capacitor, small symbol"
+			(at 175.26 73.66 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "JLC P/N" "C282734"
 			(at 175.26 73.66 0)
 			(hide yes)
 			(show_name no)
@@ -45072,7 +45182,7 @@
 				)
 			)
 		)
-		(property "JLC P/N" "C307423"
+		(property "JLC P/N" "C33546013"
 			(at 31.75 173.99 0)
 			(hide yes)
 			(show_name no)
@@ -46367,7 +46477,7 @@
 				)
 			)
 		)
-		(property "JLC P/N" "C1525"
+		(property "JLC P/N" "C49210445"
 			(at 16.51 115.57 0)
 			(hide yes)
 			(show_name no)
@@ -47533,6 +47643,17 @@
 				)
 			)
 		)
+		(property "JLC P/N" "C1525"
+			(at 165.1 82.55 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "2"
 			(uuid "0edc9e6a-1fcc-4056-a1e4-620691c6a2bc")
 		)
@@ -47898,6 +48019,17 @@
 				)
 			)
 		)
+		(property "JLC P/N" "C431540"
+			(at 167.64 133.35 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "2"
 			(uuid "3cb71e82-88b4-49a2-b1d9-0cfec92f9e77")
 		)
@@ -48135,7 +48267,7 @@
 				)
 			)
 		)
-		(property "JLC P/N" "C307423"
+		(property "JLC P/N" "C33546013"
 			(at 22.86 173.99 0)
 			(hide yes)
 			(show_name no)
@@ -48632,7 +48764,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Capacitor_SMD:C_Elec_8x10.2"
+		(property "Footprint" "Capacitor_SMD:CP_Elec_10x10"
 			(at 184.15 134.62 0)
 			(hide yes)
 			(show_name no)
@@ -48655,6 +48787,17 @@
 			)
 		)
 		(property "Description" "Unpolarized capacitor, small symbol"
+			(at 184.15 134.62 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "JLC P/N" "C970714"
 			(at 184.15 134.62 0)
 			(hide yes)
 			(show_name no)
@@ -50326,7 +50469,7 @@
 				)
 			)
 		)
-		(property "JLC P/N" "C326730"
+		(property "JLC P/N" "C122538"
 			(at 160.02 133.35 0)
 			(hide yes)
 			(show_name no)
@@ -50428,7 +50571,7 @@
 				)
 			)
 		)
-		(property "JLC P/N" "C140782"
+		(property "JLC P/N" "C2167809"
 			(at 106.68 135.89 0)
 			(hide yes)
 			(show_name no)
@@ -50542,7 +50685,7 @@
 				)
 			)
 		)
-		(property "JLC P/N" "C25905"
+		(property "JLC P/N" "C25744"
 			(at 16.51 110.49 90)
 			(hide yes)
 			(show_name no)
@@ -51176,6 +51319,17 @@
 				)
 			)
 		)
+		(property "JLC P/N" "C282734"
+			(at 175.26 82.55 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "2"
 			(uuid "c99dbb87-c471-480d-8b27-24cf09ed6ffb")
 		)
@@ -51341,6 +51495,17 @@
 			)
 		)
 		(property "Description" "Unpolarized capacitor, small symbol"
+			(at 175.26 64.77 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "JLC P/N" "C282734"
 			(at 175.26 64.77 0)
 			(hide yes)
 			(show_name no)
@@ -51790,6 +51955,17 @@
 			)
 		)
 		(property "Description" "Unpolarized capacitor, small symbol"
+			(at 184.15 90.17 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "JLC P/N" "C15850"
 			(at 184.15 90.17 0)
 			(hide yes)
 			(show_name no)
@@ -52389,7 +52565,7 @@
 				)
 			)
 		)
-		(property "JLC P/N" "C51048211"
+		(property "JLC P/N" "C122538"
 			(at 82.55 135.89 0)
 			(hide yes)
 			(show_name no)
@@ -52674,7 +52850,7 @@
 				)
 			)
 		)
-		(property "JLC P/N" "C307423"
+		(property "JLC P/N" "C880382"
 			(at 132.08 114.3 0)
 			(hide yes)
 			(show_name no)
@@ -54530,6 +54706,17 @@
 				)
 			)
 		)
+		(property "JLC P/N" "C1525"
+			(at 165.1 64.77 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "2"
 			(uuid "abd207df-8d36-45e2-8f79-40d05e62410e")
 		)
@@ -54680,6 +54867,17 @@
 			)
 		)
 		(property "Description" "Unpolarized capacitor, small symbol"
+			(at 165.1 73.66 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "JLC P/N" "C1525"
 			(at 165.1 73.66 0)
 			(hide yes)
 			(show_name no)
@@ -54841,7 +55039,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Capacitor_SMD:C_Elec_8x10.2"
+		(property "Footprint" "Capacitor_SMD:CP_Elec_10x10"
 			(at 304.8 99.06 0)
 			(hide yes)
 			(show_name no)
@@ -54864,6 +55062,17 @@
 			)
 		)
 		(property "Description" "Unpolarized capacitor, small symbol"
+			(at 304.8 99.06 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "JLC P/N" "C970714"
 			(at 304.8 99.06 0)
 			(hide yes)
 			(show_name no)
@@ -55967,7 +56176,7 @@
 				)
 			)
 		)
-		(property "JLC P/N" "C307423"
+		(property "JLC P/N" "C33546013"
 			(at 22.86 132.08 0)
 			(hide yes)
 			(show_name no)

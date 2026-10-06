@@ -56,14 +56,6 @@
       "diff_pair_dimensions": [],
       "drc_exclusions": [
         [
-          "clearance|55529811|66587244|74673f7e-12ca-4e73-9bb7-4731e9018bfc|e530eccd-7520-47be-abf5-dc424a6dcaa1",
-          "this is the footprint"
-        ],
-        [
-          "clearance|68875736|70437500|0c0314d5-e28a-48d9-954c-847178bd42fd|ca0f574d-0a94-44a1-9455-d6cbcddff966",
-          "footprint"
-        ],
-        [
           "starved_thermal|37200000|96710000|b19ee0ab-0171-4234-91e3-b3bdff68f7a3|8f8ebe3c-5989-4274-bcc0-75ec6aa8df75|F.Cu",
           "not possible due to board constraints"
         ],
@@ -698,7 +690,7 @@
         "uuid": "3adacf52-553b-4591-a9be-9572be717553"
       }
     ],
-    "used_designators": "R28,SW3,TP7-10,F1,Q6-7,D4,C16-19,C21-22,C25-27,C30-33,C37-47,#PWR39,#PWR45,#PWR49,#PWR52,#PWR54,#PWR66,#PWR68,#PWR72-75,#PWR84-91,H1-3",
+    "used_designators": "",
     "variants": []
   },
   "sheets": [
