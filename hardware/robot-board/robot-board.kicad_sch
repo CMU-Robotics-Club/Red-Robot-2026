@@ -34418,7 +34418,7 @@
 			"1jpmMpnv4n8AV/dHSFp+YNoAAAAASUVORK5CYII="
 		)
 	)
-	(label "MOTOR3_PHASE"
+	(label "MOTOR1_PHASE"
 		(at 255.27 114.3 0)
 		(effects
 			(font
@@ -34448,7 +34448,7 @@
 		)
 		(uuid "036ad39c-2de6-4e4e-8f62-a3cc091f139f")
 	)
-	(label "M1+"
+	(label "M3+"
 		(at 302.26 87.63 0)
 		(effects
 			(font
@@ -34478,7 +34478,7 @@
 		)
 		(uuid "0846ed12-66dd-4ba3-b97a-757b2cfa65f1")
 	)
-	(label "MOTOR2_EN"
+	(label "MOTOR0_EN"
 		(at 255.27 111.76 0)
 		(effects
 			(font
@@ -34488,7 +34488,7 @@
 		)
 		(uuid "0df33caa-76bb-4b45-ae3b-26baaf5b3b99")
 	)
-	(label "MOTOR2_PHASE"
+	(label "MOTOR0_PHASE"
 		(at 255.27 109.22 0)
 		(effects
 			(font
@@ -34508,7 +34508,7 @@
 		)
 		(uuid "0fc32988-6052-4fd0-94b1-072194e8ff4a")
 	)
-	(label "M1-"
+	(label "M3-"
 		(at 294.64 85.09 180)
 		(effects
 			(font
@@ -34528,7 +34528,7 @@
 		)
 		(uuid "17e34600-45aa-4db6-a2bd-e80d8d3db29a")
 	)
-	(label "MOTOR1_PHASE"
+	(label "MOTOR3_PHASE"
 		(at 255.27 87.63 0)
 		(effects
 			(font
@@ -34538,7 +34538,7 @@
 		)
 		(uuid "19be5db6-e51d-4023-98bf-0d0a623100d0")
 	)
-	(label "M2+"
+	(label "M0+"
 		(at 302.26 107.95 0)
 		(effects
 			(font
@@ -34558,7 +34558,7 @@
 		)
 		(uuid "215c8237-7cd4-4286-97e0-6d06c5803d87")
 	)
-	(label "M0+"
+	(label "M2+"
 		(at 294.64 82.55 180)
 		(effects
 			(font
@@ -34568,7 +34568,7 @@
 		)
 		(uuid "281155ad-5001-4d30-9499-148ae8e8c294")
 	)
-	(label "M3-"
+	(label "M1-"
 		(at 302.26 111.76 0)
 		(effects
 			(font
@@ -34618,7 +34618,7 @@
 		)
 		(uuid "4a24283b-3913-46b2-9784-b8da99b37810")
 	)
-	(label "M0-"
+	(label "M2-"
 		(at 302.26 78.74 0)
 		(effects
 			(font
@@ -34628,7 +34628,7 @@
 		)
 		(uuid "4bd1f8ca-7fa6-4499-90df-80f3ad12d28a")
 	)
-	(label "M1-"
+	(label "M3-"
 		(at 302.26 85.09 0)
 		(effects
 			(font
@@ -34658,7 +34658,7 @@
 		)
 		(uuid "517e054e-0e62-457c-afc1-98c3fcc3c66f")
 	)
-	(label "MOTOR0_EN"
+	(label "MOTOR2_EN"
 		(at 255.27 85.09 0)
 		(effects
 			(font
@@ -34688,7 +34688,7 @@
 		)
 		(uuid "571eae33-bbe4-4ea5-b644-0f6d175727f0")
 	)
-	(label "M1+"
+	(label "M3+"
 		(at 294.64 87.63 180)
 		(effects
 			(font
@@ -34738,7 +34738,7 @@
 		)
 		(uuid "647448ba-11b5-4fcc-9093-e46f1ac22b92")
 	)
-	(label "MOTOR0_PHASE"
+	(label "MOTOR2_PHASE"
 		(at 255.27 82.55 0)
 		(effects
 			(font
@@ -34758,7 +34758,7 @@
 		)
 		(uuid "6a0a72d9-61b4-45ee-ac0a-a67b73141ec4")
 	)
-	(label "M3+"
+	(label "M1+"
 		(at 302.26 114.3 0)
 		(effects
 			(font
@@ -34778,7 +34778,7 @@
 		)
 		(uuid "6df1ad96-1474-40fb-af5a-1eba2c939cd7")
 	)
-	(label "M2+"
+	(label "M0+"
 		(at 294.64 109.22 180)
 		(effects
 			(font
@@ -34788,7 +34788,7 @@
 		)
 		(uuid "6e932b95-2803-4854-9bbc-f21fb3be7156")
 	)
-	(label "MOTOR1_EN"
+	(label "MOTOR3_EN"
 		(at 255.27 90.17 0)
 		(effects
 			(font
@@ -34868,7 +34868,7 @@
 		)
 		(uuid "827f67c4-3893-4df0-90c5-9376cad1ff8f")
 	)
-	(label "MOTOR0_EN"
+	(label "MOTOR2_EN"
 		(at 82.55 57.15 180)
 		(effects
 			(font
@@ -34898,7 +34898,7 @@
 		)
 		(uuid "8f35c9e2-f663-4b02-afd1-d11d8b592289")
 	)
-	(label "M3-"
+	(label "M1-"
 		(at 294.64 111.76 180)
 		(effects
 			(font
@@ -34908,7 +34908,7 @@
 		)
 		(uuid "98e433f8-a73d-4c0d-961f-c9058680d066")
 	)
-	(label "MOTOR1_PHASE"
+	(label "MOTOR3_PHASE"
 		(at 24.13 62.23 0)
 		(effects
 			(font
@@ -34928,7 +34928,7 @@
 		)
 		(uuid "9e52aa5f-f36a-4377-b84b-01292aec16ee")
 	)
-	(label "M2-"
+	(label "M0-"
 		(at 302.26 105.41 0)
 		(effects
 			(font
@@ -34938,7 +34938,7 @@
 		)
 		(uuid "a1395a7e-f811-4699-89b9-e7b3eaac78ac")
 	)
-	(label "MOTOR2_EN"
+	(label "MOTOR0_EN"
 		(at 24.13 77.47 0)
 		(effects
 			(font
@@ -34958,7 +34958,7 @@
 		)
 		(uuid "ad679958-6975-4c5c-98ee-55fb4b29281c")
 	)
-	(label "M0-"
+	(label "M2-"
 		(at 294.64 80.01 180)
 		(effects
 			(font
@@ -34978,7 +34978,7 @@
 		)
 		(uuid "b69c160c-0eb4-4c39-84c6-0e95ec48801c")
 	)
-	(label "MOTOR3_PHASE"
+	(label "MOTOR1_PHASE"
 		(at 24.13 67.31 0)
 		(effects
 			(font
@@ -34988,7 +34988,7 @@
 		)
 		(uuid "b7e5cfb3-efcb-42c9-ab07-fa57397d4ac1")
 	)
-	(label "M3+"
+	(label "M1+"
 		(at 294.64 114.3 180)
 		(effects
 			(font
@@ -35018,7 +35018,7 @@
 		)
 		(uuid "bd8ac67a-754c-49b5-802a-5063f4f7a843")
 	)
-	(label "MOTOR3_EN"
+	(label "MOTOR1_EN"
 		(at 82.55 36.83 180)
 		(effects
 			(font
@@ -35038,7 +35038,7 @@
 		)
 		(uuid "cdf274b7-d81a-4879-9586-1b57acc19f6e")
 	)
-	(label "M2-"
+	(label "M0-"
 		(at 294.64 106.68 180)
 		(effects
 			(font
@@ -35168,7 +35168,7 @@
 		)
 		(uuid "ec83b6c5-4cca-4b50-9d29-df0594b74fa8")
 	)
-	(label "MOTOR0_PHASE"
+	(label "MOTOR2_PHASE"
 		(at 24.13 59.69 0)
 		(effects
 			(font
@@ -35178,7 +35178,7 @@
 		)
 		(uuid "ed5c9b81-00a5-45a7-913e-aef91a622d4c")
 	)
-	(label "M0+"
+	(label "M2+"
 		(at 302.26 81.28 0)
 		(effects
 			(font
@@ -35208,7 +35208,7 @@
 		)
 		(uuid "f60a0e57-b94d-46ac-b23d-deed4f2e6f4c")
 	)
-	(label "MOTOR3_EN"
+	(label "MOTOR1_EN"
 		(at 255.27 116.84 0)
 		(effects
 			(font
@@ -35218,7 +35218,7 @@
 		)
 		(uuid "f8b81e76-82a1-4fe5-9c8f-b6db201dfbf0")
 	)
-	(label "MOTOR2_PHASE"
+	(label "MOTOR0_PHASE"
 		(at 24.13 64.77 0)
 		(effects
 			(font
@@ -35228,7 +35228,7 @@
 		)
 		(uuid "f9169f90-e792-403a-9bb1-17fcc34c3a9d")
 	)
-	(label "MOTOR1_EN"
+	(label "MOTOR3_EN"
 		(at 82.55 54.61 180)
 		(effects
 			(font
@@ -36478,7 +36478,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "footprints:CONN2_2060-452&slash_998-404_WAG"
+		(property "Footprint" "footprints:TerminalBlock_DB301V-3.5-2P-GN-H_1x02_P3.50mm_Horizontal"
 			(at 312.42 105.41 0)
 			(hide yes)
 			(show_name no)
@@ -37031,7 +37031,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "footprints:CONN2_2060-452&slash_998-404_WAG"
+		(property "Footprint" "footprints:TerminalBlock_DB301V-3.5-2P-GN-H_1x02_P3.50mm_Horizontal"
 			(at 312.42 111.76 0)
 			(hide yes)
 			(show_name no)
@@ -40542,7 +40542,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "footprints:CONN2_2060-452&slash_998-404_WAG"
+		(property "Footprint" "footprints:TerminalBlock_DB301V-3.5-2P-GN-H_1x02_P3.50mm_Horizontal"
 			(at 312.42 85.09 0)
 			(hide yes)
 			(show_name no)
@@ -42523,7 +42523,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "footprints:CONN2_2060-452&slash_998-404_WAG"
+		(property "Footprint" "footprints:TerminalBlock_DB301V-3.5-2P-GN-H_1x02_P3.50mm_Horizontal"
 			(at 312.42 78.74 0)
 			(hide yes)
 			(show_name no)
