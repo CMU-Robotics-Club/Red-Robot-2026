@@ -36296,7 +36296,7 @@
 				)
 			)
 		)
-		(property "Value" "AGND"
+		(property "Value" "AGND_3V3"
 			(at 82.55 149.86 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -36728,7 +36728,7 @@
 				)
 			)
 		)
-		(property "Value" "AGND"
+		(property "Value" "AGND_3V3"
 			(at 22.86 151.13 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -46537,7 +46537,7 @@
 				)
 			)
 		)
-		(property "Value" "AGND"
+		(property "Value" "AGND_5V"
 			(at 82.55 191.77 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -53647,7 +53647,7 @@
 				)
 			)
 		)
-		(property "Value" "AGND"
+		(property "Value" "AGND_5V"
 			(at 22.86 191.77 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -54515,7 +54515,7 @@
 				)
 			)
 		)
-		(property "Footprint" "NetTie:NetTie-2_SMD_Pad0.5mm"
+		(property "Footprint" "footprints:NetTie-2_SMD_Pad0.25mm"
 			(at 26.67 186.69 0)
 			(hide yes)
 			(show_name no)
@@ -55892,7 +55892,7 @@
 				)
 			)
 		)
-		(property "Footprint" "NetTie:NetTie-2_SMD_Pad0.5mm"
+		(property "Footprint" "footprints:NetTie-2_SMD_Pad0.25mm"
 			(at 26.67 146.05 0)
 			(hide yes)
 			(show_name no)
