@@ -44434,17 +44434,6 @@
 		(layer "Edge.Cuts")
 		(uuid "6e7b3588-5406-4eca-bc4e-1a062c8dec5c")
 	)
-	(gr_text "boot select"
-		(at 42.5704 94.0816 0)
-		(layer "F.SilkS")
-		(uuid "dfcefe3e-411b-4f94-8c6d-ad9a0bc55481")
-		(effects
-			(font
-				(size 1 1)
-			)
-			(justify left bottom)
-		)
-	)
 	(gr_text "M0- M0+"
 		(at 51.435 142.24 0)
 		(layer "F.SilkS")
@@ -44493,18 +44482,6 @@
 			(justify left bottom)
 		)
 	)
-	(gr_text "+Batt"
-		(at 52.17 67.22 0)
-		(layer "F.SilkS")
-		(uuid "5941ba3d-5310-4540-a45d-b51e3e1d327b")
-		(effects
-			(font
-				(size 1 1)
-				(thickness 0.1)
-			)
-			(justify left bottom)
-		)
-	)
 	(gr_text "GND"
 		(at 59.07 66.15 0)
 		(layer "F.SilkS")
@@ -44517,6 +44494,30 @@
 			(justify left bottom)
 		)
 	)
+	(gr_text "boot select"
+		(at 42.5704 94.0816 0)
+		(layer "F.SilkS")
+		(uuid "dfcefe3e-411b-4f94-8c6d-ad9a0bc55481")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+			(justify left bottom)
+		)
+	)
+	(gr_text "+Batt"
+		(at 52.17 67.22 0)
+		(layer "F.SilkS")
+		(uuid "5941ba3d-5310-4540-a45d-b51e3e1d327b")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+			(justify left bottom)
+		)
+	)
 	(gr_text "5V"
 		(at 59.64 73.3 0)
 		(layer "F.SilkS")
@@ -44524,7 +44525,7 @@
 		(effects
 			(font
 				(size 1 1)
-				(thickness 0.1)
+				(thickness 0.15)
 			)
 			(justify left bottom)
 		)
@@ -44536,7 +44537,7 @@
 		(effects
 			(font
 				(size 1 1)
-				(thickness 0.1)
+				(thickness 0.15)
 			)
 			(justify left bottom)
 		)
@@ -44548,7 +44549,7 @@
 		(effects
 			(font
 				(size 1 1)
-				(thickness 0.1)
+				(thickness 0.15)
 			)
 			(justify left bottom)
 		)
@@ -44560,7 +44561,7 @@
 		(effects
 			(font
 				(size 1 1)
-				(thickness 0.1)
+				(thickness 0.15)
 			)
 			(justify left bottom)
 		)
@@ -44572,7 +44573,7 @@
 		(effects
 			(font
 				(size 1 1)
-				(thickness 0.1)
+				(thickness 0.15)
 			)
 			(justify left bottom)
 		)
@@ -44584,7 +44585,7 @@
 		(effects
 			(font
 				(size 1 1)
-				(thickness 0.1)
+				(thickness 0.15)
 			)
 			(justify left bottom)
 		)
@@ -44596,7 +44597,7 @@
 		(effects
 			(font
 				(size 1 1)
-				(thickness 0.1)
+				(thickness 0.15)
 			)
 			(justify left bottom)
 		)
@@ -44608,7 +44609,7 @@
 		(effects
 			(font
 				(size 1 1)
-				(thickness 0.1)
+				(thickness 0.15)
 			)
 			(justify left bottom)
 		)
@@ -44620,7 +44621,7 @@
 		(effects
 			(font
 				(size 1 1)
-				(thickness 0.1)
+				(thickness 0.15)
 			)
 			(justify left bottom)
 		)
@@ -44632,7 +44633,7 @@
 		(effects
 			(font
 				(size 1 1)
-				(thickness 0.1)
+				(thickness 0.15)
 			)
 			(justify left bottom)
 		)
@@ -44644,7 +44645,7 @@
 		(effects
 			(font
 				(size 1 1)
-				(thickness 0.1)
+				(thickness 0.15)
 			)
 			(justify right bottom)
 		)
@@ -44727,7 +44728,7 @@
 		(effects
 			(font
 				(size 1 1)
-				(thickness 0.1)
+				(thickness 0.15)
 			)
 			(justify left bottom mirror)
 		)
@@ -56587,35 +56588,6 @@
 		(net "Vprot")
 		(layer "F.Cu")
 		(hatch none 0.1)
-		(priority 30199)
-		(attr
-			(teardrop
-				(type padvia)
-			)
-		)
-		(connect_pads yes
-			(clearance 0)
-		)
-		(min_thickness 0.0254)
-		(fill yes
-			(island_removal_mode 1)
-		)
-		(polygon
-			(pts
-				(xy 48.905 80.305) (xy 49.105 80.305) (xy 49.13 80.18) (xy 49.005 80.054) (xy 48.88 80.18)
-			)
-		)
-		(filled_polygon
-			(layer "F.Cu")
-			(pts
-				(xy 49.13 80.18) (xy 49.105 80.305) (xy 48.905 80.305) (xy 48.88 80.18) (xy 49.005 80.054)
-			)
-		)
-	)
-	(zone
-		(net "Vprot")
-		(layer "F.Cu")
-		(hatch none 0.1)
 		(priority 30200)
 		(attr
 			(teardrop
@@ -56638,6 +56610,35 @@
 			(layer "F.Cu")
 			(pts
 				(xy 49.13 79.93) (xy 49.005 80.056) (xy 48.88 79.93) (xy 48.905 79.805) (xy 49.105 79.805)
+			)
+		)
+	)
+	(zone
+		(net "Vprot")
+		(layer "F.Cu")
+		(hatch none 0.1)
+		(priority 30199)
+		(attr
+			(teardrop
+				(type padvia)
+			)
+		)
+		(connect_pads yes
+			(clearance 0)
+		)
+		(min_thickness 0.0254)
+		(fill yes
+			(island_removal_mode 1)
+		)
+		(polygon
+			(pts
+				(xy 48.905 80.305) (xy 49.105 80.305) (xy 49.13 80.18) (xy 49.005 80.054) (xy 48.88 80.18)
+			)
+		)
+		(filled_polygon
+			(layer "F.Cu")
+			(pts
+				(xy 49.13 80.18) (xy 49.105 80.305) (xy 48.905 80.305) (xy 48.88 80.18) (xy 49.005 80.054)
 			)
 		)
 	)
@@ -56864,13 +56865,13 @@
 		)
 		(polygon
 			(pts
-				(xy 45.7125 64.775) (xy 45.9125 64.775) (xy 45.9375 64.65) (xy 45.8125 64.524) (xy 45.6875 64.65)
+				(xy 45.9125 64.275) (xy 45.7125 64.275) (xy 45.6875 64.4) (xy 45.8125 64.526) (xy 45.9375 64.4)
 			)
 		)
 		(filled_polygon
 			(layer "F.Cu")
 			(pts
-				(xy 45.9375 64.65) (xy 45.9125 64.775) (xy 45.7125 64.775) (xy 45.6875 64.65) (xy 45.8125 64.524)
+				(xy 45.9375 64.4) (xy 45.8125 64.526) (xy 45.6875 64.4) (xy 45.7125 64.275) (xy 45.9125 64.275)
 			)
 		)
 	)
@@ -56893,13 +56894,13 @@
 		)
 		(polygon
 			(pts
-				(xy 45.9125 64.275) (xy 45.7125 64.275) (xy 45.6875 64.4) (xy 45.8125 64.526) (xy 45.9375 64.4)
+				(xy 45.7125 64.775) (xy 45.9125 64.775) (xy 45.9375 64.65) (xy 45.8125 64.524) (xy 45.6875 64.65)
 			)
 		)
 		(filled_polygon
 			(layer "F.Cu")
 			(pts
-				(xy 45.9375 64.4) (xy 45.8125 64.526) (xy 45.6875 64.4) (xy 45.7125 64.275) (xy 45.9125 64.275)
+				(xy 45.9375 64.65) (xy 45.9125 64.775) (xy 45.7125 64.775) (xy 45.6875 64.65) (xy 45.8125 64.524)
 			)
 		)
 	)
@@ -59976,13 +59977,13 @@
 		)
 		(polygon
 			(pts
-				(xy 45.7125 64.275) (xy 45.9125 64.275) (xy 45.9375 64.15) (xy 45.8125 64.024) (xy 45.6875 64.15)
+				(xy 45.9125 63.775) (xy 45.7125 63.775) (xy 45.6875 63.9) (xy 45.8125 64.026) (xy 45.9375 63.9)
 			)
 		)
 		(filled_polygon
 			(layer "F.Cu")
 			(pts
-				(xy 45.9375 64.15) (xy 45.9125 64.275) (xy 45.7125 64.275) (xy 45.6875 64.15) (xy 45.8125 64.024)
+				(xy 45.9375 63.9) (xy 45.8125 64.026) (xy 45.6875 63.9) (xy 45.7125 63.775) (xy 45.9125 63.775)
 			)
 		)
 	)
@@ -60005,13 +60006,13 @@
 		)
 		(polygon
 			(pts
-				(xy 45.9125 63.775) (xy 45.7125 63.775) (xy 45.6875 63.9) (xy 45.8125 64.026) (xy 45.9375 63.9)
+				(xy 45.7125 64.275) (xy 45.9125 64.275) (xy 45.9375 64.15) (xy 45.8125 64.024) (xy 45.6875 64.15)
 			)
 		)
 		(filled_polygon
 			(layer "F.Cu")
 			(pts
-				(xy 45.9375 63.9) (xy 45.8125 64.026) (xy 45.6875 63.9) (xy 45.7125 63.775) (xy 45.9125 63.775)
+				(xy 45.9375 64.15) (xy 45.9125 64.275) (xy 45.7125 64.275) (xy 45.6875 64.15) (xy 45.8125 64.024)
 			)
 		)
 	)
