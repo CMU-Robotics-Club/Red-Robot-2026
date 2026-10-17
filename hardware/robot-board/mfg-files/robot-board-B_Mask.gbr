@@ -1,12 +1,12 @@
 %TF.GenerationSoftware,KiCad,Pcbnew,10.0.6*%
-%TF.CreationDate,2026-10-15T23:07:13-04:00*%
+%TF.CreationDate,2026-10-17T18:46:57-04:00*%
 %TF.ProjectId,robot-board,726f626f-742d-4626-9f61-72642e6b6963,rev?*%
 %TF.SameCoordinates,Original*%
 %TF.FileFunction,Soldermask,Bot*%
 %TF.FilePolarity,Negative*%
 %FSLAX46Y46*%
 G04 Gerber Fmt 4.6, Leading zero omitted, Abs format (unit mm)*
-G04 Created by KiCad (PCBNEW 10.0.6) date 2026-10-15 23:07:13*
+G04 Created by KiCad (PCBNEW 10.0.6) date 2026-10-17 18:46:57*
 %MOMM*%
 %LPD*%
 G01*
@@ -60,7 +60,7 @@ D14*
 X68580000Y-104394000D03*
 %TD*%
 %TO.C,TP8*%
-X60300000Y-59800000D03*
+X60452000Y-59800000D03*
 %TD*%
 %TO.C,TP4*%
 X68834000Y-115443000D03*
@@ -99,13 +99,13 @@ D14*
 X65532000Y-101600000D03*
 %TD*%
 %TO.C,TP9*%
-X60620000Y-74880000D03*
+X60960000Y-74676000D03*
 %TD*%
 %TO.C,TP7*%
 X56930000Y-68830000D03*
 %TD*%
 %TO.C,TP10*%
-X60350000Y-63190000D03*
+X60452000Y-63500000D03*
 %TD*%
 D11*
 %TO.C,H1*%
