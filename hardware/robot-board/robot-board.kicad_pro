@@ -72,10 +72,6 @@
       "diff_pair_dimensions": [],
       "drc_exclusions": [
         [
-          "assertion_failure|70200000|54900000|5499b08a-945c-4425-a881-48a8b7983243|00000000-0000-0000-0000-000000000000",
-          ""
-        ],
-        [
           "copper_edge_clearance|79385000|53605000|bb61f9a1-1a45-4108-87b2-492998529c11|00d5da72-61da-49e7-bfe3-267eae6dde32",
           ""
         ],
@@ -121,10 +117,6 @@
         ],
         [
           "silk_overlap|39436359|119180000|275c5054-c805-4fd0-a0a1-9abd88377037|aff912c0-595c-445b-a668-da10b21ab68c",
-          ""
-        ],
-        [
-          "silk_overlap|39695500|137335000|7a2aad28-a58a-4ddd-bae2-de118112fa22|04237e67-4454-4cca-b1fe-85c549c630b7",
           ""
         ],
         [
@@ -481,18 +473,6 @@
         ],
         [
           "silk_overlap|64495000|106251836|9c4e7b27-30ff-4ef2-9d6b-3f3081e4360b|2d53ab92-fa98-481a-bb44-9bce0fa29cbd",
-          ""
-        ],
-        [
-          "silk_overlap|67580000|103394000|060c329f-4955-4bbd-bd7c-be0fdf4d5d68|cafeb818-73e6-4268-b6a9-e03485aa6c1f",
-          ""
-        ],
-        [
-          "silk_overlap|67580000|105394000|5d990e2a-8b9a-4ebf-9e4b-1affd920de56|cafeb818-73e6-4268-b6a9-e03485aa6c1f",
-          ""
-        ],
-        [
-          "silk_overlap|69580000|103394000|7fa10fe7-888d-48f6-9dcc-92b2b589a7f8|cafeb818-73e6-4268-b6a9-e03485aa6c1f",
           ""
         ],
         [
