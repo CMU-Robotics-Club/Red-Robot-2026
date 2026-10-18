@@ -11106,7 +11106,7 @@
 				)
 			)
 		)
-		(property "JLC P/N" "C2167809"
+		(property "JLC P/N" "C385907"
 			(at 0 0 90)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -12903,7 +12903,7 @@
 				)
 			)
 		)
-		(property "JLC P/N" "C2167809"
+		(property "JLC P/N" "C385907"
 			(at 0 0 90)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -20713,7 +20713,7 @@
 				)
 			)
 		)
-		(property "JLC P/N" "C22442507"
+		(property "JLC P/N" "C296720"
 			(at 0 0 0)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -22890,7 +22890,7 @@
 				)
 			)
 		)
-		(property "JLC P/N" "C401763"
+		(property "JLC P/N" "C311227"
 			(at 0 0 135)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -56525,7 +56525,7 @@
 		(net "Vprot")
 		(layer "F.Cu")
 		(hatch none 0.1)
-		(priority 30199)
+		(priority 30200)
 		(attr
 			(teardrop
 				(type padvia)
@@ -56554,7 +56554,7 @@
 		(net "Vprot")
 		(layer "F.Cu")
 		(hatch none 0.1)
-		(priority 30200)
+		(priority 30199)
 		(attr
 			(teardrop
 				(type padvia)
@@ -56787,35 +56787,6 @@
 		(net "Vprot")
 		(layer "F.Cu")
 		(hatch none 0.1)
-		(priority 30203)
-		(attr
-			(teardrop
-				(type padvia)
-			)
-		)
-		(connect_pads yes
-			(clearance 0)
-		)
-		(min_thickness 0.0254)
-		(fill yes
-			(island_removal_mode 1)
-		)
-		(polygon
-			(pts
-				(xy 45.9125 64.275) (xy 45.7125 64.275) (xy 45.6875 64.4) (xy 45.8125 64.526) (xy 45.9375 64.4)
-			)
-		)
-		(filled_polygon
-			(layer "F.Cu")
-			(pts
-				(xy 45.9375 64.4) (xy 45.8125 64.526) (xy 45.6875 64.4) (xy 45.7125 64.275) (xy 45.9125 64.275)
-			)
-		)
-	)
-	(zone
-		(net "Vprot")
-		(layer "F.Cu")
-		(hatch none 0.1)
 		(priority 30202)
 		(attr
 			(teardrop
@@ -56838,6 +56809,35 @@
 			(layer "F.Cu")
 			(pts
 				(xy 45.9375 64.65) (xy 45.9125 64.775) (xy 45.7125 64.775) (xy 45.6875 64.65) (xy 45.8125 64.524)
+			)
+		)
+	)
+	(zone
+		(net "Vprot")
+		(layer "F.Cu")
+		(hatch none 0.1)
+		(priority 30203)
+		(attr
+			(teardrop
+				(type padvia)
+			)
+		)
+		(connect_pads yes
+			(clearance 0)
+		)
+		(min_thickness 0.0254)
+		(fill yes
+			(island_removal_mode 1)
+		)
+		(polygon
+			(pts
+				(xy 45.9125 64.275) (xy 45.7125 64.275) (xy 45.6875 64.4) (xy 45.8125 64.526) (xy 45.9375 64.4)
+			)
+		)
+		(filled_polygon
+			(layer "F.Cu")
+			(pts
+				(xy 45.9375 64.4) (xy 45.8125 64.526) (xy 45.6875 64.4) (xy 45.7125 64.275) (xy 45.9125 64.275)
 			)
 		)
 	)
@@ -59944,13 +59944,13 @@
 		)
 		(polygon
 			(pts
-				(xy 45.9125 63.775) (xy 45.7125 63.775) (xy 45.6875 63.9) (xy 45.8125 64.026) (xy 45.9375 63.9)
+				(xy 45.7125 64.275) (xy 45.9125 64.275) (xy 45.9375 64.15) (xy 45.8125 64.024) (xy 45.6875 64.15)
 			)
 		)
 		(filled_polygon
 			(layer "F.Cu")
 			(pts
-				(xy 45.9375 63.9) (xy 45.8125 64.026) (xy 45.6875 63.9) (xy 45.7125 63.775) (xy 45.9125 63.775)
+				(xy 45.9375 64.15) (xy 45.9125 64.275) (xy 45.7125 64.275) (xy 45.6875 64.15) (xy 45.8125 64.024)
 			)
 		)
 	)
@@ -59973,13 +59973,13 @@
 		)
 		(polygon
 			(pts
-				(xy 45.7125 64.275) (xy 45.9125 64.275) (xy 45.9375 64.15) (xy 45.8125 64.024) (xy 45.6875 64.15)
+				(xy 45.9125 63.775) (xy 45.7125 63.775) (xy 45.6875 63.9) (xy 45.8125 64.026) (xy 45.9375 63.9)
 			)
 		)
 		(filled_polygon
 			(layer "F.Cu")
 			(pts
-				(xy 45.9375 64.15) (xy 45.9125 64.275) (xy 45.7125 64.275) (xy 45.6875 64.15) (xy 45.8125 64.024)
+				(xy 45.9375 63.9) (xy 45.8125 64.026) (xy 45.6875 63.9) (xy 45.7125 63.775) (xy 45.9125 63.775)
 			)
 		)
 	)
@@ -63138,35 +63138,6 @@
 		(net "Vprot")
 		(layer "F.Cu")
 		(hatch none 0.1)
-		(priority 30212)
-		(attr
-			(teardrop
-				(type padvia)
-			)
-		)
-		(connect_pads yes
-			(clearance 0)
-		)
-		(min_thickness 0.0254)
-		(fill yes
-			(island_removal_mode 1)
-		)
-		(polygon
-			(pts
-				(xy 49.105 80.305) (xy 48.905 80.305) (xy 48.88 80.43) (xy 49.005 80.556) (xy 49.13 80.43)
-			)
-		)
-		(filled_polygon
-			(layer "F.Cu")
-			(pts
-				(xy 49.13 80.43) (xy 49.005 80.556) (xy 48.88 80.43) (xy 48.905 80.305) (xy 49.105 80.305)
-			)
-		)
-	)
-	(zone
-		(net "Vprot")
-		(layer "F.Cu")
-		(hatch none 0.1)
 		(priority 30211)
 		(attr
 			(teardrop
@@ -63189,6 +63160,35 @@
 			(layer "F.Cu")
 			(pts
 				(xy 49.13 80.68) (xy 49.105 80.805) (xy 48.905 80.805) (xy 48.88 80.68) (xy 49.005 80.554)
+			)
+		)
+	)
+	(zone
+		(net "Vprot")
+		(layer "F.Cu")
+		(hatch none 0.1)
+		(priority 30212)
+		(attr
+			(teardrop
+				(type padvia)
+			)
+		)
+		(connect_pads yes
+			(clearance 0)
+		)
+		(min_thickness 0.0254)
+		(fill yes
+			(island_removal_mode 1)
+		)
+		(polygon
+			(pts
+				(xy 49.105 80.305) (xy 48.905 80.305) (xy 48.88 80.43) (xy 49.005 80.556) (xy 49.13 80.43)
+			)
+		)
+		(filled_polygon
+			(layer "F.Cu")
+			(pts
+				(xy 49.13 80.43) (xy 49.005 80.556) (xy 48.88 80.43) (xy 48.905 80.305) (xy 49.105 80.305)
 			)
 		)
 	)
