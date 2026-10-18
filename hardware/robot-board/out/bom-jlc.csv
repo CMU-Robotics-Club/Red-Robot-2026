@@ -6,7 +6,7 @@ PLED: Light emitting diode,D3,LED_SMD:LED_1206_3216Metric,C51933322
 LBAT: Light emitting diode,D2,LED_SMD:LED_1206_3216Metric,C5123493
 "D_Small: Diode, small symbol","D1,D10",Diode_SMD:D_SOD-123,C82544
 MAX7219: 8-Digit LED Display Driver,U10,Package_SO:SOIC-24W_7.5x15.4mm_P1.27mm,C52476
-74AHCT125: Quadruple Bus Buffer Gates With 3-State Outputs,U9,Package_SO:TSSOP-14_4.4x5mm_P0.65mm,C36365
+74ACT125: Quadruple Bus Buffer Gates With 3-State Outputs,U9,Package_SO:TSSOP-14_4.4x5mm_P0.65mm,C52940839
 XL-SA3391SRWC: 3 Digit 7-Segment Display,U8,Display_7Segment:XL-SA3391SRWC,C49652877
 DRV8835: ,"U6,U7",Package_SON:WSON-12-1EP_3x2mm_P0.5mm_EP1x2.65,C129328
 "TVS1400DRV: Flat-Clamp Surge Protection Device. 14Vrwm, WSON-6",U4,Package_SON:WSON-6-1EP_2x2mm_P0.65mm_EP1x1.6mm,C1975229

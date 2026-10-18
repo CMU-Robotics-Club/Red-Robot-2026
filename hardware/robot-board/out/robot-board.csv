@@ -6,7 +6,7 @@
 "D2","1","LBAT","","","","LED_SMD:LED_1206_3216Metric","","C5123493","Light emitting diode"
 "D1,D10","2","D_Small","","","","Diode_SMD:D_SOD-123","","C82544","Diode, small symbol"
 "U10","1","MAX7219","","","","Package_SO:SOIC-24W_7.5x15.4mm_P1.27mm","https://datasheets.maximintegrated.com/en/ds/MAX7219-MAX7221.pdf","C52476","8-Digit LED Display Driver"
-"U9","1","74AHCT125","","","","Package_SO:TSSOP-14_4.4x5mm_P0.65mm","https://www.ti.com/lit/ds/symlink/sn74ahct125.pdf","C36365","Quadruple Bus Buffer Gates With 3-State Outputs"
+"U9","1","74ACT125","","","","Package_SO:TSSOP-14_4.4x5mm_P0.65mm","https://www.ti.com/lit/ds/symlink/sn74act125.pdf","C52940839","Quadruple Bus Buffer Gates With 3-State Outputs"
 "U8","1","XL-SA3391SRWC","","","","Display_7Segment:XL-SA3391SRWC","","C49652877","3 Digit 7-Segment Display"
 "U6,U7","2","DRV8835","","","","Package_SON:WSON-12-1EP_3x2mm_P0.5mm_EP1x2.65","","C129328",""
 "U4","1","TVS1400DRV","","","","Package_SON:WSON-6-1EP_2x2mm_P0.65mm_EP1x1.6mm","http://www.ti.com/lit/ds/symlink/tvs1400.pdf","C1975229","Flat-Clamp Surge Protection Device. 14Vrwm, WSON-6"
