@@ -40757,7 +40757,7 @@
 				)
 			)
 		)
-		(property "Description" "Light emitting diode"
+		(property "Description" "Light emitting diode, red"
 			(at 207.01 86.36 0)
 			(hide yes)
 			(show_name no)
@@ -40779,7 +40779,7 @@
 				)
 			)
 		)
-		(property "JLC P/N" "C5123493"
+		(property "JLC P/N" "C125086"
 			(at 207.01 86.36 90)
 			(hide yes)
 			(show_name no)
@@ -41347,7 +41347,7 @@
 				)
 			)
 		)
-		(property "Description" "Light emitting diode"
+		(property "Description" "Light emitting diode, green"
 			(at 224.79 86.36 0)
 			(hide yes)
 			(show_name no)
@@ -45603,7 +45603,7 @@
 		(dnp no)
 		(uuid "849f9b54-ef94-40ba-a4ae-9ba30af49240")
 		(property "Reference" "D3"
-			(at 230.886 86.106 90)
+			(at 237.998 88.9 90)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -45614,7 +45614,7 @@
 			)
 		)
 		(property "Value" "PLED"
-			(at 230.886 83.566 90)
+			(at 239.014 90.932 90)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -45646,7 +45646,7 @@
 				)
 			)
 		)
-		(property "Description" "Light emitting diode"
+		(property "Description" "Light emitting diode, orange"
 			(at 233.68 86.36 0)
 			(hide yes)
 			(show_name no)
@@ -49853,7 +49853,7 @@
 				)
 			)
 		)
-		(property "Description" "Light emitting diode"
+		(property "Description" "Light emitting diode, orange"
 			(at 242.57 86.36 0)
 			(hide yes)
 			(show_name no)
@@ -49875,7 +49875,7 @@
 				)
 			)
 		)
-		(property "JLC P/N" "C5123493"
+		(property "JLC P/N" "C51933322"
 			(at 242.57 86.36 90)
 			(hide yes)
 			(show_name no)
@@ -50234,7 +50234,7 @@
 		(dnp no)
 		(uuid "b283fe09-eac9-4081-8857-eb622ae3f2a0")
 		(property "Reference" "D9"
-			(at 213.106 86.106 90)
+			(at 220.726 86.614 90)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -50245,7 +50245,7 @@
 			)
 		)
 		(property "Value" "BLED"
-			(at 213.106 83.566 90)
+			(at 221.742 89.662 90)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -50277,7 +50277,7 @@
 				)
 			)
 		)
-		(property "Description" "Light emitting diode"
+		(property "Description" "Light emitting diode, blue"
 			(at 215.9 86.36 0)
 			(hide yes)
 			(show_name no)

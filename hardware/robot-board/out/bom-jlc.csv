@@ -1,9 +1,9 @@
 Comment,Designator,Footprint,LCSC Part Number
-BLED: Light emitting diode,D9,LED_SMD:LED_1206_3216Metric,C375460
-RXLED: Light emitting diode,D7,LED_SMD:LED_1206_3216Metric,C5123493
-PWR: Light emitting diode,D5,LED_SMD:LED_1206_3216Metric,C5123493
-PLED: Light emitting diode,D3,LED_SMD:LED_1206_3216Metric,C51933322
-LBAT: Light emitting diode,D2,LED_SMD:LED_1206_3216Metric,C5123493
+"BLED: Light emitting diode, blue",D9,LED_SMD:LED_1206_3216Metric,C375460
+"RXLED: Light emitting diode, orange",D7,LED_SMD:LED_1206_3216Metric,C51933322
+"PWR: Light emitting diode, green",D5,LED_SMD:LED_1206_3216Metric,C5123493
+"PLED: Light emitting diode, orange",D3,LED_SMD:LED_1206_3216Metric,C51933322
+"LBAT: Light emitting diode, red",D2,LED_SMD:LED_1206_3216Metric,C125086
 "D_Small: Diode, small symbol","D1,D10",Diode_SMD:D_SOD-123,C82544
 MAX7219: 8-Digit LED Display Driver,U10,Package_SO:SOIC-24W_7.5x15.4mm_P1.27mm,C52476
 74ACT125: Quadruple Bus Buffer Gates With 3-State Outputs,U9,Package_SO:TSSOP-14_4.4x5mm_P0.65mm,C52940839
@@ -37,14 +37,14 @@ Barrel_Jack: DC Barrel Jack with an internal switch,J2,Connector_BarrelJack:Barr
 "Fuse_Small: Fuse, small symbol",F1,Fuse:Fuseholder_Littelfuse_Nano2_154x,C206916
 "4.7uF: Unpolarized capacitor, small symbol",C46,Capacitor_SMD:C_0805_2012Metric,C880382
 "1uF: Unpolarized capacitor, small symbol",C45,Capacitor_SMD:C_0402_1005Metric,C49210445
-"1000uF: Unpolarized capacitor, small symbol",C44,Capacitor_SMD:CP_Elec_8x10,C401763
-"22uF: Unpolarized capacitor, small symbol",C42,Capacitor_SMD:C_0805_2012Metric,C22442507
+"1000uF: Unpolarized capacitor, small symbol",C44,Capacitor_SMD:CP_Elec_8x10,C311227
+"22uF: Unpolarized capacitor, small symbol",C42,Capacitor_SMD:C_0805_2012Metric,C296720
 "100uF: Unpolarized capacitor, small symbol",C37,Capacitor_SMD:C_0805_2012Metric,C141660
 "1uF: Unpolarized capacitor, small symbol","C21,C26,C31,C40",Capacitor_SMD:C_0805_2012Metric,C282734
 "1000uF: Unpolarized capacitor, small symbol","C16,C17,C18",Capacitor_SMD:CP_Elec_10x10,C970714
 "10uF: Unpolarized capacitor, small symbol","C15,C22,C27,C32,C35,C38,C39,C41",Capacitor_SMD:C_0805_2012Metric,C15850
 "33uF: Unpolarized capacitor, small symbol","C12,C14",Capacitor_SMD:C_1206_3216Metric,C342307
-"47uF: Unpolarized capacitor, small symbol","C11,C13",Capacitor_SMD:C_1206_3216Metric,C2167809
+"47uF: Unpolarized capacitor, small symbol","C11,C13",Capacitor_SMD:C_1206_3216Metric,C385907
 "33pF: Unpolarized capacitor, small symbol","C9,C10",Capacitor_SMD:C_0402_1005Metric,C107005
 "0.1uF: Unpolarized capacitor, small symbol","C5,C6,C7,C8,C19,C20,C23,C24,C25,C28,C29,C30,C33,C34,C36,C43,C47",Capacitor_SMD:C_0402_1005Metric,C1525
 "10uF: Unpolarized capacitor, small symbol","C1,C2,C3,C4",Capacitor_SMD:C_1206_3216Metric,C33546013
