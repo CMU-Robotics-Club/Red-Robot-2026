@@ -9,7 +9,7 @@
 "U9","1","74ACT125","","","","Package_SO:TSSOP-14_4.4x5mm_P0.65mm","https://www.ti.com/lit/ds/symlink/sn74act125.pdf","C52940839","Quadruple Bus Buffer Gates With 3-State Outputs"
 "U8","1","XL-SA3391SRWC","","","","Display_7Segment:XL-SA3391SRWC","","C49652877","3 Digit 7-Segment Display"
 "U6,U7","2","DRV8835","","","","Package_SON:WSON-12-1EP_3x2mm_P0.5mm_EP1x2.65","","C129328",""
-"U4","1","TVS1400DRV","","","","Package_SON:WSON-6-1EP_2x2mm_P0.65mm_EP1x1.6mm","http://www.ti.com/lit/ds/symlink/tvs1400.pdf","C1975229","Flat-Clamp Surge Protection Device. 14Vrwm, WSON-6"
+"U4","1","SMBJ12A","","","","Diode_SMD:D_SMB","https://www.lcsc.com/datasheet/C151251.pdf","C151251","TVS diode"
 "U2,U3","2","LMR51450","","","","Package_SON:WSON-12-1EP_3x3mm_P0.5mm_EP1.5x2.5mm","","C5782413",""
 "U1","1","ESP32-S3-WROOM-1","","","","RF_Module:ESP32-S3-WROOM-1","https://www.espressif.com/sites/default/files/documentation/esp32-s3-wroom-1_wroom-1u_datasheet_en.pdf","C2913197","RF Module, ESP32-S3 SoC, Wi-Fi 802.11b/g/n, Bluetooth, BLE, 32-bit, 3.3V, onboard antenna, SMD"
 "SW3","1","SW_SPST","","","","Button_Switch_SMD:SW_SPDT_Shouhan_MSK12C02","","C431540","Single Pole Single Throw (SPST) switch"

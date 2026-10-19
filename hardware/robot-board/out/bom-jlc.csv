@@ -9,7 +9,7 @@ MAX7219: 8-Digit LED Display Driver,U10,Package_SO:SOIC-24W_7.5x15.4mm_P1.27mm,C
 74ACT125: Quadruple Bus Buffer Gates With 3-State Outputs,U9,Package_SO:TSSOP-14_4.4x5mm_P0.65mm,C52940839
 XL-SA3391SRWC: 3 Digit 7-Segment Display,U8,Display_7Segment:XL-SA3391SRWC,C49652877
 DRV8835: ,"U6,U7",Package_SON:WSON-12-1EP_3x2mm_P0.5mm_EP1x2.65,C129328
-"TVS1400DRV: Flat-Clamp Surge Protection Device. 14Vrwm, WSON-6",U4,Package_SON:WSON-6-1EP_2x2mm_P0.65mm_EP1x1.6mm,C1975229
+SMBJ12A: TVS diode,U4,Diode_SMD:D_SMB,C151251
 LMR51450: ,"U2,U3",Package_SON:WSON-12-1EP_3x3mm_P0.5mm_EP1.5x2.5mm,C5782413
 "ESP32-S3-WROOM-1: RF Module, ESP32-S3 SoC, Wi-Fi 802.11b/g/n, Bluetooth, BLE, 32-bit, 3.3V, onboard antenna, SMD",U1,RF_Module:ESP32-S3-WROOM-1,C2913197
 SW_SPST: Single Pole Single Throw (SPST) switch,SW3,Button_Switch_SMD:SW_SPDT_Shouhan_MSK12C02,C431540
