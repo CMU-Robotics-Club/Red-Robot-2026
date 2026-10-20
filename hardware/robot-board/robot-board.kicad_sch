@@ -6550,231 +6550,6 @@
 			)
 			(embedded_fonts no)
 		)
-		(symbol "Transistor_FET:AO4407A"
-			(exclude_from_sim no)
-			(in_bom yes)
-			(on_board yes)
-			(in_pos_files yes)
-			(duplicate_pin_numbers_are_jumpers no)
-			(property "Reference" "Q"
-				(at 0 0 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "Value" ""
-				(at 0 0 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "Footprint" ""
-				(at 0 0 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "Datasheet" ""
-				(at 0 0 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "Description" ""
-				(at 0 0 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(symbol "AO4407A_0_1"
-				(circle
-					(center -5.08 -5.08)
-					(radius 5.08)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-			)
-			(symbol "AO4407A_1_1"
-				(pin output line
-					(at -5.08 -12.7 90)
-					(length 2.54)
-					(name "S"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "1"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin passive line
-					(at -5.08 -12.7 90)
-					(length 2.54)
-					(hide yes)
-					(name "S"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "2"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin passive line
-					(at -5.08 -12.7 90)
-					(length 2.54)
-					(hide yes)
-					(name "S"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "3"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin input line
-					(at -12.7 -5.08 0)
-					(length 2.54)
-					(name "G"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "4"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin input line
-					(at -5.08 2.54 270)
-					(length 2.54)
-					(name "D"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "5"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin passive line
-					(at -5.08 2.54 270)
-					(length 2.54)
-					(hide yes)
-					(name "D"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "6"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin passive line
-					(at -5.08 2.54 270)
-					(length 2.54)
-					(hide yes)
-					(name "D"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "7"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin passive line
-					(at -5.08 2.54 270)
-					(length 2.54)
-					(hide yes)
-					(name "D"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "8"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-			)
-			(embedded_fonts no)
-		)
 		(symbol "Transistor_FET:BSS138"
 			(pin_names
 				(hide yes)
@@ -9126,12 +8901,6 @@
 		(uuid "7b814cc1-1b08-4ae5-8f78-3a96182554ec")
 	)
 	(junction
-		(at 162.56 133.35)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "7ed9ca53-5f48-4912-8dad-5062ced46411")
-	)
-	(junction
 		(at 111.76 73.66)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -9148,12 +8917,6 @@
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "8726bc65-5a0d-4811-aa37-38b7451e46bc")
-	)
-	(junction
-		(at 157.48 133.35)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "890619a5-8e41-487f-beb5-ff5f2ec0507d")
 	)
 	(junction
 		(at 165.1 87.63)
@@ -9509,16 +9272,6 @@
 	)
 	(wire
 		(pts
-			(xy 172.72 133.35) (xy 172.72 137.16)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "04e056a3-2e3f-4744-828e-d3233ddb940a")
-	)
-	(wire
-		(pts
 			(xy 96.52 43.18) (xy 111.76 43.18)
 		)
 		(stroke
@@ -9726,16 +9479,6 @@
 			(type default)
 		)
 		(uuid "181ac32e-0bfc-489d-9930-2d45e4ae1767")
-	)
-	(wire
-		(pts
-			(xy 170.18 128.27) (xy 176.53 128.27)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "181da2b6-510c-448f-91a4-f74fa1a91877")
 	)
 	(wire
 		(pts
@@ -10849,16 +10592,6 @@
 	)
 	(wire
 		(pts
-			(xy 154.94 133.35) (xy 154.94 140.97)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "691b7e91-e597-41f2-8319-24daa5562314")
-	)
-	(wire
-		(pts
 			(xy 22.86 171.45) (xy 31.75 171.45)
 		)
 		(stroke
@@ -10929,7 +10662,7 @@
 	)
 	(wire
 		(pts
-			(xy 149.86 128.27) (xy 157.48 128.27)
+			(xy 149.86 128.27) (xy 176.53 128.27)
 		)
 		(stroke
 			(width 0)
@@ -11879,16 +11612,6 @@
 	)
 	(wire
 		(pts
-			(xy 170.18 128.27) (xy 170.18 140.97)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "b601b81f-4714-420a-a37a-52a0113148bf")
-	)
-	(wire
-		(pts
 			(xy 24.13 77.47) (xy 38.1 77.47)
 		)
 		(stroke
@@ -12539,16 +12262,6 @@
 	)
 	(wire
 		(pts
-			(xy 154.94 133.35) (xy 157.48 133.35)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "e63d0b40-5551-4cd6-818a-6b89878c3a58")
-	)
-	(wire
-		(pts
 			(xy 129.54 73.66) (xy 129.54 72.39)
 		)
 		(stroke
@@ -12709,16 +12422,6 @@
 	)
 	(wire
 		(pts
-			(xy 157.48 128.27) (xy 157.48 133.35)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "f124e090-699a-44e2-b7b3-7051a5ded2a0")
-	)
-	(wire
-		(pts
 			(xy 24.13 82.55) (xy 38.1 82.55)
 		)
 		(stroke
@@ -12836,16 +12539,6 @@
 			(type default)
 		)
 		(uuid "fd23b5f5-ab62-4f64-b710-8cb4122bf4c2")
-	)
-	(wire
-		(pts
-			(xy 172.72 137.16) (xy 176.53 137.16)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "fd58a7c2-0c48-4008-9187-1269021cf3c1")
 	)
 	(wire
 		(pts
@@ -41695,7 +41388,7 @@
 				)
 			)
 		)
-		(property "JLC P/N" "C311227"
+		(property "JLC P/N" "C2910470"
 			(at 181.61 39.37 0)
 			(hide yes)
 			(show_name no)
@@ -42715,115 +42408,6 @@
 			(project "robot-board"
 				(path "/3adacf52-553b-4591-a9be-9572be717553"
 					(reference "#PWR012")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Transistor_FET:AO4407A")
-		(at 167.64 146.05 270)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "6907b3b4-60c4-4dd4-a192-cbbb644a8fd2")
-		(property "Reference" "Q6"
-			(at 162.56 148.59 90)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" ""
-			(at 167.64 146.05 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" "Package_SO:SOIC-8_3.9x4.9mm_P1.27mm"
-			(at 167.64 146.05 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 167.64 146.05 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" ""
-			(at 167.64 146.05 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "JLC P/N" "C16072"
-			(at 167.64 146.05 90)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "8"
-			(uuid "4cc5d471-088f-40d2-8144-9bfdfacaf32d")
-		)
-		(pin "2"
-			(uuid "72f9f6c0-981c-47c2-bd24-3ea4c07f6ed3")
-		)
-		(pin "5"
-			(uuid "9c5aa07e-c77c-4aa3-ae51-87417f471365")
-		)
-		(pin "3"
-			(uuid "75932129-ed96-422a-aa1e-f8237b6c8a1e")
-		)
-		(pin "6"
-			(uuid "bbb01f30-137a-47fb-bdd3-3634c12b9b2e")
-		)
-		(pin "7"
-			(uuid "4cc1a40a-b120-4019-a6d6-e3342b0b3072")
-		)
-		(pin "1"
-			(uuid "f6c613cf-6cd8-41b5-a51f-175083878f52")
-		)
-		(pin "4"
-			(uuid "f9fa46b5-86d1-4fa0-adfb-1283a1325421")
-		)
-		(instances
-			(project "robot-board"
-				(path "/3adacf52-553b-4591-a9be-9572be717553"
-					(reference "Q6")
 					(unit 1)
 				)
 			)
@@ -47745,97 +47329,6 @@
 		)
 	)
 	(symbol
-		(lib_id "Switch:SW_SPST")
-		(at 167.64 133.35 0)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "9b457772-4255-444b-8a44-9560808ffed0")
-		(property "Reference" "SW3"
-			(at 167.64 127 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "SW_SPST"
-			(at 167.64 129.54 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" "Button_Switch_SMD:SW_SPDT_Shouhan_MSK12C02"
-			(at 167.64 133.35 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 167.64 133.35 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" "Single Pole Single Throw (SPST) switch"
-			(at 167.64 133.35 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "JLC P/N" "C431540"
-			(at 167.64 133.35 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "2"
-			(uuid "3cb71e82-88b4-49a2-b1d9-0cfec92f9e77")
-		)
-		(pin "1"
-			(uuid "75e1fabe-b100-41f2-b7f6-e2e8600cfefd")
-		)
-		(instances
-			(project "robot-board"
-				(path "/3adacf52-553b-4591-a9be-9572be717553"
-					(reference "SW3")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
 		(lib_id "power:VBUS")
 		(at 15.24 171.45 0)
 		(unit 1)
@@ -50173,109 +49666,6 @@
 			(project "robot-board"
 				(path "/3adacf52-553b-4591-a9be-9572be717553"
 					(reference "#PWR079")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Device:R_Small")
-		(at 160.02 133.35 90)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(uuid "b464529e-0e40-43e4-bfcb-1f645ee2d7e3")
-		(property "Reference" "R28"
-			(at 158.75 131.572 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.016 1.016)
-				)
-				(justify left)
-			)
-		)
-		(property "Value" "100k"
-			(at 161.29 131.572 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Footprint" "Resistor_SMD:R_0603_1608Metric"
-			(at 160.02 133.35 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 160.02 133.35 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" "Resistor, small symbol"
-			(at 160.02 133.35 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "JLC P/N" "C122538"
-			(at 160.02 133.35 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Sim.Type" ""
-			(at 160.02 133.35 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "267d621b-a036-45aa-b033-296aa8bb0832")
-		)
-		(pin "2"
-			(uuid "06df2ba2-b3e8-4e64-83ee-b0309b02b6c6")
-		)
-		(instances
-			(project "robot-board"
-				(path "/3adacf52-553b-4591-a9be-9572be717553"
-					(reference "R28")
 					(unit 1)
 				)
 			)
