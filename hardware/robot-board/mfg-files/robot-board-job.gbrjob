@@ -5,7 +5,7 @@
       "Application": "Pcbnew",
       "Version": "10.0.6"
     },
-    "CreationDate": "2026-10-19T18:12:52-04:00"
+    "CreationDate": "2026-10-19T23:17:03-04:00"
   },
   "GeneralSpecs": {
     "ProjectId": {
@@ -36,64 +36,63 @@
       "PadToPad": 0.0,
       "PadToTrack": 0.0,
       "TrackToTrack": 0.2,
-      "MinLineWidth": 1.0,
       "TrackToRegion": 0.5,
       "RegionToRegion": 0.5
     }
   ],
   "FilesAttributes": [
     {
-      "Path": "robot-board-F_Cu.gbr",
+      "Path": "robot-board-F_Cu.gtl",
       "FileFunction": "Copper,L1,Top",
       "FilePolarity": "Positive"
     },
     {
-      "Path": "robot-board-In1_Cu.gbr",
+      "Path": "robot-board-In1_Cu.g1",
       "FileFunction": "Copper,L2,Inr",
       "FilePolarity": "Positive"
     },
     {
-      "Path": "robot-board-In2_Cu.gbr",
+      "Path": "robot-board-In2_Cu.g2",
       "FileFunction": "Copper,L3,Inr",
       "FilePolarity": "Positive"
     },
     {
-      "Path": "robot-board-B_Cu.gbr",
+      "Path": "robot-board-B_Cu.gbl",
       "FileFunction": "Copper,L4,Bot",
       "FilePolarity": "Positive"
     },
     {
-      "Path": "robot-board-F_Paste.gbr",
+      "Path": "robot-board-F_Paste.gtp",
       "FileFunction": "SolderPaste,Top",
       "FilePolarity": "Positive"
     },
     {
-      "Path": "robot-board-B_Paste.gbr",
+      "Path": "robot-board-B_Paste.gbp",
       "FileFunction": "SolderPaste,Bot",
       "FilePolarity": "Positive"
     },
     {
-      "Path": "robot-board-F_Silkscreen.gbr",
+      "Path": "robot-board-F_Silkscreen.gto",
       "FileFunction": "Legend,Top",
       "FilePolarity": "Positive"
     },
     {
-      "Path": "robot-board-B_Silkscreen.gbr",
+      "Path": "robot-board-B_Silkscreen.gbo",
       "FileFunction": "Legend,Bot",
       "FilePolarity": "Positive"
     },
     {
-      "Path": "robot-board-F_Mask.gbr",
+      "Path": "robot-board-F_Mask.gts",
       "FileFunction": "SolderMask,Top",
       "FilePolarity": "Negative"
     },
     {
-      "Path": "robot-board-B_Mask.gbr",
+      "Path": "robot-board-B_Mask.gbs",
       "FileFunction": "SolderMask,Bot",
       "FilePolarity": "Negative"
     },
     {
-      "Path": "robot-board-Edge_Cuts.gbr",
+      "Path": "robot-board-Edge_Cuts.gm1",
       "FileFunction": "Profile",
       "FilePolarity": "Positive"
     }

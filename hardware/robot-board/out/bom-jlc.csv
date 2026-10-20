@@ -12,7 +12,6 @@ DRV8835: ,"U6,U7",Package_SON:WSON-12-1EP_3x2mm_P0.5mm_EP1x2.65,C129328
 SMBJ12A: TVS diode,U4,Diode_SMD:D_SMB,C151251
 LMR51450: ,"U2,U3",Package_SON:WSON-12-1EP_3x3mm_P0.5mm_EP1.5x2.5mm,C5782413
 "ESP32-S3-WROOM-1: RF Module, ESP32-S3 SoC, Wi-Fi 802.11b/g/n, Bluetooth, BLE, 32-bit, 3.3V, onboard antenna, SMD",U1,RF_Module:ESP32-S3-WROOM-1,C2913197
-SW_SPST: Single Pole Single Throw (SPST) switch,SW3,Button_Switch_SMD:SW_SPDT_Shouhan_MSK12C02,C431540
 SW_SPST: Single Pole Single Throw (SPST) switch,"SW1,SW2",footprints:SW_Push_SPST_TS-1088,C720477
 "22R: Resistor, small symbol","R42,R43",Resistor_SMD:R_0402_1005Metric,C2929994
 "33k: Resistor, small symbol",R27,Resistor_SMD:R_0603_1608Metric,C705768
@@ -23,9 +22,8 @@ SW_SPST: Single Pole Single Throw (SPST) switch,"SW1,SW2",footprints:SW_Push_SPS
 "1k: Resistor, small symbol","R6,R7,R19,R20,R24,R29",Resistor_SMD:R_0402_1005Metric,C11702
 "19.1k: Resistor, small symbol",R5,Resistor_SMD:R_0603_1608Metric,C855669
 "31.6k: Resistor, small symbol",R3,Resistor_SMD:R_0603_1608Metric,C860829
-"100k: Resistor, small symbol","R2,R4,R26,R28",Resistor_SMD:R_0603_1608Metric,C122538
+"100k: Resistor, small symbol","R2,R4,R26",Resistor_SMD:R_0603_1608Metric,C122538
 "10k: Resistor, small symbol",R1,Resistor_SMD:R_0402_1005Metric,C25744
-: ,Q6,Package_SO:SOIC-8_3.9x4.9mm_P1.27mm,C16072
 "BSS138: 50V Vds, 0.22A Id, N-Channel MOSFET, SOT-23","Q1,Q2,Q3,Q4,Q5",Package_TO_SOT_SMD:SOT-23,C112239
 "5.6uH: Inductor, small symbol",L2,Inductor_SMD:L_Bourns_SRP7028A_7.3x6.6mm,C5351382
 "4.7uH: Inductor, small symbol",L1,Inductor_SMD:L_Bourns_SRP7028A_7.3x6.6mm,C51933838
@@ -37,7 +35,7 @@ Barrel_Jack: DC Barrel Jack with an internal switch,J2,Connector_BarrelJack:Barr
 "Fuse_Small: Fuse, small symbol",F1,Fuse:Fuseholder_Littelfuse_Nano2_154x,C206916
 "4.7uF: Unpolarized capacitor, small symbol",C46,Capacitor_SMD:C_0805_2012Metric,C880382
 "1uF: Unpolarized capacitor, small symbol",C45,Capacitor_SMD:C_0402_1005Metric,C49210445
-"1000uF: Unpolarized capacitor, small symbol",C44,Capacitor_SMD:CP_Elec_8x10,C311227
+"1000uF: Unpolarized capacitor, small symbol",C44,Capacitor_SMD:CP_Elec_8x10,C2910470
 "22uF: Unpolarized capacitor, small symbol",C42,Capacitor_SMD:C_0805_2012Metric,C296720
 "100uF: Unpolarized capacitor, small symbol",C37,Capacitor_SMD:C_0805_2012Metric,C141660
 "1uF: Unpolarized capacitor, small symbol","C21,C26,C31,C40",Capacitor_SMD:C_0805_2012Metric,C282734
