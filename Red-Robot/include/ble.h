@@ -8,7 +8,7 @@
 
 #define BLE_STATIC_PIN 232323
 
-extern volatile int16_t global_motor_speed;
+extern volatile int16_t global_motor_speed[4];
 
 namespace BLE {
 /**

@@ -1,5 +1,6 @@
 #include <Arduino.h>
 #include <NimBLEDevice.h>
+#include <esp_mac.h>
 
 #include "ble.h"
 
@@ -40,11 +41,25 @@ class RxCallbacks : public NimBLECharacteristicCallbacks {
     NimBLEAttValue rxValue = pCharacteristic->getValue();
 
     if (rxValue.length() > 0) {
-      int16_t incoming_speed = (int16_t)String(rxValue.c_str()).toInt();
-      incoming_speed = constrain(incoming_speed, -100, 100);
+      int16_t channel, speed;
+      if (sscanf(rxValue.c_str(), "%hd %hd", &channel, &speed) == 2) {
+          channel = constrain(channel, 0, 3);
+          speed = constrain(speed, -100, 100);
 
-      Serial.printf("[BLE] Speed updated to: %d\n", incoming_speed);
-      global_motor_speed = incoming_speed;
+          Serial.printf("[BLE] Speeds updated: motor[%d] - %d\n",
+                        channel, speed);
+
+          global_motor_speed[channel] = speed;
+      } else {
+          Serial.println("[BLE] Invalid speed command");
+      }
+
+
+//      int16_t incoming_speed = (int16_t)String(rxValue.c_str()).toInt();
+//      incoming_speed = constrain(incoming_speed, -100, 100);
+//
+//      Serial.printf("[BLE] Speed updated to: %d\n", incoming_speed);
+//      global_motor_speed = incoming_speed;
     }
   }
 };

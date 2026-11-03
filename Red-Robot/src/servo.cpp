@@ -25,13 +25,11 @@ void init() {
   if (servo_mutex == NULL) {
     servo_mutex = xSemaphoreCreateMutex();
   }
+  ledcSetClockSource(LEDC_USE_XTAL_CLK);
 
   for (int i = 0; i < 4; i++) {
-    // 1. Configure the LEDC channel (Channel 0-3, 50 Hz, 14-bit resolution)
-    ledcSetup(i, 50, 14);
-
-    // 2. Attach the physical GPIO pin to that channel
-    ledcAttachPin(servo_pins[i], i);
+    // (Channel 0-3, 50 Hz, 14-bit resolution)
+    ledcAttach(servo_pins[i], 50, 14);
   }
 }
 
