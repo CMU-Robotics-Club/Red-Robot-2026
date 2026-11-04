@@ -70,6 +70,8 @@ void motorTask(void *pvParameters) {
 void setup() {
   Serial.begin(115200);
 
+  delay(3000);
+
   Serial.printf("Reset reason: %d\n", (int)esp_reset_reason());
 
   analogReadResolution(12);
@@ -90,7 +92,8 @@ void setup() {
 }
 
 void loop() {
-  /*uint16_t sensor_values[6];
+  /*
+  uint16_t sensor_values[6];
 
   Serial.print("Line sensors=");
   LineSensors::read(sensor_values);
@@ -99,5 +102,6 @@ void loop() {
     Serial.print(sensor_values[i]);
     Serial.print(" ");
   }
-  Serial.println();*/
+  Serial.println();
+  */
 }

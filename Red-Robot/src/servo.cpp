@@ -47,10 +47,10 @@ void write(SERVO s, int16_t angle) {
     uint32_t duty = map(pulse_us, 0, SERVO_PERIOD_US, 0, LEDC_MAX_DUTY);
 
     // Cast enum to integer to get the corresponding channel (0, 1, 2, or 3)
-    int channel = static_cast<int>(s);
+    int idx = static_cast<int>(s);
 
     // 3. Write the duty cycle to the channel (Core v2 uses channel, not pin)
-    ledcWrite(channel, duty);
+    ledcWrite(servo_pins[idx], duty);   // pin, not channel
 
     vTaskDelay(pdMS_TO_TICKS(50));
     xSemaphoreGive(servo_mutex);
