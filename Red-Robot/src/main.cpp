@@ -68,6 +68,8 @@ void motorTask(void *pvParameters) {
 }
 
 void setup() {
+  pinMode(MOTOR1_EN, OUTPUT);
+  digitalWrite(MOTOR1_EN, LOW);
   Serial.begin(115200);
 
   delay(3000);

@@ -38,7 +38,7 @@ void init() {
 
   Serial.println("[DC_MOTOR] Initializing channels...");
 
-  for (int i = 0; i < 2; i++) {
+  for (int i = 0; i < 4; i++) {
     // 1. Route the MCPWM output signal to the EN pin
     mcpwm_gpio_init(mc[i].unit, mc[i].signal, dc_en[i]);
 
@@ -65,12 +65,18 @@ void write(DCMOTOR d, int16_t speed) {
   if (dc_mutex == NULL)
     return;
 
+  int motor = static_cast<int>(d);
+
+  if (motor < 0 || motor >= 4) {
+    Serial.printf("[DC_MOTOR] Error: Invalid motor index %d\n", motor);
+    return;
+  }
+
   if (xSemaphoreTake(dc_mutex, pdMS_TO_TICKS(100)) != pdTRUE) {
     Serial.println("[DC_MOTOR] Error: Mutex lock timeout!");
     return;
   }
 
-  int motor = static_cast<int>(d);
   speed = constrain(speed, -100, 100);
 
   if (speed == 0) {
