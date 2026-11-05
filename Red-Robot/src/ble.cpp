@@ -57,6 +57,9 @@ class RxCallbacks : public NimBLECharacteristicCallbacks {
     buf[len] = '\0';
 
     int channel, speed;
+    char c1, c2, c3, c4;
+
+    Serial.printf("buf: %s\n", buf);
     if (sscanf(buf, "%d %d", &channel, &speed) == 2) {
       channel = constrain(channel, 0, 3);
       speed = constrain(speed, -100, 100);
@@ -64,6 +67,62 @@ class RxCallbacks : public NimBLECharacteristicCallbacks {
       Serial.printf("[BLE] Speeds updated: motor[%d] - %d\n", channel, speed);
 
       global_motor_speed[channel] = (int16_t)speed;
+    } else if (sscanf(buf, "%c%c%c%c", &c1, &c2, &c3, &c4)) {
+      Serial.printf("c1: %c, c2: %c, c3: %c, c4: %c\n", c1, c2, c3, c4);
+      static bool button_pressed[4] = {false, false, false, false};
+
+      if (c1 != '!' || c2 != 'B')
+          return;
+
+      int button = -1;
+
+      // 5 is forward
+      // 6 is backwards
+      // 7 is left
+      // 8 is right
+      switch (c3) {
+      case '5': button = 0; break;
+      case '6': button = 1; break;
+      case '7': button = 2; break;
+      case '8': button = 3; break;
+      case '1': break;
+      default:
+          Serial.println("[BLE] Invalid speed command");
+          return;
+      }
+
+      if (button >= 0) {
+          button_pressed[button] = (c4 == '1');
+      }
+
+      // Recalculate combined motor speeds
+      int left = 0;
+      int right = 0;
+
+      if (button_pressed[0]) { // Forward
+          left += 100;
+          right += 100;
+      }
+
+      if (button_pressed[1]) { // Backward
+          left -= 100;
+          right -= 100;
+      }
+
+      if (button_pressed[2]) { // Turn left
+          left -= 50;
+          right += 50;
+      }
+
+      if (button_pressed[3]) { // Turn right
+          left += 50;
+          right -= 50;
+      }
+
+      // Clamp speeds
+      global_motor_speed[2] = constrain(left, -100, 100);
+      global_motor_speed[3] = constrain(right, -100, 100);
+
     } else {
       Serial.println("[BLE] Invalid speed command");
     }
