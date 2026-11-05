@@ -66,7 +66,7 @@ class RxCallbacks : public NimBLECharacteristicCallbacks {
 
       Serial.printf("[BLE] Speeds updated: motor[%d] - %d\n", channel, speed);
 
-      global_motor_speed[channel] = (int16_t)speed;
+      __RR_global_motor_speed[channel] = (int16_t)speed;
     } else if (sscanf(buf, "%c%c%c%c", &c1, &c2, &c3, &c4)) {
       Serial.printf("c1: %c, c2: %c, c3: %c, c4: %c\n", c1, c2, c3, c4);
       static bool button_pressed[4] = {false, false, false, false};
@@ -120,8 +120,8 @@ class RxCallbacks : public NimBLECharacteristicCallbacks {
       }
 
       // Clamp speeds
-      global_motor_speed[2] = constrain(left, -100, 100);
-      global_motor_speed[3] = constrain(right, -100, 100);
+      __RR_global_motor_speed[2] = constrain(left, -100, 100);
+      __RR_global_motor_speed[3] = constrain(right, -100, 100);
 
     } else {
       Serial.println("[BLE] Invalid speed command");

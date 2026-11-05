@@ -51,8 +51,6 @@ void write(SERVO s, int16_t angle) {
 
     // 3. Write the duty cycle to the channel (Core v2 uses channel, not pin)
     ledcWrite(servo_pins[idx], duty);   // pin, not channel
-
-    vTaskDelay(pdMS_TO_TICKS(50));
     xSemaphoreGive(servo_mutex);
   }
 }
