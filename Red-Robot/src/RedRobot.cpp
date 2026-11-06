@@ -399,7 +399,7 @@ void ParseBluetoothCommands(char *buf, size_t len) {
   #ifdef REDROBOT_DEBUG
     Serial.printf("[Bluetooth] Received: \"%s\"\n", buf);
   #endif
-  if (!Bluefruit::Parse(buf, len))
+  if (!Bluefruit::Parse(buf, len));
     RR_Controller::Parse(buf, len);
 }
 
@@ -455,6 +455,11 @@ void WriteDCMotor(uint8_t d, int16_t speed) {
     if (actuatorMutex) xSemaphoreGive(actuatorMutex);
 }
 
+void Brake() {
+    for (uint8_t i = 0; i < 4; i++)
+      WriteDCMotor(i, 0);
+}
+
 void SetServo(uint8_t s, int16_t angle) {
     if (actuatorMutex) xSemaphoreTake(actuatorMutex, portMAX_DELAY);
     if (in_remote_control.load() && xTaskGetCurrentTaskHandle() == arduinoLoopTask) {
@@ -477,6 +482,7 @@ void StartRemoteControl() {
 bool IsRemoteControlled() {
     return in_remote_control.load();
 }
+
 }
 
 void loop() {

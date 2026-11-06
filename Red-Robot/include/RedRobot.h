@@ -17,6 +17,11 @@ void InitAuton();
 void WriteDCMotor(uint8_t d, int16_t speed);
 
 /**
+ * @brief Stop all motors
+ */
+static void Brake();
+
+/**
  * @brief Set servo 0, 1, 2, or 3 to the specified angle (0 to 180). Must call InitServo before using.
  */
 void SetServo(uint8_t s, int16_t angle);

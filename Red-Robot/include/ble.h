@@ -11,6 +11,7 @@
 
 #include "CONFIGURE-ME.h"
 #include "pinouts.h"
+#include "RedRobot.h"
 
 extern void ParseBluetoothCommands(char *buf, size_t len);
 
@@ -36,6 +37,7 @@ class ServerCallbacks : public NimBLEServerCallbacks {
   void onDisconnect(NimBLEServer *pServer, NimBLEConnInfo &connInfo,
                     int reason) override {
     deviceConnected = false;
+    RedRobot::Brake();
     Serial.printf("[BLE] Client disconnected (reason 0x%X)\n", reason);
   }
 };
