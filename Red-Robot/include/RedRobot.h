@@ -49,3 +49,21 @@ namespace Bluefruit {
   void Button4_Pressed(bool buttonPressedDown);
 
 }
+
+namespace PlaceHolder {
+    enum button_t {
+    UP = 0,
+    DOWN = 1, 
+    LEFT = 2, 
+    RIGHT = 3,
+    CENTER = 3
+  };
+
+  void ButtonX_Pressed(bool buttonPressedDown);
+  void ButtonY_Pressed(bool buttonPressedDown);
+  void ButtonB_Pressed(bool buttonPressedDown);
+  void ButtonA_Pressed(bool buttonPressedDown);
+  void DPad_Pressed(button_t Button, bool buttonPressedDown);
+  void Joystick1(int8_t x, int8_t y);
+  void Joystick2(int8_t x, int8_t y);
+}
