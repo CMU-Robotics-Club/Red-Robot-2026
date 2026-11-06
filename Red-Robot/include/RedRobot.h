@@ -1,3 +1,5 @@
+#pragma once
+
 #include <Arduino.h>
 
 namespace RedRobot {
@@ -15,7 +17,7 @@ void WriteDCMotor(uint8_t d, int16_t speed);
 /**
  * @brief Set servo 0, 1, 2, or 3 to the specified angle (0 to 180). Must call InitServo before using.
  */
-void WriteServo(uint8_t s, int16_t angle);
+void SetServo(uint8_t s, int16_t angle);
 
 /**
  * @brief Read line sensor values
@@ -30,4 +32,20 @@ void WriteServo(uint8_t s, int16_t angle);
 void ReadLineSensor(uint16_t values[6]);
 
 void StartRemoteControl();
+}
+
+namespace Bluefruit {
+    enum button_t {
+    UP = 0,
+    DOWN = 1, 
+    LEFT = 2, 
+    RIGHT = 3
+  };
+
+  void DPad_Pressed(button_t Button, bool buttonPressedDown);
+  void Button1_Pressed(bool buttonPressedDown);
+  void Button2_Pressed(bool buttonPressedDown);
+  void Button3_Pressed(bool buttonPressedDown);
+  void Button4_Pressed(bool buttonPressedDown);
+
 }

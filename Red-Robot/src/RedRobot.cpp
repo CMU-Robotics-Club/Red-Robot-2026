@@ -8,6 +8,8 @@
 #include "pinouts.h"
 #include "ble.h"
 
+#include "BluetoothControls.h"
+
 #define SERVO_MIN_PULSEWIDTH_US 500
 #define SERVO_MAX_PULSEWIDTH_US 2500
 #define SERVO_MIN_DEGREE -180
@@ -20,6 +22,8 @@
 
 #define VOLTAGE_BUF_SIZE 60
 volatile int16_t __RR_global_motor_speed[4] = { 0 };
+
+bool in_remote_control = false;
 
 namespace Battery {
 float read() {
@@ -161,22 +165,15 @@ void write(DCMOTOR d, int16_t speed) {
 }
 }
 
-namespace {
-static SemaphoreHandle_t servo_mutex = NULL;
-
-static const int servo_pins[] = {SERVO0_PWM, SERVO1_PWM, SERVO2_PWM,
-                                 SERVO3_PWM};
-} // namespace
-
 namespace Servo {
+  static const int servo_pins[] = {SERVO0_PWM, SERVO1_PWM, SERVO2_PWM,
+                                  SERVO3_PWM};
+
   enum SERVO{
-    SERVO_0, SERVO_1, SERVO_2, SERVO_3
+    SERVO_0 = 0, SERVO_1 = 1, SERVO_2 = 2, SERVO_3 = 3
   };
 
 void init() {
-  if (servo_mutex == NULL) {
-    servo_mutex = xSemaphoreCreateMutex();
-  }
   ledcSetClockSource(LEDC_USE_XTAL_CLK);
 
   for (int i = 0; i < 4; i++) {
@@ -185,26 +182,19 @@ void init() {
   }
 }
 
-void write(SERVO s, int16_t angle) {
-  if (servo_mutex == NULL)
-    return;
+void set(SERVO s, int16_t angle) {
+  angle = constrain(angle, SERVO_MIN_DEGREE, SERVO_MAX_DEGREE);
 
-  if (xSemaphoreTake(servo_mutex, portMAX_DELAY) == pdTRUE) {
+  uint32_t pulse_us = map(angle, SERVO_MIN_DEGREE, SERVO_MAX_DEGREE,
+                          SERVO_MIN_PULSEWIDTH_US, SERVO_MAX_PULSEWIDTH_US);
 
-    angle = constrain(angle, SERVO_MIN_DEGREE, SERVO_MAX_DEGREE);
+  uint32_t duty = map(pulse_us, 0, SERVO_PERIOD_US, 0, SERVO_LEDC_MAX_DUTY);
 
-    uint32_t pulse_us = map(angle, SERVO_MIN_DEGREE, SERVO_MAX_DEGREE,
-                            SERVO_MIN_PULSEWIDTH_US, SERVO_MAX_PULSEWIDTH_US);
+  // Cast enum to integer to get the corresponding channel (0, 1, 2, or 3)
+  int idx = static_cast<int>(s);
 
-    uint32_t duty = map(pulse_us, 0, SERVO_PERIOD_US, 0, SERVO_LEDC_MAX_DUTY);
-
-    // Cast enum to integer to get the corresponding channel (0, 1, 2, or 3)
-    int idx = static_cast<int>(s);
-
-    // 3. Write the duty cycle to the channel (Core v2 uses channel, not pin)
-    ledcWrite(servo_pins[idx], duty);   // pin, not channel
-    xSemaphoreGive(servo_mutex);
-  }
+  // 3. Write the duty cycle to the channel (Core v2 uses channel, not pin)
+  ledcWrite(servo_pins[idx], duty);   // pin, not channel
 }
 
 } // namespace Servo
@@ -300,10 +290,10 @@ void servoTask(void *) {
     for (;;) {
         vTaskDelay(pdMS_TO_TICKS(1000));
         val = (counter % 2 == 0) ? -180 : 180;
-        Servo::write(Servo::SERVO_0, val);
-        Servo::write(Servo::SERVO_1, val);
-        Servo::write(Servo::SERVO_2, val);
-        Servo::write(Servo::SERVO_3, val);
+        Servo::set(Servo::SERVO_0, val);
+        Servo::set(Servo::SERVO_1, val);
+        Servo::set(Servo::SERVO_2, val);
+        Servo::set(Servo::SERVO_3, val);
         counter++;
     }
 }
@@ -321,6 +311,66 @@ void motorTask(void *pvParameters) {
         }
         }
     }
+}
+
+namespace BluefruitInternal {
+  using namespace Bluefruit;
+  void Parse(char *buf, size_t len) {
+    char c1, c2, c3, c4;
+    if (sscanf(buf, "%c%c%c%c", &c1, &c2, &c3, &c4)) {
+      Serial.printf("c1: %c, c2: %c, c3: %c, c4: %c\n", c1, c2, c3, c4);
+
+      if (c1 != '!' || c2 != 'B')
+          return;
+
+      switch (c3) {
+      case '1':
+        Button1_Pressed((c4 == '1'));
+        break;
+      case '2':
+        Button2_Pressed((c4 == '1'));
+        break;
+      case '3':
+        Button3_Pressed((c4 == '1'));
+        break;
+      case '4':
+        Button4_Pressed((c4 == '1'));
+        break;
+      case '5':   // forward
+        DPad_Pressed(UP, (c4 == '1'));
+        break;  
+      case '6':   // backwards
+        DPad_Pressed(DOWN, (c4 == '1'));
+        break;  
+      case '7':   // left 
+        DPad_Pressed(LEFT, (c4 == '1'));
+        break;
+      case '8':   // right
+        DPad_Pressed(RIGHT, (c4 == '1'));
+        break;
+      default:
+          Serial.println("[BLE] Invalid speed command");
+          return;
+      }
+    } else {
+      Serial.println("[BLE] Invalid speed command");
+    }
+  }
+}
+
+void ParseBluetoothCommands(char *buf, size_t len) {
+  Serial.printf("buf: %s\n", buf);
+  int channel, speed;
+  if (sscanf(buf, "%d %d", &channel, &speed) == 2) {
+    channel = constrain(channel, 0, 3);
+    speed = constrain(speed, -100, 100);
+
+    Serial.printf("[BLE] Speeds updated: motor[%d] - %d\n", channel, speed);
+  } else {
+    #ifdef USE_BLUEFRUIT
+      BluefruitInternal::Parse(buf, len);
+    #endif
+  }
 }
 
 namespace RedRobot {
@@ -359,8 +409,8 @@ void WriteDCMotor(uint8_t d, int16_t speed) {
     DCMotor::write(DCMotor::DCMOTOR(d), speed);
 }
 
-void WriteServo(uint8_t s, int16_t angle) {
-    Servo::write(Servo::SERVO(s), angle);
+void SetServo(uint8_t s, int16_t angle) {
+    Servo::set(Servo::SERVO(s), angle);
 }
 
 void ReadLineSensor(uint16_t values[6]) {
@@ -369,7 +419,6 @@ void ReadLineSensor(uint16_t values[6]) {
 }
 
 void StartRemoteControl() {
-    xTaskCreatePinnedToCore(servoTask, "servo", 2048, nullptr, 1, nullptr, 1);
-    xTaskCreatePinnedToCore(motorTask, "dc_motor", 4096, nullptr, 1, nullptr, 1);
+    in_remote_control = true;
 }
 }
