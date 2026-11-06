@@ -31,7 +31,7 @@
 #define LBAT_LED 16
 #define RADIO_LED 21
 #define RX_LED 17
-#define TX_LED 18
+#define PROG_LED 18
 
 // Line following
 #define LF0 37

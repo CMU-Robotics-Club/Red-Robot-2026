@@ -12,7 +12,6 @@
 #include "CONFIGURE-ME.h"
 #include "pinouts.h"
 
-
 extern volatile int16_t __RR_global_motor_speed[4];
 
 // Set to 1 for one boot to wipe stale bonds (e.g. after changing security
@@ -32,22 +31,12 @@ class ServerCallbacks : public NimBLEServerCallbacks {
   void onConnect(NimBLEServer *pServer, NimBLEConnInfo &connInfo) override {
     deviceConnected = true;
     Serial.println("[BLE] Client connected");
-    NimBLEDevice::startSecurity(connInfo.getConnHandle());
   }
 
   void onDisconnect(NimBLEServer *pServer, NimBLEConnInfo &connInfo,
                     int reason) override {
     deviceConnected = false;
-    Serial.printf("[BLE] Client disconnected (reason %d)\n", reason);
-    // advertiseOnDisconnect(true) restarts advertising; the watchdog task
-    // below is the backstop if that ever fails.
-  }
-
-  void onAuthenticationComplete(NimBLEConnInfo &connInfo) override {
-    if (!connInfo.isEncrypted()) {
-      Serial.println("[BLE] Pairing failed, disconnecting");
-      NimBLEDevice::getServer()->disconnect(connInfo.getConnHandle());
-    }
+    Serial.printf("[BLE] Client disconnected (reason 0x%X)\n", reason);
   }
 };
 
@@ -184,9 +173,12 @@ void init() {
 #endif
 
   // Static passkey, bonding + MITM + secure connections
-  NimBLEDevice::setSecurityAuth(true, true, true);
+  /*NimBLEDevice::setSecurityAuth(true, true, true);
   NimBLEDevice::setSecurityIOCap(BLE_HS_IO_DISPLAY_ONLY);
-  NimBLEDevice::setSecurityPasskey(BLE_STATIC_PIN);
+  NimBLEDevice::setSecurityPasskey(BLE_STATIC_PIN);*/
+
+  NimBLEDevice::setSecurityAuth(false, false, false);
+  NimBLEDevice::setSecurityIOCap(BLE_HS_IO_NO_INPUT_OUTPUT);
 
   // GATT server
   NimBLEServer *pServer = NimBLEDevice::createServer();
@@ -202,8 +194,8 @@ void init() {
   // RX (app -> ESP32)
   NimBLECharacteristic *pRx = pService->createCharacteristic(
       CHARACTERISTIC_UUID_RX,
-      NIMBLE_PROPERTY::WRITE | NIMBLE_PROPERTY::WRITE_NR |
-          NIMBLE_PROPERTY::WRITE_ENC | NIMBLE_PROPERTY::WRITE_AUTHEN);
+      NIMBLE_PROPERTY::WRITE | NIMBLE_PROPERTY::WRITE_NR/* |
+          NIMBLE_PROPERTY::WRITE_ENC | NIMBLE_PROPERTY::WRITE_AUTHEN*/);
   pRx->setCallbacks(new RxCallbacks());
 
   pServer->start();

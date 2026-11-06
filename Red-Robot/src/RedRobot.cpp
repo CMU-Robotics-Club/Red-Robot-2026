@@ -27,6 +27,8 @@ float read() {
   // so Vin = Vout * ((R26+R27)/R27) = Vout * 4.0303
   uint32_t mv = analogReadMilliVolts(ADC1_0);
   float volts = mv / 1000.0; 
+  if (volts < 6.0f) digitalWrite(LBAT_LED, HIGH);
+  else digitalWrite(LBAT_LED, LOW);
   return volts * 4.0303;
 }
 } // namespace Battery
@@ -324,6 +326,7 @@ void motorTask(void *pvParameters) {
 namespace RedRobot {
 void InitRedRobot() {
   pinMode(MOTOR1_EN, OUTPUT);
+  pinMode(LBAT_LED, OUTPUT);
   digitalWrite(MOTOR1_EN, LOW);
   Serial.begin(115200);
 
