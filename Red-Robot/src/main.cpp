@@ -2,12 +2,13 @@
 #include <RedRobot.h>
 
 
+// initialize any variables here
 void setup() {
-  RedRobot::InitRedRobot();
+  RedRobot::InitRedRobot();         // call this first
   RedRobot::InitDCMotors();
   RedRobot::InitServo();
   RedRobot::InitLineSensors();
-  RedRobot::InitAuton();
+  RedRobot::InitAuton();            // call this to activate the AutonomousLoop
 }
 
 void AutonomousLoop() {
