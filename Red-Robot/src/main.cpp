@@ -8,17 +8,14 @@ void setup() {
   RedRobot::InitServo();
   RedRobot::InitLineSensors();
   RedRobot::InitAuton();
-
 }
 
 void AutonomousLoop() {
     static uint32_t lastPrint = 0;
-    static uint32_t startTime = 0;
     static bool started = false;
 
     if (!started) { // Ex: get out of the starting box
         started = true;
-        startTime = millis();
         RedRobot::WriteDCMotor(2, 100);
         RedRobot::WriteDCMotor(3, 100);
         delay(1000);

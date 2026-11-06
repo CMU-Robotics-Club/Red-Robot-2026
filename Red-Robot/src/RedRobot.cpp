@@ -68,8 +68,7 @@ namespace LineSensors {
 
 namespace DCMotor {
   static const int dc_en[] = {MOTOR0_EN, MOTOR1_EN, MOTOR2_EN, MOTOR3_EN};
-  static const int dc_phase[] = {MOTOR0_PHASE, MOTOR1_PHASE, MOTOR2_PHASE,
-                                MOTOR3_PHASE};
+  static const int dc_phase[] = {MOTOR0_PHASE, MOTOR1_PHASE, MOTOR2_PHASE, MOTOR3_PHASE};
 
   // Each motor gets its own MCPWM timer, output A
   struct McpwmMap {
@@ -109,16 +108,13 @@ namespace DCMotor {
       pinMode(dc_phase[i], OUTPUT);
       digitalWrite(dc_phase[i], LOW);
 
-      Serial.printf("[DC_MOTOR] Motor %d -> EN Pin: %d (MCPWM unit %d, timer "
-                    "%d), PHASE Pin: %d\n",
-                    i, dc_en[i], (int)mc[i].unit, (int)mc[i].timer, dc_phase[i]);
     }
   }
 
   void write(DCMOTOR d, int16_t speed) {
     int motor = static_cast<int>(d);
 
-    if (motor < 0 || motor >= 4) {
+    if (motor < 0 || motor >= 4 || motor == 1) {
       Serial.printf("[DC_MOTOR] Error: Invalid motor index %d\n", motor);
       return;
     }
@@ -139,9 +135,11 @@ namespace DCMotor {
     float duty = (float)abs(speed);
     mcpwm_set_duty(mc[motor].unit, mc[motor].timer, MCPWM_OPR_A, duty);
 
-//    Serial.printf(
-//        "[DC_MOTOR] Motor %d | Target Speed: %d | Duty: %d%% | Phase Pin: %s\n",
-//        motor, speed, (int)abs(speed), phase_state == LOW ? "LOW" : "HIGH");
+    #ifdef REDROBOT_DEBUG
+      Serial.printf(
+          "[DC_MOTOR] Motor %d | Target Speed: %d | Duty: %d%% | Phase Pin: %s\n",
+          motor, speed, (int)abs(speed), phase_state == LOW ? "LOW" : "HIGH");
+    #endif
   }
 }
 
@@ -155,6 +153,7 @@ namespace Servo {
 
   void init() {
     ledcSetClockSource(LEDC_USE_XTAL_CLK);
+    Serial.println("[SERVO] Initializing channels...");
 
     for (int i = 0; i < 4; i++) {
       // (Channel 0-3, 50 Hz, 14-bit resolution)
@@ -246,10 +245,9 @@ namespace Display {
 } // namespace Display
 
 void batteryLevelTask(void *) {
-  Serial.println("[TASK] Battery task entered");
   int voltage_buf[VOLTAGE_BUF_SIZE] = {};
   uint16_t index = 0;
-  while (1) {
+  while (true) {
     vTaskDelay(pdMS_TO_TICKS(5));
     voltage_buf[index] =
         static_cast<uint16_t>((Battery::read() * 100.0f) + 0.5f);
@@ -265,13 +263,15 @@ void batteryLevelTask(void *) {
 }
 
 namespace Bluefruit {
-  void Parse(char *buf, size_t len) {
+  bool Parse(char *buf, size_t len) {
     char c1, c2, c3, c4;
     if (sscanf(buf, "%c%c%c%c", &c1, &c2, &c3, &c4)) {
-      Serial.printf("c1: %c, c2: %c, c3: %c, c4: %c\n", c1, c2, c3, c4);
+      #ifdef REDROBOT_DEBUG
+        Serial.printf("[Bluefruit] '%c' '%c' '%c' '%c'\n", c1, c2, c3, c4);
+      #endif
 
       if (c1 != '!' || c2 != 'B')
-          return;
+          return false;
 
       switch (c3) {
       case '1':
@@ -300,11 +300,13 @@ namespace Bluefruit {
         break;
       default:
           Serial.println("[BLE] Invalid speed command");
-          return;
+          return false;
       }
     } else {
       Serial.println("[BLE] Invalid speed command");
+      return false;
     }
+    return true;
   }
 
   void __attribute__((weak)) DPad_Pressed(button_t Button, bool buttonPressedDown) {}
@@ -315,16 +317,15 @@ namespace Bluefruit {
 }
 
 namespace RR_Controller {
-  void Parse(char *buf, size_t len) {
+  bool Parse(char *buf, size_t len) {
     char c1, c2, c3, c4;
     if (sscanf(buf, "%c%c%c%c", &c1, &c2, &c3, &c4)) {
-      Serial.printf("c1: %c, c2: %c, c3: %c, c4: %c\n", c1, c2, c3, c4);
-      Serial.printf("c4: %d, %u", (int)c4, (unsigned int)c4);
+      #ifdef REDROBOT_DEBUG
+        Serial.printf("[RR_Controller] '%c' '%c' '%c/%d' '%d'\n", c1, c2, c3, c3, c4);
+      #endif
 
       if (c1 != '~')
-          return;
-
-      Serial.print("got past c1\n");
+          return false;
 
       switch (c2) {
       case 'B':
@@ -333,7 +334,6 @@ namespace RR_Controller {
           ButtonX_Pressed((c4 == 1));
           break;
         case 'Y':
-          Serial.printf("calling y_pressed\n");
           ButtonY_Pressed((c4 == 1));
           break;
         case 'B':
@@ -344,14 +344,12 @@ namespace RR_Controller {
           break;
         default:
           Serial.println("[BLE] Invalid speed command");
-          return;
+          return false;
         }
         break;
       case 'D':
-        Serial.print("in case D\n");
         switch (c3) {
         case 'U':
-          Serial.print("Going up!\n");
           DPad_Pressed(UP, (c4 == 1));
           break;  
         case 'D':
@@ -368,7 +366,7 @@ namespace RR_Controller {
           break;
         default:
             Serial.println("[BLE] Invalid speed command");
-            return;
+            return false;
         }
         break;
       case 'J':
@@ -379,11 +377,13 @@ namespace RR_Controller {
         break;
       default:
         Serial.println("[BLE] Invalid speed command");
-        return;
+        return false;
       }
     } else {
       Serial.println("[BLE] Invalid speed command");
+      return false;
     }
+    return true;
   }
 
     void __attribute__((weak)) ButtonX_Pressed(bool buttonPressedDown) {}
@@ -396,16 +396,11 @@ namespace RR_Controller {
 }
 
 void ParseBluetoothCommands(char *buf, size_t len) {
-  Serial.printf("buf: %s\n", buf);
-  int channel, speed;
-  if (sscanf(buf, "%d %d", &channel, &speed) == 2) {
-    channel = constrain(channel, 0, 3);
-    speed = constrain(speed, -100, 100);
-
-    Serial.printf("[BLE] Speeds updated: motor[%d] - %d\n", channel, speed);
-  } else {
-    BLUETOOTH_APP::Parse(buf, len);
-  }
+  #ifdef REDROBOT_DEBUG
+    Serial.printf("[Bluetooth] Received: \"%s\"\n", buf);
+  #endif
+  if (!Bluefruit::Parse(buf, len))
+    RR_Controller::Parse(buf, len);
 }
 
 namespace RedRobot {
@@ -431,21 +426,7 @@ void InitRedRobot() {
   BLE::init();
   Serial.println("[INIT] Creating battery task");
 
-  BaseType_t batteryResult = xTaskCreatePinnedToCore(
-      batteryLevelTask,
-      "batteryLevel",
-      4096,
-      nullptr,
-      1,
-      &batteryTaskHandler,
-      1
-  );
-
-  Serial.printf("[INIT] Battery task creation: %s\n",
-                batteryResult == pdPASS ? "SUCCESS" : "FAILED");
-
-  //xTaskCreatePinnedToCore(batteryLevelTask, "batteryLevel", 2048, nullptr, 1, nullptr, 1);
-  //xTaskCreatePinnedToCore(autonomousTask, "AutonomousLoop", 2048, nullptr, 1, nullptr, 1);
+  xTaskCreatePinnedToCore(batteryLevelTask, "batteryLevel", 4096, nullptr, 1, &batteryTaskHandler, 1);
 }
 void InitDCMotors() {
     DCMotor::init();

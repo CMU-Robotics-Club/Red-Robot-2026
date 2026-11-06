@@ -1,7 +1,8 @@
 #include <RedRobot.h>
 bool useTankDrive = false;
 
-namespace Bluefruit {
+namespace Bluefruit
+{
   /* DPad_Pressed is called everytime a D-Pad button is pressed or released.
    *
    * Only activates after RedRobot::StartRemoteControl() is called.
@@ -53,19 +54,27 @@ namespace Bluefruit {
   void Button1_Pressed(bool buttonPressedDown)
   {
     if (!RedRobot::IsRemoteControlled() && buttonPressedDown)
+    {
       RedRobot::StartRemoteControl();
+
+      // start remote controlled with the DC motors off
+      RedRobot::WriteDCMotor(2, 0);
+      RedRobot::WriteDCMotor(3, 0);
+    }
   }
 
   void Button2_Pressed(bool buttonPressedDown)
   {
     // Ex: move an arm when the button is pressed
-    if (buttonPressedDown) {
+    if (buttonPressedDown)
+    {
       RedRobot::SetServo(0, 180);
       RedRobot::SetServo(1, 180);
       RedRobot::SetServo(2, 180);
       RedRobot::SetServo(3, 180);
-
-    } else {
+    }
+    else
+    {
       RedRobot::SetServo(0, 0);
       RedRobot::SetServo(1, 0);
       RedRobot::SetServo(2, 0);
@@ -82,21 +91,24 @@ namespace Bluefruit {
   }
 }
 
-namespace RR_Controller {
+namespace RR_Controller
+{
   void Joystick1(int8_t x, int8_t y)
   {
     if (useTankDrive)
       RedRobot::WriteDCMotor(2, y);
-    else {
-      int leftMotor  = y + x;
+    else
+    {
+      int leftMotor = y + x;
       int rightMotor = y - x;
 
       // Normalize to [-100, 100]
       int maxMagnitude = max(abs(leftMotor), abs(rightMotor));
 
-      if (maxMagnitude > 100) {
-          leftMotor  = leftMotor * 75 / maxMagnitude;
-          rightMotor = rightMotor * 75 / maxMagnitude;
+      if (maxMagnitude > 100)
+      {
+        leftMotor = leftMotor * 75 / maxMagnitude;
+        rightMotor = rightMotor * 75 / maxMagnitude;
       }
       RedRobot::WriteDCMotor(2, leftMotor);
       RedRobot::WriteDCMotor(3, rightMotor);
@@ -157,7 +169,13 @@ namespace RR_Controller {
   void ButtonX_Pressed(bool buttonPressedDown)
   {
     if (!RedRobot::IsRemoteControlled() && buttonPressedDown)
+    {
       RedRobot::StartRemoteControl();
+
+      // start remote controlled with the DC motors off
+      RedRobot::WriteDCMotor(2, 0);
+      RedRobot::WriteDCMotor(3, 0);
+    }
   }
 
   void ButtonY_Pressed(bool buttonPressedDown)

@@ -33,7 +33,14 @@ void SetServo(uint8_t s, int16_t angle);
  */
 void ReadLineSensor(uint16_t values[6]);
 
+/**
+ * @brief Start receiving commands from the remote control and stop the autonomous loop.
+ */
 void StartRemoteControl();
+
+/**
+ * @brief Returns whether or not the robot is set to receive commands from the remote control.
+ */
 bool IsRemoteControlled();
 }
 
@@ -50,7 +57,6 @@ namespace Bluefruit {
   void Button2_Pressed(bool buttonPressedDown);
   void Button3_Pressed(bool buttonPressedDown);
   void Button4_Pressed(bool buttonPressedDown);
-
 }
 
 namespace RR_Controller {

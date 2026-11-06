@@ -25,7 +25,7 @@ extern void ParseBluetoothCommands(char *buf, size_t len);
 
 namespace {
 volatile bool deviceConnected = false;
-char gDeviceName[sizeof(TEAM_NAME) + 10 + 6]; // sus buffer size allocation
+char gDeviceName[6 + sizeof(TEAM_NAME)]; // sus buffer size allocation
 
 class ServerCallbacks : public NimBLEServerCallbacks {
   void onConnect(NimBLEServer *pServer, NimBLEConnInfo &connInfo) override {
@@ -92,9 +92,7 @@ void init() {
   pinMode(RADIO_LED, OUTPUT);
   digitalWrite(RADIO_LED, LOW);
 
-  uint8_t mac[6];
-  esp_read_mac(mac, ESP_MAC_BT);
-  snprintf(gDeviceName, sizeof(gDeviceName), "RR-%s-%02X%02X", TEAM_NAME, mac[4], mac[5]);
+  snprintf(gDeviceName, sizeof(gDeviceName), "RR-%02u-%s", TEAM_NUMBER, TEAM_NAME);
 
   NimBLEDevice::init(gDeviceName);
   NimBLEDevice::setPower(9); // dBm, max range
