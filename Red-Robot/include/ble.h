@@ -55,7 +55,6 @@ class RxCallbacks : public NimBLECharacteristicCallbacks {
     memcpy(buf, rxValue.data(), len);
     buf[len] = '\0';
 
-    Serial.printf("buf (in callback): %s\n", buf);
     ParseBluetoothCommands(buf, len);
   }
 };

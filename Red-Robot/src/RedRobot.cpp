@@ -1,6 +1,7 @@
 #include <Arduino.h>
 #include <SPI.h>
 #include <stdint.h>
+#include <atomic>
 #include "driver/mcpwm.h"
 #include "freertos/semphr.h"
 
@@ -20,7 +21,9 @@
 
 #define VOLTAGE_BUF_SIZE 60
 
-bool in_remote_control = false;
+static std::atomic<bool> in_remote_control{false};
+static SemaphoreHandle_t actuatorMutex = nullptr;
+static TaskHandle_t arduinoLoopTask = nullptr;
 
 extern void AutonomousLoop();
 
@@ -136,9 +139,9 @@ namespace DCMotor {
     float duty = (float)abs(speed);
     mcpwm_set_duty(mc[motor].unit, mc[motor].timer, MCPWM_OPR_A, duty);
 
-    Serial.printf(
-        "[DC_MOTOR] Motor %d | Target Speed: %d | Duty: %d%% | Phase Pin: %s\n",
-        motor, speed, (int)abs(speed), phase_state == LOW ? "LOW" : "HIGH");
+//    Serial.printf(
+//        "[DC_MOTOR] Motor %d | Target Speed: %d | Duty: %d%% | Phase Pin: %s\n",
+//        motor, speed, (int)abs(speed), phase_state == LOW ? "LOW" : "HIGH");
   }
 }
 
@@ -243,6 +246,7 @@ namespace Display {
 } // namespace Display
 
 void batteryLevelTask(void *) {
+  Serial.println("[TASK] Battery task entered");
   int voltage_buf[VOLTAGE_BUF_SIZE] = {};
   uint16_t index = 0;
   while (1) {
@@ -260,12 +264,7 @@ void batteryLevelTask(void *) {
   }
 }
 
-void autonomousTask(void *) {
-  AutonomousLoop();
-}
-
-namespace BluefruitInternal {
-  using namespace Bluefruit;
+namespace Bluefruit {
   void Parse(char *buf, size_t len) {
     char c1, c2, c3, c4;
     if (sscanf(buf, "%c%c%c%c", &c1, &c2, &c3, &c4)) {
@@ -307,9 +306,7 @@ namespace BluefruitInternal {
       Serial.println("[BLE] Invalid speed command");
     }
   }
-}
 
-namespace Bluefruit {
   void __attribute__((weak)) DPad_Pressed(button_t Button, bool buttonPressedDown) {}
   void __attribute__((weak)) Button1_Pressed(bool buttonPressedDown) {}
   void __attribute__((weak)) Button2_Pressed(bool buttonPressedDown) {}
@@ -317,8 +314,7 @@ namespace Bluefruit {
   void __attribute__((weak)) Button4_Pressed(bool buttonPressedDown) {}
 }
 
-namespace PlaceHolderInternal {
-  using namespace PlaceHolder;
+namespace RR_Controller {
   void Parse(char *buf, size_t len) {
     char c1, c2, c3, c4;
     if (sscanf(buf, "%c%c%c%c", &c1, &c2, &c3, &c4)) {
@@ -390,11 +386,6 @@ namespace PlaceHolderInternal {
     }
   }
 
-
-
-}
-
-namespace PlaceHolder {
     void __attribute__((weak)) ButtonX_Pressed(bool buttonPressedDown) {}
     void __attribute__((weak)) ButtonY_Pressed(bool buttonPressedDown) {}
     void __attribute__((weak)) ButtonB_Pressed(bool buttonPressedDown) {}
@@ -413,16 +404,13 @@ void ParseBluetoothCommands(char *buf, size_t len) {
 
     Serial.printf("[BLE] Speeds updated: motor[%d] - %d\n", channel, speed);
   } else {
-    #ifdef USE_PLACEHOLDER
-      PlaceHolderInternal::Parse(buf, len);
-    #else
-      BluefruitInternal::Parse(buf, len);
-    #endif
+    BLUETOOTH_APP::Parse(buf, len);
   }
 }
 
 namespace RedRobot {
-TaskHandle_t autonomousTaskHandler = nullptr;
+TaskHandle_t batteryTaskHandler = nullptr;
+
 void InitRedRobot() {
   pinMode(MOTOR1_EN, OUTPUT);
   pinMode(LBAT_LED, OUTPUT);
@@ -437,10 +425,27 @@ void InitRedRobot() {
   analogSetAttenuation(ADC_11db);
 
   Display::init();
+  actuatorMutex = xSemaphoreCreateMutex();
+  if (!actuatorMutex)
+    Serial.println("[INIT] Failed to create actuator mutex");
   BLE::init();
+  Serial.println("[INIT] Creating battery task");
 
-  xTaskCreatePinnedToCore(batteryLevelTask, "batteryLevel", 2048, nullptr, 1, nullptr, 1);
-  xTaskCreatePinnedToCore(autonomousTask, "AutonomousLoop", 2048, nullptr, 1, nullptr, 1);
+  BaseType_t batteryResult = xTaskCreatePinnedToCore(
+      batteryLevelTask,
+      "batteryLevel",
+      4096,
+      nullptr,
+      1,
+      &batteryTaskHandler,
+      1
+  );
+
+  Serial.printf("[INIT] Battery task creation: %s\n",
+                batteryResult == pdPASS ? "SUCCESS" : "FAILED");
+
+  //xTaskCreatePinnedToCore(batteryLevelTask, "batteryLevel", 2048, nullptr, 1, nullptr, 1);
+  //xTaskCreatePinnedToCore(autonomousTask, "AutonomousLoop", 2048, nullptr, 1, nullptr, 1);
 }
 void InitDCMotors() {
     DCMotor::init();
@@ -451,16 +456,32 @@ void InitServo() {
 void InitLineSensors() {
   LineSensors::init();
 }
+void InitAuton() {
+  in_remote_control.store(false);
+  Serial.println("[INIT] AutonomousLoop will run from the Arduino loop task");
+}
 
 /**
  * @brief Drive a certain motor at a certain speed (-100, 100)
  */
 void WriteDCMotor(uint8_t d, int16_t speed) {
+    if (actuatorMutex) xSemaphoreTake(actuatorMutex, portMAX_DELAY);
+    if (in_remote_control.load() && xTaskGetCurrentTaskHandle() == arduinoLoopTask) {
+      if (actuatorMutex) xSemaphoreGive(actuatorMutex);
+      return;
+    }
     DCMotor::write(DCMotor::DCMOTOR(d), speed);
+    if (actuatorMutex) xSemaphoreGive(actuatorMutex);
 }
 
 void SetServo(uint8_t s, int16_t angle) {
+    if (actuatorMutex) xSemaphoreTake(actuatorMutex, portMAX_DELAY);
+    if (in_remote_control.load() && xTaskGetCurrentTaskHandle() == arduinoLoopTask) {
+      if (actuatorMutex) xSemaphoreGive(actuatorMutex);
+      return;
+    }
     Servo::set(Servo::SERVO(s), angle);
+    if (actuatorMutex) xSemaphoreGive(actuatorMutex);
 }
 
 void ReadLineSensor(uint16_t values[6]) {
@@ -469,9 +490,20 @@ void ReadLineSensor(uint16_t values[6]) {
 }
 
 void StartRemoteControl() {
-    in_remote_control = true;
-    vTaskDelete(autonomousTaskHandler);
+    in_remote_control.store(true);
+}
+
+bool IsRemoteControlled() {
+    return in_remote_control.load();
 }
 }
 
-void loop() {}
+void loop() {
+  arduinoLoopTask = xTaskGetCurrentTaskHandle();
+
+  if (!in_remote_control.load())
+    AutonomousLoop();
+
+  // Give equal-priority tasks on this core (batteryLevelTask) time.
+  taskYIELD();
+}

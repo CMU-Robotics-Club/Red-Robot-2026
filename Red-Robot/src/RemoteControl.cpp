@@ -1,15 +1,15 @@
 #include <RedRobot.h>
-extern bool in_remote_control;
 bool useTankDrive = false;
 
 namespace Bluefruit {
   /* DPad_Pressed is called everytime a D-Pad button is pressed or released.
    *
    * Only activates after RedRobot::StartRemoteControl() is called.
+   * Button is one of {UP = 0, DOWN = 1, LEFT = 2, RIGHT = 3}
    */
   void DPad_Pressed(button_t Button, bool buttonPressedDown)
   {
-    if (!in_remote_control)
+    if (!RedRobot::IsRemoteControlled())
       return;
 
     // values stay the same between calls to DPad_Pressed
@@ -52,29 +52,24 @@ namespace Bluefruit {
 
   void Button1_Pressed(bool buttonPressedDown)
   {
-    if (buttonPressedDown)
+    if (!RedRobot::IsRemoteControlled() && buttonPressedDown)
       RedRobot::StartRemoteControl();
   }
 
   void Button2_Pressed(bool buttonPressedDown)
   {
+    // Ex: move an arm when the button is pressed
     if (buttonPressedDown) {
       RedRobot::SetServo(0, 180);
       RedRobot::SetServo(1, 180);
       RedRobot::SetServo(2, 180);
       RedRobot::SetServo(3, 180);
-      RedRobot::WriteDCMotor(2, 70);
-      RedRobot::WriteDCMotor(3, 100);
 
     } else {
-//    vTaskDelay(pdMS_TO_TICKS(1000));
-    RedRobot::SetServo(0, 0);
-    RedRobot::SetServo(1, 0);
-    RedRobot::SetServo(2, 0);
-    RedRobot::SetServo(3, 0);
-    RedRobot::WriteDCMotor(2, 0);
-    RedRobot::WriteDCMotor(3, 0);
-
+      RedRobot::SetServo(0, 0);
+      RedRobot::SetServo(1, 0);
+      RedRobot::SetServo(2, 0);
+      RedRobot::SetServo(3, 0);
     }
   }
 
@@ -87,7 +82,7 @@ namespace Bluefruit {
   }
 }
 
-namespace PlaceHolder {
+namespace RR_Controller {
   void Joystick1(int8_t x, int8_t y)
   {
     if (useTankDrive)
@@ -126,8 +121,6 @@ namespace PlaceHolder {
 
     button_pressed[Button] = (buttonPressedDown == true);
 
-    Serial.printf("button_pressed: [0] = %d, [1] = %d, [2] = %d, [3] = %d\n", button_pressed[0],button_pressed[1],button_pressed[2],button_pressed[3]);
-
     // TODO: edit your speed output to the yellow motors below!
     // stop = 0, slow = 50, fast = 100
     // range [-100,100]
@@ -163,7 +156,7 @@ namespace PlaceHolder {
 
   void ButtonX_Pressed(bool buttonPressedDown)
   {
-    if (buttonPressedDown)
+    if (!RedRobot::IsRemoteControlled() && buttonPressedDown)
       RedRobot::StartRemoteControl();
   }
 

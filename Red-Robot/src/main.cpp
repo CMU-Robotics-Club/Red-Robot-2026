@@ -7,11 +7,54 @@ void setup() {
   RedRobot::InitDCMotors();
   RedRobot::InitServo();
   RedRobot::InitLineSensors();
+  RedRobot::InitAuton();
 
 }
 
 void AutonomousLoop() {
-  RedRobot::WriteDCMotor(2, 100);
-  RedRobot::WriteDCMotor(3, 100);
-//  RedRobot::StartRemoteControl();
+    static uint32_t lastPrint = 0;
+    static uint32_t startTime = 0;
+    static bool started = false;
+
+    if (!started) { // Ex: get out of the starting box
+        started = true;
+        startTime = millis();
+        RedRobot::WriteDCMotor(2, 100);
+        RedRobot::WriteDCMotor(3, 100);
+        delay(1000);
+
+        // Turn right
+        RedRobot::WriteDCMotor(2, 100);
+        RedRobot::WriteDCMotor(3, -100);
+        delay(500);
+        RedRobot::WriteDCMotor(2, 0);
+        RedRobot::WriteDCMotor(3, 0);
+
+        // line follower example
+    }
+    
+    // Ex: Repeatedly move the servo and get in scoring position
+    RedRobot::SetServo(0, 0);
+    RedRobot::SetServo(1, 0);
+    RedRobot::SetServo(2, 0);
+    RedRobot::SetServo(3, 0);
+    RedRobot::WriteDCMotor(2, 100);
+    RedRobot::WriteDCMotor(3, 100);
+    delay(1000);
+    RedRobot::WriteDCMotor(2, 0);
+    RedRobot::WriteDCMotor(3, 0);
+    RedRobot::SetServo(0, 90);
+    RedRobot::SetServo(1, 180);
+    RedRobot::SetServo(2, 90);
+    RedRobot::SetServo(3, 180);
+    delay(500);
+    RedRobot::WriteDCMotor(2, -100);
+    RedRobot::WriteDCMotor(3, -100);
+    delay(1000);
+
+
+    if (millis() - lastPrint >= 500) {
+        lastPrint = millis();
+        Serial.println("[AUTO] Running");
+    }
 }

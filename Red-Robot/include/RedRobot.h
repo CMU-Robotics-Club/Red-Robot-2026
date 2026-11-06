@@ -8,6 +8,8 @@ void InitRedRobot();
 void InitDCMotors();
 void InitServo();
 void InitLineSensors();
+void InitAuton();
+
 
 /**
  * @brief Drive motor 0, 2, or 3 at a certain speed (from -100 to 100). Must call InitDCMotor before using.
@@ -32,6 +34,7 @@ void SetServo(uint8_t s, int16_t angle);
 void ReadLineSensor(uint16_t values[6]);
 
 void StartRemoteControl();
+bool IsRemoteControlled();
 }
 
 namespace Bluefruit {
@@ -50,7 +53,7 @@ namespace Bluefruit {
 
 }
 
-namespace PlaceHolder {
+namespace RR_Controller {
     enum button_t {
     UP = 0,
     DOWN = 1, 
